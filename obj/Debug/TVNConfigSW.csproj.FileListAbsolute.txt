@@ -1,0 +1,56 @@
+C:\Users\hnc\Documents\[Working]_TVNConfigSW\obj\Debug\TVNConfigSW.csproj.GenerateResource.Cache
+C:\Users\TruongGiang\Documents\[Working]_TVNConfigSW\obj\Debug\TVNConfigSW.FrmMain.resources
+C:\Users\TruongGiang\Documents\[Working]_TVNConfigSW\obj\Debug\TVNConfigSW.csproj.GenerateResource.Cache
+C:\Users\TruongGiang\Documents\[Working]_TVNConfigSW\obj\Debug\TVNConfigSW.csproj.CoreCompileInputs.cache
+C:\Users\TruongGiang\Documents\[Working]_TVNConfigSW\obj\Debug\TVNConfigSW.Properties.Resources.resources
+C:\Users\TruongGiang\Documents\[Working]_TVNConfigSW\bin\Debug\TVNConfigSW.exe.config
+C:\Users\TruongGiang\Documents\[Working]_TVNConfigSW\bin\Debug\TVNConfigSW.exe
+C:\Users\TruongGiang\Documents\[Working]_TVNConfigSW\bin\Debug\TVNConfigSW.pdb
+C:\Users\TruongGiang\Documents\[Working]_TVNConfigSW\obj\Debug\TVNConfigSW.exe
+C:\Users\TruongGiang\Documents\[Working]_TVNConfigSW\obj\Debug\TVNConfigSW.pdb
+C:\Users\hnc\Documents\[Working]_TVNConfigSW\bin\Debug\TVNConfigSW.exe.config
+C:\Users\hnc\Documents\[Working]_TVNConfigSW\bin\Debug\TVNConfigSW.exe
+C:\Users\hnc\Documents\[Working]_TVNConfigSW\bin\Debug\TVNConfigSW.pdb
+C:\Users\hnc\Documents\[Working]_TVNConfigSW\obj\Debug\TVNConfigSW.FrmMain.resources
+C:\Users\hnc\Documents\[Working]_TVNConfigSW\obj\Debug\TVNConfigSW.Properties.Resources.resources
+C:\Users\hnc\Documents\[Working]_TVNConfigSW\obj\Debug\TVNConfigSW.exe
+C:\Users\hnc\Documents\[Working]_TVNConfigSW\obj\Debug\TVNConfigSW.pdb
+F:\one drive\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\TVNConfigSW.exe.config
+F:\one drive\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\TVNConfigSW.exe
+F:\one drive\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\TVNConfigSW.pdb
+F:\one drive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.AssemblyReference.cache
+F:\one drive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.FrmMain.resources
+F:\one drive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.Properties.Resources.resources
+F:\one drive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.GenerateResource.cache
+F:\one drive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.CoreCompileInputs.cache
+F:\one drive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.exe
+F:\one drive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.pdb
+D:\onedrive\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\TVNConfigSW.exe.config
+D:\onedrive\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\TVNConfigSW.exe
+D:\onedrive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.AssemblyReference.cache
+D:\onedrive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.SuggestedBindingRedirects.cache
+D:\onedrive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.FrmMain.resources
+D:\onedrive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.Properties.Resources.resources
+D:\onedrive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.GenerateResource.cache
+D:\onedrive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.CoreCompileInputs.cache
+D:\onedrive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.exe
+D:\onedrive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.pdb
+D:\onedrive\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\TVNConfigSW.pdb
+F:\one drive\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.AssemblyReference.cache
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.FrmMain.resources
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.Properties.Resources.resources
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.GenerateResource.cache
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.CoreCompileInputs.cache
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.exe
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.pdb
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\TVNConfigSW.exe.config
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\TVNConfigSW.exe
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\TVNConfigSW.pdb
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\EPPlus.dll
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\System.ComponentModel.Annotations.dll
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\EPPlus.xml
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\OneDrive - www.microsoft365.me\DSS\TVNconfig\obj\Debug\TVNConfigSW.csproj.CopyComplete
