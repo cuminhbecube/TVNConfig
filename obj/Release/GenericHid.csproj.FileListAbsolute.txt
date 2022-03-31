@@ -1,0 +1,11 @@
+C:\Users\TruongGiang\Dropbox\0.TVN_USB_Viewer\generic_hid_cs_v62\bin\Release\GenericHid.exe.config
+C:\Users\TruongGiang\Dropbox\0.TVN_USB_Viewer\generic_hid_cs_v62\bin\Release\GenericHid.exe
+C:\Users\TruongGiang\Dropbox\0.TVN_USB_Viewer\generic_hid_cs_v62\bin\Release\GenericHid.pdb
+C:\Users\TruongGiang\Dropbox\0.TVN_USB_Viewer\generic_hid_cs_v62\obj\Release\GenericHid.csprojResolveAssemblyReference.cache
+C:\Users\TruongGiang\Dropbox\0.TVN_USB_Viewer\generic_hid_cs_v62\obj\Release\GenericHid.FrmFirmwareUpdate.resources
+C:\Users\TruongGiang\Dropbox\0.TVN_USB_Viewer\generic_hid_cs_v62\obj\Release\GenericHid.FrmMain.resources
+C:\Users\TruongGiang\Dropbox\0.TVN_USB_Viewer\generic_hid_cs_v62\obj\Release\GenericHid.Properties.Resources.resources
+C:\Users\TruongGiang\Dropbox\0.TVN_USB_Viewer\generic_hid_cs_v62\obj\Release\GenericHid.csproj.GenerateResource.Cache
+C:\Users\TruongGiang\Dropbox\0.TVN_USB_Viewer\generic_hid_cs_v62\obj\Release\GenericHid.csproj.CoreCompileInputs.cache
+C:\Users\TruongGiang\Dropbox\0.TVN_USB_Viewer\generic_hid_cs_v62\obj\Release\GenericHid.exe
+C:\Users\TruongGiang\Dropbox\0.TVN_USB_Viewer\generic_hid_cs_v62\obj\Release\GenericHid.pdb
