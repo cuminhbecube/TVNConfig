@@ -166,7 +166,6 @@ namespace TVNConfigSW
         private Label label21;
         private Label label20;
         private SplitContainer splitContainer5;
-        private SplitContainer splitContainer6;
         private SplitContainer splitContainer9;
         private Button buttonTvn05;
         private Button buttonTvn02;
@@ -189,7 +188,6 @@ namespace TVNConfigSW
         private TextBox textBoxImei;
         private SplitContainer splitContainer2;
         private SplitContainer splitContainer7;
-        private Panel panel1;
         private GroupBox groupBoxLogs;
         private TextBox textBoxTempC;
         private TextBox textBoxVbat;
@@ -215,13 +213,10 @@ namespace TVNConfigSW
         private TextBox textBoxGprsMessage1;
         private SplitContainer splitContainer3;
         private TextBox textBoxDeviceLogs;
-        private SplitContainer splitContainer10;
         private CheckBox checkBoxDisplayGpsSentence;
         private CheckBox checkBoxAutoScrollDeviceLogs;
-        private Button buttonExit;
         private Button buttonClearLogs;
         private Button buttonClear1;
-        private Button buttonCopyTextBoxRcvData;
         private Splitter splitter1;
         private TabControl tabControlTestList;
         private CheckBox CheckboxUpdate;
@@ -232,6 +227,13 @@ namespace TVNConfigSW
         private Button buttonReset;
         private TextBox textGPSstartus;
         private TextBox textBoxTempD;
+        private SplitContainer splitContainer15;
+        private SplitContainer splitContainer16;
+        private GroupBox groupBox2;
+        private GroupBox groupBox3;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
+        private CheckBox checkBox3;
         private TabPage tabPage6;
 
         [System.Diagnostics.DebuggerStepThrough()]
@@ -362,33 +364,33 @@ namespace TVNConfigSW
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.buttonReset = new System.Windows.Forms.Button();
-            this.buttonTvn05 = new System.Windows.Forms.Button();
-            this.buttonTvn02 = new System.Windows.Forms.Button();
-            this.buttonDefault = new System.Windows.Forms.Button();
-            this.buttonDeleteFlash = new System.Windows.Forms.Button();
-            this.buttonWriteSettingToDevice = new System.Windows.Forms.Button();
             this.textBoxCommandList = new System.Windows.Forms.TextBox();
             this.textBoxFwRev = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxBootloader = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.buttonExImei = new System.Windows.Forms.Button();
-            this.label41 = new System.Windows.Forms.Label();
             this.textBoxCCID1 = new System.Windows.Forms.TextBox();
-            this.textBoxFirmwareFilePath1 = new System.Windows.Forms.TextBox();
-            this.buttonRebootToDFUMode2 = new System.Windows.Forms.Button();
-            this.buttonOpenFWFile = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.listBoxFirmwareUpdateLog1 = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxBootloader = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxImei = new System.Windows.Forms.TextBox();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.buttonWriteSettingToDevice = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBoxDisplayGpsSentence = new System.Windows.Forms.CheckBox();
+            this.CheckboxUpdate = new System.Windows.Forms.CheckBox();
+            this.checkBoxAutoScrollDeviceLogs = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonExportTXT = new System.Windows.Forms.Button();
+            this.buttonExImei = new System.Windows.Forms.Button();
+            this.buttonClear1 = new System.Windows.Forms.Button();
+            this.buttonClearLogs = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.buttonDefault = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.buttonWriteLogs = new System.Windows.Forms.Button();
+            this.buttonDeleteFlash = new System.Windows.Forms.Button();
+            this.buttonTvn05 = new System.Windows.Forms.Button();
+            this.buttonTvn02 = new System.Windows.Forms.Button();
             this.groupBoxLogs = new System.Windows.Forms.GroupBox();
+            this.textBoxTempD = new System.Windows.Forms.TextBox();
             this.textBoxTempC = new System.Windows.Forms.TextBox();
             this.textBoxVbat = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
@@ -407,27 +409,29 @@ namespace TVNConfigSW
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxDeviceErrorMessage1 = new System.Windows.Forms.TextBox();
+            this.textBoxFirmwareFilePath1 = new System.Windows.Forms.TextBox();
+            this.buttonRebootToDFUMode2 = new System.Windows.Forms.Button();
+            this.buttonOpenFWFile = new System.Windows.Forms.Button();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer15 = new System.Windows.Forms.SplitContainer();
             this.errorlog = new System.Windows.Forms.GroupBox();
+            this.textBoxDeviceErrorMessage1 = new System.Windows.Forms.TextBox();
             this.gprs4gStartus = new System.Windows.Forms.GroupBox();
             this.textBoxGprsMessage1 = new System.Windows.Forms.TextBox();
+            this.splitContainer16 = new System.Windows.Forms.SplitContainer();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textGPSstartus = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.listBoxFirmwareUpdateLog1 = new System.Windows.Forms.ListBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.textBoxDeviceLogs = new System.Windows.Forms.TextBox();
-            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
-            this.CheckboxUpdate = new System.Windows.Forms.CheckBox();
-            this.checkBoxDisplayGpsSentence = new System.Windows.Forms.CheckBox();
-            this.checkBoxAutoScrollDeviceLogs = new System.Windows.Forms.CheckBox();
-            this.buttonExportTXT = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
-            this.buttonClearLogs = new System.Windows.Forms.Button();
-            this.buttonClear1 = new System.Windows.Forms.Button();
-            this.buttonWriteLogs = new System.Windows.Forms.Button();
-            this.buttonCopyTextBoxRcvData = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.tabControlTestList = new System.Windows.Forms.TabControl();
-            this.textGPSstartus = new System.Windows.Forms.TextBox();
-            this.textBoxTempD = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.statusStrip.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -490,11 +494,8 @@ namespace TVNConfigSW
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.Panel1.SuspendLayout();
-            this.splitContainer6.Panel2.SuspendLayout();
-            this.splitContainer6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBoxLogs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -503,17 +504,21 @@ namespace TVNConfigSW
             this.splitContainer7.Panel1.SuspendLayout();
             this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.groupBoxLogs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).BeginInit();
+            this.splitContainer15.Panel1.SuspendLayout();
+            this.splitContainer15.Panel2.SuspendLayout();
+            this.splitContainer15.SuspendLayout();
+            this.errorlog.SuspendLayout();
             this.gprs4gStartus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).BeginInit();
+            this.splitContainer16.Panel1.SuspendLayout();
+            this.splitContainer16.Panel2.SuspendLayout();
+            this.splitContainer16.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
-            this.splitContainer10.Panel1.SuspendLayout();
-            this.splitContainer10.Panel2.SuspendLayout();
-            this.splitContainer10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
             this.splitContainer9.SuspendLayout();
             this.tabControlTestList.SuspendLayout();
@@ -525,10 +530,10 @@ namespace TVNConfigSW
             this.labelConnectingStatus,
             this.labelFirmwareUpdateProcess,
             this.progressBarFirmwareUpdate});
-            this.statusStrip.Location = new System.Drawing.Point(0, 727);
+            this.statusStrip.Location = new System.Drawing.Point(0, 845);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip.Size = new System.Drawing.Size(1225, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1482, 22);
             this.statusStrip.TabIndex = 19;
             this.statusStrip.Text = "statusStrip1";
             // 
@@ -884,7 +889,7 @@ namespace TVNConfigSW
             this.tabPage8.Location = new System.Drawing.Point(4, 34);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1217, 689);
+            this.tabPage8.Size = new System.Drawing.Size(1474, 807);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "Test List";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -895,7 +900,7 @@ namespace TVNConfigSW
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(548, 156);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(666, 530);
+            this.panel16.Size = new System.Drawing.Size(923, 648);
             this.panel16.TabIndex = 4;
             // 
             // groupBox8
@@ -904,7 +909,7 @@ namespace TVNConfigSW
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox8.Location = new System.Drawing.Point(0, 0);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(666, 530);
+            this.groupBox8.Size = new System.Drawing.Size(923, 648);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "groupBox8";
@@ -915,7 +920,7 @@ namespace TVNConfigSW
             this.textBox2.Location = new System.Drawing.Point(3, 18);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(660, 509);
+            this.textBox2.Size = new System.Drawing.Size(917, 627);
             this.textBox2.TabIndex = 1;
             // 
             // panel15
@@ -924,7 +929,7 @@ namespace TVNConfigSW
             this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel15.Location = new System.Drawing.Point(203, 156);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(345, 530);
+            this.panel15.Size = new System.Drawing.Size(345, 648);
             this.panel15.TabIndex = 3;
             // 
             // groupBox9
@@ -933,7 +938,7 @@ namespace TVNConfigSW
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox9.Location = new System.Drawing.Point(0, 0);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(345, 530);
+            this.groupBox9.Size = new System.Drawing.Size(345, 648);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "groupBox9";
@@ -944,7 +949,7 @@ namespace TVNConfigSW
             this.textBox1.Location = new System.Drawing.Point(3, 18);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(339, 509);
+            this.textBox1.Size = new System.Drawing.Size(339, 627);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
@@ -956,7 +961,7 @@ namespace TVNConfigSW
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(203, 36);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1011, 120);
+            this.panel4.Size = new System.Drawing.Size(1268, 120);
             this.panel4.TabIndex = 2;
             // 
             // panel11
@@ -968,7 +973,7 @@ namespace TVNConfigSW
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(191, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(820, 120);
+            this.panel11.Size = new System.Drawing.Size(1077, 120);
             this.panel11.TabIndex = 5;
             // 
             // panel19
@@ -977,7 +982,7 @@ namespace TVNConfigSW
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel19.Location = new System.Drawing.Point(291, 0);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(529, 120);
+            this.panel19.Size = new System.Drawing.Size(786, 120);
             this.panel19.TabIndex = 3;
             // 
             // groupBox12
@@ -986,7 +991,7 @@ namespace TVNConfigSW
             this.groupBox12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox12.Location = new System.Drawing.Point(0, 0);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(529, 120);
+            this.groupBox12.Size = new System.Drawing.Size(786, 120);
             this.groupBox12.TabIndex = 0;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "SENT BYTE";
@@ -997,7 +1002,7 @@ namespace TVNConfigSW
             this.textBox23.Location = new System.Drawing.Point(3, 18);
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(523, 99);
+            this.textBox23.Size = new System.Drawing.Size(780, 99);
             this.textBox23.TabIndex = 0;
             // 
             // panel18
@@ -1145,7 +1150,7 @@ namespace TVNConfigSW
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(203, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1011, 33);
+            this.panel3.Size = new System.Drawing.Size(1268, 33);
             this.panel3.TabIndex = 1;
             // 
             // panel10
@@ -1153,7 +1158,7 @@ namespace TVNConfigSW
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(507, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(504, 33);
+            this.panel10.Size = new System.Drawing.Size(761, 33);
             this.panel10.TabIndex = 6;
             // 
             // panel8
@@ -1199,7 +1204,7 @@ namespace TVNConfigSW
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 683);
+            this.panel2.Size = new System.Drawing.Size(200, 801);
             this.panel2.TabIndex = 0;
             // 
             // panel14
@@ -1222,7 +1227,7 @@ namespace TVNConfigSW
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(74, 204);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(126, 479);
+            this.panel14.Size = new System.Drawing.Size(126, 597);
             this.panel14.TabIndex = 3;
             // 
             // textBox22
@@ -1350,7 +1355,7 @@ namespace TVNConfigSW
             this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel13.Location = new System.Drawing.Point(0, 204);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(74, 479);
+            this.panel13.Size = new System.Drawing.Size(74, 597);
             this.panel13.TabIndex = 3;
             // 
             // label33
@@ -1622,7 +1627,7 @@ namespace TVNConfigSW
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1217, 689);
+            this.tabPage1.Size = new System.Drawing.Size(1474, 807);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Device Info";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1644,7 +1649,7 @@ namespace TVNConfigSW
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer1.Size = new System.Drawing.Size(1211, 683);
+            this.splitContainer1.Size = new System.Drawing.Size(1468, 801);
             this.splitContainer1.SplitterDistance = 221;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -1671,7 +1676,7 @@ namespace TVNConfigSW
             // 
             this.splitContainer4.Panel2.Controls.Add(this.splitContainer5);
             this.splitContainer4.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer4.Size = new System.Drawing.Size(221, 683);
+            this.splitContainer4.Size = new System.Drawing.Size(221, 801);
             this.splitContainer4.SplitterDistance = 61;
             this.splitContainer4.TabIndex = 0;
             // 
@@ -1750,136 +1755,48 @@ namespace TVNConfigSW
             // 
             // splitContainer5.Panel1
             // 
-            this.splitContainer5.Panel1.Controls.Add(this.splitContainer6);
+            this.splitContainer5.Panel1.Controls.Add(this.textBoxCommandList);
+            this.splitContainer5.Panel1.Controls.Add(this.textBoxFwRev);
+            this.splitContainer5.Panel1.Controls.Add(this.textBoxCCID1);
+            this.splitContainer5.Panel1.Controls.Add(this.textBoxBootloader);
+            this.splitContainer5.Panel1.Controls.Add(this.label41);
+            this.splitContainer5.Panel1.Controls.Add(this.label1);
+            this.splitContainer5.Panel1.Controls.Add(this.textBoxImei);
+            this.splitContainer5.Panel1.Controls.Add(this.label11);
+            this.splitContainer5.Panel1.Controls.Add(this.buttonWriteSettingToDevice);
+            this.splitContainer5.Panel1.Controls.Add(this.label4);
             this.splitContainer5.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.AutoScroll = true;
-            this.splitContainer5.Panel2.Controls.Add(this.button4);
-            this.splitContainer5.Panel2.Controls.Add(this.buttonExImei);
-            this.splitContainer5.Panel2.Controls.Add(this.label41);
-            this.splitContainer5.Panel2.Controls.Add(this.textBoxCCID1);
+            this.splitContainer5.Panel2.Controls.Add(this.checkBox1);
+            this.splitContainer5.Panel2.Controls.Add(this.checkBox2);
+            this.splitContainer5.Panel2.Controls.Add(this.checkBox3);
+            this.splitContainer5.Panel2.Controls.Add(this.checkBoxDisplayGpsSentence);
+            this.splitContainer5.Panel2.Controls.Add(this.CheckboxUpdate);
+            this.splitContainer5.Panel2.Controls.Add(this.checkBoxAutoScrollDeviceLogs);
+            this.splitContainer5.Panel2.Controls.Add(this.groupBox3);
+            this.splitContainer5.Panel2.Controls.Add(this.groupBoxLogs);
             this.splitContainer5.Panel2.Controls.Add(this.textBoxFirmwareFilePath1);
             this.splitContainer5.Panel2.Controls.Add(this.buttonRebootToDFUMode2);
             this.splitContainer5.Panel2.Controls.Add(this.buttonOpenFWFile);
-            this.splitContainer5.Panel2.Controls.Add(this.groupBox5);
-            this.splitContainer5.Panel2.Controls.Add(this.label4);
-            this.splitContainer5.Panel2.Controls.Add(this.textBoxImei);
             this.splitContainer5.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer5.Size = new System.Drawing.Size(221, 618);
+            this.splitContainer5.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer5_Panel2_Paint);
+            this.splitContainer5.Size = new System.Drawing.Size(221, 736);
             this.splitContainer5.SplitterDistance = 199;
             this.splitContainer5.TabIndex = 0;
-            // 
-            // splitContainer6
-            // 
-            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer6.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer6.Name = "splitContainer6";
-            this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.AllowDrop = true;
-            this.splitContainer6.Panel1.AutoScroll = true;
-            this.splitContainer6.Panel1.Controls.Add(this.buttonReset);
-            this.splitContainer6.Panel1.Controls.Add(this.buttonTvn05);
-            this.splitContainer6.Panel1.Controls.Add(this.buttonTvn02);
-            this.splitContainer6.Panel1.Controls.Add(this.buttonDefault);
-            this.splitContainer6.Panel1.Controls.Add(this.buttonDeleteFlash);
-            this.splitContainer6.Panel1.Controls.Add(this.buttonWriteSettingToDevice);
-            this.splitContainer6.Panel1.Controls.Add(this.textBoxCommandList);
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.Controls.Add(this.textBoxFwRev);
-            this.splitContainer6.Panel2.Controls.Add(this.label1);
-            this.splitContainer6.Panel2.Controls.Add(this.textBoxBootloader);
-            this.splitContainer6.Panel2.Controls.Add(this.label11);
-            this.splitContainer6.Size = new System.Drawing.Size(221, 199);
-            this.splitContainer6.SplitterDistance = 169;
-            this.splitContainer6.TabIndex = 0;
-            // 
-            // buttonReset
-            // 
-            this.buttonReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonReset.Location = new System.Drawing.Point(78, 135);
-            this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(67, 31);
-            this.buttonReset.TabIndex = 38;
-            this.buttonReset.Text = "Reset";
-            this.buttonReset.UseVisualStyleBackColor = true;
-            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
-            // 
-            // buttonTvn05
-            // 
-            this.buttonTvn05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonTvn05.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTvn05.Location = new System.Drawing.Point(132, 95);
-            this.buttonTvn05.Name = "buttonTvn05";
-            this.buttonTvn05.Size = new System.Drawing.Size(57, 33);
-            this.buttonTvn05.TabIndex = 36;
-            this.buttonTvn05.Text = "TVN05";
-            this.buttonTvn05.UseVisualStyleBackColor = true;
-            this.buttonTvn05.Click += new System.EventHandler(this.buttonTvn05_Click);
-            // 
-            // buttonTvn02
-            // 
-            this.buttonTvn02.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTvn02.Location = new System.Drawing.Point(30, 94);
-            this.buttonTvn02.Name = "buttonTvn02";
-            this.buttonTvn02.Size = new System.Drawing.Size(61, 34);
-            this.buttonTvn02.TabIndex = 1;
-            this.buttonTvn02.Text = "TVN02";
-            this.buttonTvn02.UseVisualStyleBackColor = true;
-            this.buttonTvn02.Click += new System.EventHandler(this.buttonTvn02_Click);
-            // 
-            // buttonDefault
-            // 
-            this.buttonDefault.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonDefault.Location = new System.Drawing.Point(0, 135);
-            this.buttonDefault.Name = "buttonDefault";
-            this.buttonDefault.Size = new System.Drawing.Size(68, 31);
-            this.buttonDefault.TabIndex = 26;
-            this.buttonDefault.Text = "Default";
-            this.buttonDefault.UseVisualStyleBackColor = true;
-            this.buttonDefault.Click += new System.EventHandler(this.buttonDefault_Click);
-            // 
-            // buttonDeleteFlash
-            // 
-            this.buttonDeleteFlash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteFlash.Cursor = System.Windows.Forms.Cursors.Help;
-            this.buttonDeleteFlash.Location = new System.Drawing.Point(152, 134);
-            this.buttonDeleteFlash.Name = "buttonDeleteFlash";
-            this.buttonDeleteFlash.Size = new System.Drawing.Size(67, 31);
-            this.buttonDeleteFlash.TabIndex = 25;
-            this.buttonDeleteFlash.Text = "Del flash";
-            this.buttonDeleteFlash.UseVisualStyleBackColor = true;
-            this.buttonDeleteFlash.Click += new System.EventHandler(this.buttonDeleteFlash_Click);
-            // 
-            // buttonWriteSettingToDevice
-            // 
-            this.buttonWriteSettingToDevice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonWriteSettingToDevice.Location = new System.Drawing.Point(0, 67);
-            this.buttonWriteSettingToDevice.Name = "buttonWriteSettingToDevice";
-            this.buttonWriteSettingToDevice.Size = new System.Drawing.Size(222, 26);
-            this.buttonWriteSettingToDevice.TabIndex = 24;
-            this.buttonWriteSettingToDevice.Text = "Write Setting To Device";
-            this.buttonWriteSettingToDevice.UseVisualStyleBackColor = true;
-            this.buttonWriteSettingToDevice.Click += new System.EventHandler(this.buttonWriteSettingToDevice_Click);
             // 
             // textBoxCommandList
             // 
             this.textBoxCommandList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxCommandList.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBoxCommandList.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCommandList.ForeColor = System.Drawing.Color.Blue;
-            this.textBoxCommandList.Location = new System.Drawing.Point(0, 0);
+            this.textBoxCommandList.Location = new System.Drawing.Point(0, 107);
             this.textBoxCommandList.Multiline = true;
             this.textBoxCommandList.Name = "textBoxCommandList";
             this.textBoxCommandList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxCommandList.Size = new System.Drawing.Size(221, 57);
+            this.textBoxCommandList.Size = new System.Drawing.Size(218, 57);
             this.textBoxCommandList.TabIndex = 1;
             this.textBoxCommandList.Text = "*300190,990,099#";
             // 
@@ -1888,55 +1805,171 @@ namespace TVNConfigSW
             this.textBoxFwRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxFwRev.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFwRev.Location = new System.Drawing.Point(132, 3);
+            this.textBoxFwRev.Location = new System.Drawing.Point(150, 9);
             this.textBoxFwRev.Name = "textBoxFwRev";
-            this.textBoxFwRev.Size = new System.Drawing.Size(85, 22);
+            this.textBoxFwRev.Size = new System.Drawing.Size(69, 22);
             this.textBoxFwRev.TabIndex = 1;
             this.textBoxFwRev.TextChanged += new System.EventHandler(this.textBoxFwRev_TextChanged);
             // 
-            // label1
+            // textBoxCCID1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 16);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "FW:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.textBoxCCID1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxCCID1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxCCID1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCCID1.Location = new System.Drawing.Point(54, 60);
+            this.textBoxCCID1.Name = "textBoxCCID1";
+            this.textBoxCCID1.ReadOnly = true;
+            this.textBoxCCID1.Size = new System.Drawing.Size(164, 22);
+            this.textBoxCCID1.TabIndex = 6;
             // 
             // textBoxBootloader
             // 
             this.textBoxBootloader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBootloader.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBootloader.Location = new System.Drawing.Point(52, 3);
+            this.textBoxBootloader.Location = new System.Drawing.Point(53, 9);
             this.textBoxBootloader.Name = "textBoxBootloader";
-            this.textBoxBootloader.Size = new System.Drawing.Size(39, 22);
+            this.textBoxBootloader.Size = new System.Drawing.Size(50, 22);
             this.textBoxBootloader.TabIndex = 38;
             this.textBoxBootloader.TextChanged += new System.EventHandler(this.textBoxBootloader_TextChanged);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(9, 63);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(42, 16);
+            this.label41.TabIndex = 7;
+            this.label41.Text = "CCID:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(109, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 16);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "FW:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // textBoxImei
+            // 
+            this.textBoxImei.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxImei.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxImei.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxImei.Location = new System.Drawing.Point(53, 36);
+            this.textBoxImei.Name = "textBoxImei";
+            this.textBoxImei.ReadOnly = true;
+            this.textBoxImei.Size = new System.Drawing.Size(165, 22);
+            this.textBoxImei.TabIndex = 2;
+            this.textBoxImei.TextChanged += new System.EventHandler(this.textBoxImei_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 5);
+            this.label11.Location = new System.Drawing.Point(7, 11);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 16);
             this.label11.TabIndex = 37;
             this.label11.Text = "Blder:";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // button4
+            // buttonWriteSettingToDevice
             // 
-            this.button4.Location = new System.Drawing.Point(115, 67);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 23);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Ex to Sheet";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonWriteSettingToDevice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonWriteSettingToDevice.Location = new System.Drawing.Point(12, 170);
+            this.buttonWriteSettingToDevice.Name = "buttonWriteSettingToDevice";
+            this.buttonWriteSettingToDevice.Size = new System.Drawing.Size(195, 26);
+            this.buttonWriteSettingToDevice.TabIndex = 24;
+            this.buttonWriteSettingToDevice.Text = "Write Setting To Device";
+            this.buttonWriteSettingToDevice.UseVisualStyleBackColor = true;
+            this.buttonWriteSettingToDevice.Click += new System.EventHandler(this.buttonWriteSettingToDevice_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "IMEI:";
+            // 
+            // checkBoxDisplayGpsSentence
+            // 
+            this.checkBoxDisplayGpsSentence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBoxDisplayGpsSentence.AutoSize = true;
+            this.checkBoxDisplayGpsSentence.Checked = true;
+            this.checkBoxDisplayGpsSentence.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxDisplayGpsSentence.Location = new System.Drawing.Point(8, 390);
+            this.checkBoxDisplayGpsSentence.Name = "checkBoxDisplayGpsSentence";
+            this.checkBoxDisplayGpsSentence.Size = new System.Drawing.Size(85, 20);
+            this.checkBoxDisplayGpsSentence.TabIndex = 0;
+            this.checkBoxDisplayGpsSentence.Text = " GPS Logs";
+            this.checkBoxDisplayGpsSentence.UseVisualStyleBackColor = true;
+            this.checkBoxDisplayGpsSentence.CheckedChanged += new System.EventHandler(this.checkBoxDisplayGpsSentence_CheckedChanged);
+            // 
+            // CheckboxUpdate
+            // 
+            this.CheckboxUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CheckboxUpdate.AutoSize = true;
+            this.CheckboxUpdate.Location = new System.Drawing.Point(8, 338);
+            this.CheckboxUpdate.Name = "CheckboxUpdate";
+            this.CheckboxUpdate.Size = new System.Drawing.Size(105, 20);
+            this.CheckboxUpdate.TabIndex = 25;
+            this.CheckboxUpdate.Text = "Auto Update";
+            this.CheckboxUpdate.UseVisualStyleBackColor = true;
+            this.CheckboxUpdate.CheckedChanged += new System.EventHandler(this.CheckboxUpdate_CheckedChanged);
+            // 
+            // checkBoxAutoScrollDeviceLogs
+            // 
+            this.checkBoxAutoScrollDeviceLogs.AutoSize = true;
+            this.checkBoxAutoScrollDeviceLogs.Checked = true;
+            this.checkBoxAutoScrollDeviceLogs.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxAutoScrollDeviceLogs.Location = new System.Drawing.Point(8, 364);
+            this.checkBoxAutoScrollDeviceLogs.Name = "checkBoxAutoScrollDeviceLogs";
+            this.checkBoxAutoScrollDeviceLogs.Size = new System.Drawing.Size(95, 20);
+            this.checkBoxAutoScrollDeviceLogs.TabIndex = 24;
+            this.checkBoxAutoScrollDeviceLogs.Text = "Auto scroll";
+            this.checkBoxAutoScrollDeviceLogs.UseVisualStyleBackColor = true;
+            this.checkBoxAutoScrollDeviceLogs.CheckedChanged += new System.EventHandler(this.checkBoxAutoScrollDeviceLogs_CheckedChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonExportTXT);
+            this.groupBox3.Controls.Add(this.buttonExImei);
+            this.groupBox3.Controls.Add(this.buttonClear1);
+            this.groupBox3.Controls.Add(this.buttonClearLogs);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.buttonDefault);
+            this.groupBox3.Controls.Add(this.buttonReset);
+            this.groupBox3.Controls.Add(this.buttonWriteLogs);
+            this.groupBox3.Controls.Add(this.buttonDeleteFlash);
+            this.groupBox3.Controls.Add(this.buttonTvn05);
+            this.groupBox3.Controls.Add(this.buttonTvn02);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox3.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(0, 165);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(221, 167);
+            this.groupBox3.TabIndex = 36;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Config Button";
+            // 
+            // buttonExportTXT
+            // 
+            this.buttonExportTXT.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExportTXT.Location = new System.Drawing.Point(5, 74);
+            this.buttonExportTXT.Name = "buttonExportTXT";
+            this.buttonExportTXT.Size = new System.Drawing.Size(100, 25);
+            this.buttonExportTXT.TabIndex = 29;
+            this.buttonExportTXT.Text = "Export Logs";
+            this.buttonExportTXT.UseVisualStyleBackColor = true;
+            this.buttonExportTXT.Click += new System.EventHandler(this.buttonExportTXT_Click);
             // 
             // buttonExImei
             // 
-            this.buttonExImei.Location = new System.Drawing.Point(16, 67);
+            this.buttonExImei.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExImei.Location = new System.Drawing.Point(124, 136);
             this.buttonExImei.Name = "buttonExImei";
             this.buttonExImei.Size = new System.Drawing.Size(93, 23);
             this.buttonExImei.TabIndex = 19;
@@ -1944,169 +1977,110 @@ namespace TVNConfigSW
             this.buttonExImei.UseVisualStyleBackColor = true;
             this.buttonExImei.Click += new System.EventHandler(this.buttonExImei_Click);
             // 
-            // label41
+            // buttonClear1
             // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(6, 38);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(42, 16);
-            this.label41.TabIndex = 7;
-            this.label41.Text = "CCID:";
+            this.buttonClear1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear1.Location = new System.Drawing.Point(124, 105);
+            this.buttonClear1.Name = "buttonClear1";
+            this.buttonClear1.Size = new System.Drawing.Size(94, 25);
+            this.buttonClear1.TabIndex = 26;
+            this.buttonClear1.Text = "Clear All";
+            this.buttonClear1.UseVisualStyleBackColor = true;
+            this.buttonClear1.Click += new System.EventHandler(this.buttonClear1_Click);
             // 
-            // textBoxCCID1
+            // buttonClearLogs
             // 
-            this.textBoxCCID1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxCCID1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxCCID1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCCID1.Location = new System.Drawing.Point(54, 36);
-            this.textBoxCCID1.Name = "textBoxCCID1";
-            this.textBoxCCID1.ReadOnly = true;
-            this.textBoxCCID1.Size = new System.Drawing.Size(164, 22);
-            this.textBoxCCID1.TabIndex = 6;
+            this.buttonClearLogs.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClearLogs.Location = new System.Drawing.Point(6, 105);
+            this.buttonClearLogs.Name = "buttonClearLogs";
+            this.buttonClearLogs.Size = new System.Drawing.Size(99, 25);
+            this.buttonClearLogs.TabIndex = 27;
+            this.buttonClearLogs.Text = "Clear Logs";
+            this.buttonClearLogs.UseVisualStyleBackColor = true;
+            this.buttonClearLogs.Click += new System.EventHandler(this.button7_Click_1);
             // 
-            // textBoxFirmwareFilePath1
+            // button4
             // 
-            this.textBoxFirmwareFilePath1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxFirmwareFilePath1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFirmwareFilePath1.Location = new System.Drawing.Point(0, 389);
-            this.textBoxFirmwareFilePath1.Multiline = true;
-            this.textBoxFirmwareFilePath1.Name = "textBoxFirmwareFilePath1";
-            this.textBoxFirmwareFilePath1.Size = new System.Drawing.Size(145, 26);
-            this.textBoxFirmwareFilePath1.TabIndex = 5;
-            this.textBoxFirmwareFilePath1.TextChanged += new System.EventHandler(this.textBoxFirmwareFilePath1_TextChanged);
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(6, 136);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(99, 23);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "Ex to Sheet";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // buttonRebootToDFUMode2
+            // buttonDefault
             // 
-            this.buttonRebootToDFUMode2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRebootToDFUMode2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonRebootToDFUMode2.Font = new System.Drawing.Font("Georgia", 12F);
-            this.buttonRebootToDFUMode2.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonRebootToDFUMode2.ImageKey = "(none)";
-            this.buttonRebootToDFUMode2.Location = new System.Drawing.Point(-3, 327);
-            this.buttonRebootToDFUMode2.Name = "buttonRebootToDFUMode2";
-            this.buttonRebootToDFUMode2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.buttonRebootToDFUMode2.Size = new System.Drawing.Size(225, 56);
-            this.buttonRebootToDFUMode2.TabIndex = 4;
-            this.buttonRebootToDFUMode2.Text = "Start Update";
-            this.buttonRebootToDFUMode2.UseVisualStyleBackColor = false;
-            this.buttonRebootToDFUMode2.Click += new System.EventHandler(this.buttonRebootToBootloaderMode_Click);
+            this.buttonDefault.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDefault.Location = new System.Drawing.Point(3, 21);
+            this.buttonDefault.Name = "buttonDefault";
+            this.buttonDefault.Size = new System.Drawing.Size(73, 21);
+            this.buttonDefault.TabIndex = 26;
+            this.buttonDefault.Text = "Default";
+            this.buttonDefault.UseVisualStyleBackColor = true;
+            this.buttonDefault.Click += new System.EventHandler(this.buttonDefault_Click);
             // 
-            // buttonOpenFWFile
+            // buttonReset
             // 
-            this.buttonOpenFWFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpenFWFile.AutoSize = true;
-            this.buttonOpenFWFile.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOpenFWFile.Location = new System.Drawing.Point(151, 387);
-            this.buttonOpenFWFile.Name = "buttonOpenFWFile";
-            this.buttonOpenFWFile.Size = new System.Drawing.Size(68, 28);
-            this.buttonOpenFWFile.TabIndex = 3;
-            this.buttonOpenFWFile.Text = "Open file";
-            this.buttonOpenFWFile.UseVisualStyleBackColor = true;
-            this.buttonOpenFWFile.Click += new System.EventHandler(this.buttonOpenBinaryFWFile_Click);
+            this.buttonReset.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonReset.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReset.Location = new System.Drawing.Point(78, 21);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(67, 21);
+            this.buttonReset.TabIndex = 38;
+            this.buttonReset.Text = "Reset";
+            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
-            // groupBox5
+            // buttonWriteLogs
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.AutoSize = true;
-            this.groupBox5.Controls.Add(this.listBoxFirmwareUpdateLog1);
-            this.groupBox5.Location = new System.Drawing.Point(-3, 96);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(223, 225);
-            this.groupBox5.TabIndex = 0;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Update log";
+            this.buttonWriteLogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonWriteLogs.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonWriteLogs.Location = new System.Drawing.Point(124, 74);
+            this.buttonWriteLogs.Name = "buttonWriteLogs";
+            this.buttonWriteLogs.Size = new System.Drawing.Size(94, 25);
+            this.buttonWriteLogs.TabIndex = 24;
+            this.buttonWriteLogs.Text = "EX IMEI";
+            this.buttonWriteLogs.UseVisualStyleBackColor = true;
             // 
-            // listBoxFirmwareUpdateLog1
+            // buttonDeleteFlash
             // 
-            this.listBoxFirmwareUpdateLog1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxFirmwareUpdateLog1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
-            this.listBoxFirmwareUpdateLog1.FormattingEnabled = true;
-            this.listBoxFirmwareUpdateLog1.ItemHeight = 24;
-            this.listBoxFirmwareUpdateLog1.Location = new System.Drawing.Point(3, 18);
-            this.listBoxFirmwareUpdateLog1.Name = "listBoxFirmwareUpdateLog1";
-            this.listBoxFirmwareUpdateLog1.Size = new System.Drawing.Size(217, 204);
-            this.listBoxFirmwareUpdateLog1.TabIndex = 0;
-            this.listBoxFirmwareUpdateLog1.SelectedIndexChanged += new System.EventHandler(this.listBoxFirmwareUpdateLog1_SelectedIndexChanged);
+            this.buttonDeleteFlash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDeleteFlash.Cursor = System.Windows.Forms.Cursors.Help;
+            this.buttonDeleteFlash.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDeleteFlash.Location = new System.Drawing.Point(149, 21);
+            this.buttonDeleteFlash.Name = "buttonDeleteFlash";
+            this.buttonDeleteFlash.Size = new System.Drawing.Size(73, 21);
+            this.buttonDeleteFlash.TabIndex = 25;
+            this.buttonDeleteFlash.Text = "Del flash";
+            this.buttonDeleteFlash.UseVisualStyleBackColor = true;
+            this.buttonDeleteFlash.Click += new System.EventHandler(this.buttonDeleteFlash_Click);
             // 
-            // label4
+            // buttonTvn05
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "IMEI:";
+            this.buttonTvn05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonTvn05.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTvn05.Location = new System.Drawing.Point(158, 48);
+            this.buttonTvn05.Name = "buttonTvn05";
+            this.buttonTvn05.Size = new System.Drawing.Size(57, 20);
+            this.buttonTvn05.TabIndex = 36;
+            this.buttonTvn05.Text = "TVN05";
+            this.buttonTvn05.UseVisualStyleBackColor = true;
+            this.buttonTvn05.Click += new System.EventHandler(this.buttonTvn05_Click);
             // 
-            // textBoxImei
+            // buttonTvn02
             // 
-            this.textBoxImei.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxImei.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxImei.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxImei.Location = new System.Drawing.Point(54, 7);
-            this.textBoxImei.Name = "textBoxImei";
-            this.textBoxImei.ReadOnly = true;
-            this.textBoxImei.Size = new System.Drawing.Size(164, 22);
-            this.textBoxImei.TabIndex = 2;
-            this.textBoxImei.TextChanged += new System.EventHandler(this.textBoxImei_TextChanged);
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.splitContainer7);
-            this.splitContainer2.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Panel2.Controls.Add(this.splitter1);
-            this.splitContainer2.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer2.Size = new System.Drawing.Size(986, 683);
-            this.splitContainer2.SplitterDistance = 166;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // splitContainer7
-            // 
-            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer7.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer7.Name = "splitContainer7";
-            // 
-            // splitContainer7.Panel1
-            // 
-            this.splitContainer7.Panel1.AutoScroll = true;
-            this.splitContainer7.Panel1.Controls.Add(this.panel1);
-            this.splitContainer7.Panel1.Controls.Add(this.textBoxDeviceErrorMessage1);
-            this.splitContainer7.Panel1.Controls.Add(this.errorlog);
-            // 
-            // splitContainer7.Panel2
-            // 
-            this.splitContainer7.Panel2.Controls.Add(this.gprs4gStartus);
-            this.splitContainer7.Size = new System.Drawing.Size(986, 166);
-            this.splitContainer7.SplitterDistance = 490;
-            this.splitContainer7.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.groupBoxLogs);
-            this.panel1.Location = new System.Drawing.Point(269, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 165);
-            this.panel1.TabIndex = 2;
+            this.buttonTvn02.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTvn02.Location = new System.Drawing.Point(6, 46);
+            this.buttonTvn02.Name = "buttonTvn02";
+            this.buttonTvn02.Size = new System.Drawing.Size(61, 22);
+            this.buttonTvn02.TabIndex = 1;
+            this.buttonTvn02.Text = "TVN02";
+            this.buttonTvn02.UseVisualStyleBackColor = true;
+            this.buttonTvn02.Click += new System.EventHandler(this.buttonTvn02_Click);
             // 
             // groupBoxLogs
             // 
-            this.groupBoxLogs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxLogs.Controls.Add(this.textBoxTempD);
             this.groupBoxLogs.Controls.Add(this.textBoxTempC);
             this.groupBoxLogs.Controls.Add(this.textBoxVbat);
@@ -2126,13 +2100,22 @@ namespace TVNConfigSW
             this.groupBoxLogs.Controls.Add(this.label6);
             this.groupBoxLogs.Controls.Add(this.label5);
             this.groupBoxLogs.Controls.Add(this.label3);
+            this.groupBoxLogs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBoxLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBoxLogs.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxLogs.Location = new System.Drawing.Point(0, 0);
             this.groupBoxLogs.Name = "groupBoxLogs";
-            this.groupBoxLogs.Size = new System.Drawing.Size(220, 165);
+            this.groupBoxLogs.Size = new System.Drawing.Size(221, 165);
             this.groupBoxLogs.TabIndex = 0;
             this.groupBoxLogs.TabStop = false;
             this.groupBoxLogs.Text = "Signal Indicator";
+            // 
+            // textBoxTempD
+            // 
+            this.textBoxTempD.Location = new System.Drawing.Point(173, 125);
+            this.textBoxTempD.Name = "textBoxTempD";
+            this.textBoxTempD.Size = new System.Drawing.Size(38, 22);
+            this.textBoxTempD.TabIndex = 27;
             // 
             // textBoxTempC
             // 
@@ -2288,51 +2271,213 @@ namespace TVNConfigSW
             this.label3.Text = "PWR:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBoxDeviceErrorMessage1
+            // textBoxFirmwareFilePath1
             // 
-            this.textBoxDeviceErrorMessage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxDeviceErrorMessage1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDeviceErrorMessage1.ForeColor = System.Drawing.Color.Red;
-            this.textBoxDeviceErrorMessage1.Location = new System.Drawing.Point(3, 26);
-            this.textBoxDeviceErrorMessage1.Multiline = true;
-            this.textBoxDeviceErrorMessage1.Name = "textBoxDeviceErrorMessage1";
-            this.textBoxDeviceErrorMessage1.Size = new System.Drawing.Size(265, 136);
-            this.textBoxDeviceErrorMessage1.TabIndex = 1;
+            this.textBoxFirmwareFilePath1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxFirmwareFilePath1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFirmwareFilePath1.Location = new System.Drawing.Point(5, 504);
+            this.textBoxFirmwareFilePath1.Multiline = true;
+            this.textBoxFirmwareFilePath1.Name = "textBoxFirmwareFilePath1";
+            this.textBoxFirmwareFilePath1.Size = new System.Drawing.Size(140, 26);
+            this.textBoxFirmwareFilePath1.TabIndex = 5;
+            this.textBoxFirmwareFilePath1.TextChanged += new System.EventHandler(this.textBoxFirmwareFilePath1_TextChanged);
+            // 
+            // buttonRebootToDFUMode2
+            // 
+            this.buttonRebootToDFUMode2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRebootToDFUMode2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonRebootToDFUMode2.Font = new System.Drawing.Font("Georgia", 12F);
+            this.buttonRebootToDFUMode2.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonRebootToDFUMode2.ImageKey = "(none)";
+            this.buttonRebootToDFUMode2.Location = new System.Drawing.Point(0, 467);
+            this.buttonRebootToDFUMode2.Name = "buttonRebootToDFUMode2";
+            this.buttonRebootToDFUMode2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.buttonRebootToDFUMode2.Size = new System.Drawing.Size(219, 31);
+            this.buttonRebootToDFUMode2.TabIndex = 4;
+            this.buttonRebootToDFUMode2.Text = "Start Update";
+            this.buttonRebootToDFUMode2.UseVisualStyleBackColor = false;
+            this.buttonRebootToDFUMode2.Click += new System.EventHandler(this.buttonRebootToBootloaderMode_Click);
+            // 
+            // buttonOpenFWFile
+            // 
+            this.buttonOpenFWFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOpenFWFile.AutoSize = true;
+            this.buttonOpenFWFile.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOpenFWFile.Location = new System.Drawing.Point(151, 505);
+            this.buttonOpenFWFile.Name = "buttonOpenFWFile";
+            this.buttonOpenFWFile.Size = new System.Drawing.Size(68, 25);
+            this.buttonOpenFWFile.TabIndex = 3;
+            this.buttonOpenFWFile.Text = "Open file";
+            this.buttonOpenFWFile.UseVisualStyleBackColor = true;
+            this.buttonOpenFWFile.Click += new System.EventHandler(this.buttonOpenBinaryFWFile_Click);
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.splitContainer7);
+            this.splitContainer2.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
+            this.splitContainer2.Panel2.Controls.Add(this.splitter1);
+            this.splitContainer2.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.splitContainer2.Size = new System.Drawing.Size(1243, 801);
+            this.splitContainer2.SplitterDistance = 166;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // splitContainer7
+            // 
+            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer7.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer7.Name = "splitContainer7";
+            // 
+            // splitContainer7.Panel1
+            // 
+            this.splitContainer7.Panel1.AutoScroll = true;
+            this.splitContainer7.Panel1.Controls.Add(this.splitContainer15);
+            // 
+            // splitContainer7.Panel2
+            // 
+            this.splitContainer7.Panel2.Controls.Add(this.splitContainer16);
+            this.splitContainer7.Size = new System.Drawing.Size(1243, 166);
+            this.splitContainer7.SplitterDistance = 490;
+            this.splitContainer7.TabIndex = 0;
+            // 
+            // splitContainer15
+            // 
+            this.splitContainer15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer15.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer15.Name = "splitContainer15";
+            // 
+            // splitContainer15.Panel1
+            // 
+            this.splitContainer15.Panel1.Controls.Add(this.errorlog);
+            // 
+            // splitContainer15.Panel2
+            // 
+            this.splitContainer15.Panel2.Controls.Add(this.gprs4gStartus);
+            this.splitContainer15.Size = new System.Drawing.Size(490, 166);
+            this.splitContainer15.SplitterDistance = 256;
+            this.splitContainer15.TabIndex = 0;
             // 
             // errorlog
             // 
+            this.errorlog.Controls.Add(this.textBoxDeviceErrorMessage1);
             this.errorlog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.errorlog.Enabled = false;
             this.errorlog.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorlog.Location = new System.Drawing.Point(0, 0);
             this.errorlog.Name = "errorlog";
-            this.errorlog.Size = new System.Drawing.Size(490, 166);
+            this.errorlog.Size = new System.Drawing.Size(256, 166);
             this.errorlog.TabIndex = 0;
             this.errorlog.TabStop = false;
             this.errorlog.Text = "Error Logs";
             // 
+            // textBoxDeviceErrorMessage1
+            // 
+            this.textBoxDeviceErrorMessage1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxDeviceErrorMessage1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDeviceErrorMessage1.ForeColor = System.Drawing.Color.Red;
+            this.textBoxDeviceErrorMessage1.Location = new System.Drawing.Point(3, 18);
+            this.textBoxDeviceErrorMessage1.Multiline = true;
+            this.textBoxDeviceErrorMessage1.Name = "textBoxDeviceErrorMessage1";
+            this.textBoxDeviceErrorMessage1.Size = new System.Drawing.Size(250, 145);
+            this.textBoxDeviceErrorMessage1.TabIndex = 1;
+            // 
             // gprs4gStartus
             // 
-            this.gprs4gStartus.Controls.Add(this.textGPSstartus);
             this.gprs4gStartus.Controls.Add(this.textBoxGprsMessage1);
             this.gprs4gStartus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gprs4gStartus.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gprs4gStartus.Location = new System.Drawing.Point(0, 0);
             this.gprs4gStartus.Name = "gprs4gStartus";
-            this.gprs4gStartus.Size = new System.Drawing.Size(492, 166);
+            this.gprs4gStartus.Size = new System.Drawing.Size(230, 166);
             this.gprs4gStartus.TabIndex = 0;
             this.gprs4gStartus.TabStop = false;
             this.gprs4gStartus.Text = "GPRS - 4G Status";
             // 
             // textBoxGprsMessage1
             // 
-            this.textBoxGprsMessage1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBoxGprsMessage1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxGprsMessage1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGprsMessage1.Location = new System.Drawing.Point(3, 18);
             this.textBoxGprsMessage1.Multiline = true;
             this.textBoxGprsMessage1.Name = "textBoxGprsMessage1";
-            this.textBoxGprsMessage1.Size = new System.Drawing.Size(496, 145);
+            this.textBoxGprsMessage1.Size = new System.Drawing.Size(224, 145);
             this.textBoxGprsMessage1.TabIndex = 0;
+            // 
+            // splitContainer16
+            // 
+            this.splitContainer16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer16.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer16.Name = "splitContainer16";
+            // 
+            // splitContainer16.Panel1
+            // 
+            this.splitContainer16.Panel1.Controls.Add(this.groupBox2);
+            // 
+            // splitContainer16.Panel2
+            // 
+            this.splitContainer16.Panel2.Controls.Add(this.groupBox5);
+            this.splitContainer16.Size = new System.Drawing.Size(749, 166);
+            this.splitContainer16.SplitterDistance = 696;
+            this.splitContainer16.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textGPSstartus);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(696, 166);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "GPRS - 4G Status";
+            // 
+            // textGPSstartus
+            // 
+            this.textGPSstartus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textGPSstartus.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textGPSstartus.Location = new System.Drawing.Point(3, 18);
+            this.textGPSstartus.Multiline = true;
+            this.textGPSstartus.Name = "textGPSstartus";
+            this.textGPSstartus.Size = new System.Drawing.Size(690, 145);
+            this.textGPSstartus.TabIndex = 1;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.AutoSize = true;
+            this.groupBox5.Controls.Add(this.listBoxFirmwareUpdateLog1);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.Location = new System.Drawing.Point(0, 0);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(49, 166);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Update log";
+            // 
+            // listBoxFirmwareUpdateLog1
+            // 
+            this.listBoxFirmwareUpdateLog1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxFirmwareUpdateLog1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
+            this.listBoxFirmwareUpdateLog1.FormattingEnabled = true;
+            this.listBoxFirmwareUpdateLog1.ItemHeight = 24;
+            this.listBoxFirmwareUpdateLog1.Location = new System.Drawing.Point(3, 18);
+            this.listBoxFirmwareUpdateLog1.Name = "listBoxFirmwareUpdateLog1";
+            this.listBoxFirmwareUpdateLog1.Size = new System.Drawing.Size(43, 145);
+            this.listBoxFirmwareUpdateLog1.TabIndex = 0;
+            this.listBoxFirmwareUpdateLog1.SelectedIndexChanged += new System.EventHandler(this.listBoxFirmwareUpdateLog1_SelectedIndexChanged);
             // 
             // splitContainer3
             // 
@@ -2348,10 +2493,10 @@ namespace TVNConfigSW
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.splitContainer10);
             this.splitContainer3.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer3.Size = new System.Drawing.Size(983, 513);
-            this.splitContainer3.SplitterDistance = 470;
+            this.splitContainer3.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer3_Panel2_Paint);
+            this.splitContainer3.Size = new System.Drawing.Size(1240, 631);
+            this.splitContainer3.SplitterDistance = 588;
             this.splitContainer3.TabIndex = 1;
             // 
             // textBoxDeviceLogs
@@ -2367,147 +2512,14 @@ namespace TVNConfigSW
             this.textBoxDeviceLogs.Name = "textBoxDeviceLogs";
             this.textBoxDeviceLogs.ReadOnly = true;
             this.textBoxDeviceLogs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxDeviceLogs.Size = new System.Drawing.Size(983, 470);
+            this.textBoxDeviceLogs.Size = new System.Drawing.Size(1240, 588);
             this.textBoxDeviceLogs.TabIndex = 18;
-            // 
-            // splitContainer10
-            // 
-            this.splitContainer10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer10.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.splitContainer10.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer10.Name = "splitContainer10";
-            // 
-            // splitContainer10.Panel1
-            // 
-            this.splitContainer10.Panel1.Controls.Add(this.CheckboxUpdate);
-            this.splitContainer10.Panel1.Controls.Add(this.checkBoxDisplayGpsSentence);
-            this.splitContainer10.Panel1.Controls.Add(this.checkBoxAutoScrollDeviceLogs);
-            // 
-            // splitContainer10.Panel2
-            // 
-            this.splitContainer10.Panel2.Controls.Add(this.buttonExportTXT);
-            this.splitContainer10.Panel2.Controls.Add(this.buttonExit);
-            this.splitContainer10.Panel2.Controls.Add(this.buttonClearLogs);
-            this.splitContainer10.Panel2.Controls.Add(this.buttonClear1);
-            this.splitContainer10.Panel2.Controls.Add(this.buttonWriteLogs);
-            this.splitContainer10.Panel2.Controls.Add(this.buttonCopyTextBoxRcvData);
-            this.splitContainer10.Size = new System.Drawing.Size(983, 39);
-            this.splitContainer10.SplitterDistance = 232;
-            this.splitContainer10.TabIndex = 0;
-            // 
-            // CheckboxUpdate
-            // 
-            this.CheckboxUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CheckboxUpdate.AutoSize = true;
-            this.CheckboxUpdate.Location = new System.Drawing.Point(126, 0);
-            this.CheckboxUpdate.Name = "CheckboxUpdate";
-            this.CheckboxUpdate.Size = new System.Drawing.Size(105, 20);
-            this.CheckboxUpdate.TabIndex = 25;
-            this.CheckboxUpdate.Text = "Auto Update";
-            this.CheckboxUpdate.UseVisualStyleBackColor = true;
-            this.CheckboxUpdate.CheckedChanged += new System.EventHandler(this.CheckboxUpdate_CheckedChanged);
-            // 
-            // checkBoxDisplayGpsSentence
-            // 
-            this.checkBoxDisplayGpsSentence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBoxDisplayGpsSentence.AutoSize = true;
-            this.checkBoxDisplayGpsSentence.Checked = true;
-            this.checkBoxDisplayGpsSentence.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxDisplayGpsSentence.Location = new System.Drawing.Point(-1, 19);
-            this.checkBoxDisplayGpsSentence.Name = "checkBoxDisplayGpsSentence";
-            this.checkBoxDisplayGpsSentence.Size = new System.Drawing.Size(85, 20);
-            this.checkBoxDisplayGpsSentence.TabIndex = 0;
-            this.checkBoxDisplayGpsSentence.Text = " GPS Logs";
-            this.checkBoxDisplayGpsSentence.UseVisualStyleBackColor = true;
-            this.checkBoxDisplayGpsSentence.CheckedChanged += new System.EventHandler(this.checkBoxDisplayGpsSentence_CheckedChanged);
-            // 
-            // checkBoxAutoScrollDeviceLogs
-            // 
-            this.checkBoxAutoScrollDeviceLogs.AutoSize = true;
-            this.checkBoxAutoScrollDeviceLogs.Checked = true;
-            this.checkBoxAutoScrollDeviceLogs.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxAutoScrollDeviceLogs.Location = new System.Drawing.Point(-1, 0);
-            this.checkBoxAutoScrollDeviceLogs.Name = "checkBoxAutoScrollDeviceLogs";
-            this.checkBoxAutoScrollDeviceLogs.Size = new System.Drawing.Size(95, 20);
-            this.checkBoxAutoScrollDeviceLogs.TabIndex = 24;
-            this.checkBoxAutoScrollDeviceLogs.Text = "Auto scroll";
-            this.checkBoxAutoScrollDeviceLogs.UseVisualStyleBackColor = true;
-            this.checkBoxAutoScrollDeviceLogs.CheckedChanged += new System.EventHandler(this.checkBoxAutoScrollDeviceLogs_CheckedChanged);
-            // 
-            // buttonExportTXT
-            // 
-            this.buttonExportTXT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExportTXT.Location = new System.Drawing.Point(221, 3);
-            this.buttonExportTXT.Name = "buttonExportTXT";
-            this.buttonExportTXT.Size = new System.Drawing.Size(100, 33);
-            this.buttonExportTXT.TabIndex = 29;
-            this.buttonExportTXT.Text = "Export Logs";
-            this.buttonExportTXT.UseVisualStyleBackColor = true;
-            this.buttonExportTXT.Click += new System.EventHandler(this.buttonExportTXT_Click);
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
-            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExit.Location = new System.Drawing.Point(652, 0);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(95, 39);
-            this.buttonExit.TabIndex = 28;
-            this.buttonExit.Text = "Exit";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // buttonClearLogs
-            // 
-            this.buttonClearLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClearLogs.Location = new System.Drawing.Point(423, 3);
-            this.buttonClearLogs.Name = "buttonClearLogs";
-            this.buttonClearLogs.Size = new System.Drawing.Size(94, 33);
-            this.buttonClearLogs.TabIndex = 27;
-            this.buttonClearLogs.Text = "Clear Logs";
-            this.buttonClearLogs.UseVisualStyleBackColor = true;
-            this.buttonClearLogs.Click += new System.EventHandler(this.button7_Click_1);
-            // 
-            // buttonClear1
-            // 
-            this.buttonClear1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClear1.Location = new System.Drawing.Point(523, 3);
-            this.buttonClear1.Name = "buttonClear1";
-            this.buttonClear1.Size = new System.Drawing.Size(58, 33);
-            this.buttonClear1.TabIndex = 26;
-            this.buttonClear1.Text = "Clear";
-            this.buttonClear1.UseVisualStyleBackColor = true;
-            this.buttonClear1.Click += new System.EventHandler(this.buttonClear1_Click);
-            // 
-            // buttonWriteLogs
-            // 
-            this.buttonWriteLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonWriteLogs.Location = new System.Drawing.Point(327, 3);
-            this.buttonWriteLogs.Name = "buttonWriteLogs";
-            this.buttonWriteLogs.Size = new System.Drawing.Size(90, 33);
-            this.buttonWriteLogs.TabIndex = 24;
-            this.buttonWriteLogs.Text = "EX IMEI";
-            this.buttonWriteLogs.UseVisualStyleBackColor = true;
-            // 
-            // buttonCopyTextBoxRcvData
-            // 
-            this.buttonCopyTextBoxRcvData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCopyTextBoxRcvData.Location = new System.Drawing.Point(587, 3);
-            this.buttonCopyTextBoxRcvData.Name = "buttonCopyTextBoxRcvData";
-            this.buttonCopyTextBoxRcvData.Size = new System.Drawing.Size(59, 32);
-            this.buttonCopyTextBoxRcvData.TabIndex = 22;
-            this.buttonCopyTextBoxRcvData.Text = "Copy";
-            this.buttonCopyTextBoxRcvData.UseVisualStyleBackColor = true;
-            this.buttonCopyTextBoxRcvData.Click += new System.EventHandler(this.buttonCopyTextBoxRcvData_Click);
             // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 513);
+            this.splitter1.Size = new System.Drawing.Size(3, 631);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
@@ -2532,29 +2544,48 @@ namespace TVNConfigSW
             this.tabControlTestList.Location = new System.Drawing.Point(0, 0);
             this.tabControlTestList.Name = "tabControlTestList";
             this.tabControlTestList.SelectedIndex = 0;
-            this.tabControlTestList.Size = new System.Drawing.Size(1225, 727);
+            this.tabControlTestList.Size = new System.Drawing.Size(1482, 845);
             this.tabControlTestList.TabIndex = 35;
             // 
-            // textGPSstartus
+            // checkBox1
             // 
-            this.textGPSstartus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textGPSstartus.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textGPSstartus.Location = new System.Drawing.Point(499, 18);
-            this.textGPSstartus.Multiline = true;
-            this.textGPSstartus.Name = "textGPSstartus";
-            this.textGPSstartus.Size = new System.Drawing.Size(0, 145);
-            this.textGPSstartus.TabIndex = 1;
+            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(112, 390);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(85, 20);
+            this.checkBox1.TabIndex = 37;
+            this.checkBox1.Text = " GPS Logs";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // textBoxTempD
+            // checkBox2
             // 
-            this.textBoxTempD.Location = new System.Drawing.Point(173, 125);
-            this.textBoxTempD.Name = "textBoxTempD";
-            this.textBoxTempD.Size = new System.Drawing.Size(38, 22);
-            this.textBoxTempD.TabIndex = 27;
+            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(112, 338);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(105, 20);
+            this.checkBox2.TabIndex = 39;
+            this.checkBox2.Text = "Auto Update";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Location = new System.Drawing.Point(112, 364);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(95, 20);
+            this.checkBox3.TabIndex = 38;
+            this.checkBox3.Text = "Auto scroll";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
-            this.ClientSize = new System.Drawing.Size(1225, 749);
+            this.ClientSize = new System.Drawing.Size(1482, 867);
             this.Controls.Add(this.tabControlTestList);
             this.Controls.Add(this.statusStrip);
             this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2646,41 +2677,42 @@ namespace TVNConfigSW
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             this.splitContainer5.Panel1.ResumeLayout(false);
+            this.splitContainer5.Panel1.PerformLayout();
             this.splitContainer5.Panel2.ResumeLayout(false);
             this.splitContainer5.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
-            this.splitContainer6.Panel1.ResumeLayout(false);
-            this.splitContainer6.Panel1.PerformLayout();
-            this.splitContainer6.Panel2.ResumeLayout(false);
-            this.splitContainer6.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBoxLogs.ResumeLayout(false);
+            this.groupBoxLogs.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.splitContainer7.Panel1.ResumeLayout(false);
-            this.splitContainer7.Panel1.PerformLayout();
             this.splitContainer7.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.groupBoxLogs.ResumeLayout(false);
-            this.groupBoxLogs.PerformLayout();
+            this.splitContainer15.Panel1.ResumeLayout(false);
+            this.splitContainer15.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).EndInit();
+            this.splitContainer15.ResumeLayout(false);
+            this.errorlog.ResumeLayout(false);
+            this.errorlog.PerformLayout();
             this.gprs4gStartus.ResumeLayout(false);
             this.gprs4gStartus.PerformLayout();
+            this.splitContainer16.Panel1.ResumeLayout(false);
+            this.splitContainer16.Panel2.ResumeLayout(false);
+            this.splitContainer16.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).EndInit();
+            this.splitContainer16.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
-            this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.splitContainer10.Panel1.ResumeLayout(false);
-            this.splitContainer10.Panel1.PerformLayout();
-            this.splitContainer10.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
-            this.splitContainer10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
             this.splitContainer9.ResumeLayout(false);
             this.tabControlTestList.ResumeLayout(false);
@@ -4082,6 +4114,16 @@ namespace TVNConfigSW
         private void listBoxFirmwareUpdateLog1_SelectedIndexChanged(object sender, EventArgs e)
         {
                 
+        }
+
+        private void splitContainer5_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitContainer3_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
