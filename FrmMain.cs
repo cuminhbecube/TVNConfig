@@ -232,8 +232,8 @@ namespace TVNConfigSW
         private GroupBox groupBox2;
         private GroupBox groupBox3;
         private CheckBox checkBox1;
-        private CheckBox checkBox2;
         private CheckBox checkBox3;
+        private GroupBox groupBox4;
         private TabPage tabPage6;
 
         [System.Diagnostics.DebuggerStepThrough()]
@@ -364,19 +364,16 @@ namespace TVNConfigSW
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.textBoxCommandList = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBoxFwRev = new System.Windows.Forms.TextBox();
+            this.textBoxImei = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBoxCCID1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxBootloader = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxImei = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.buttonWriteSettingToDevice = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.checkBoxDisplayGpsSentence = new System.Windows.Forms.CheckBox();
-            this.CheckboxUpdate = new System.Windows.Forms.CheckBox();
-            this.checkBoxAutoScrollDeviceLogs = new System.Windows.Forms.CheckBox();
+            this.textBoxCommandList = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonExportTXT = new System.Windows.Forms.Button();
             this.buttonExImei = new System.Windows.Forms.Button();
@@ -409,9 +406,8 @@ namespace TVNConfigSW
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxFirmwareFilePath1 = new System.Windows.Forms.TextBox();
             this.buttonRebootToDFUMode2 = new System.Windows.Forms.Button();
-            this.buttonOpenFWFile = new System.Windows.Forms.Button();
+            this.buttonWriteSettingToDevice = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.splitContainer15 = new System.Windows.Forms.SplitContainer();
@@ -426,12 +422,16 @@ namespace TVNConfigSW
             this.listBoxFirmwareUpdateLog1 = new System.Windows.Forms.ListBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.textBoxDeviceLogs = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBoxFirmwareFilePath1 = new System.Windows.Forms.TextBox();
+            this.buttonOpenFWFile = new System.Windows.Forms.Button();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.CheckboxUpdate = new System.Windows.Forms.CheckBox();
+            this.checkBoxAutoScrollDeviceLogs = new System.Windows.Forms.CheckBox();
+            this.checkBoxDisplayGpsSentence = new System.Windows.Forms.CheckBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.tabControlTestList = new System.Windows.Forms.TabControl();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.statusStrip.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -494,6 +494,7 @@ namespace TVNConfigSW
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBoxLogs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -518,6 +519,7 @@ namespace TVNConfigSW
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
             this.splitContainer9.SuspendLayout();
@@ -554,7 +556,7 @@ namespace TVNConfigSW
             // progressBarFirmwareUpdate
             // 
             this.progressBarFirmwareUpdate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.progressBarFirmwareUpdate.ForeColor = System.Drawing.Color.Lime;
+            this.progressBarFirmwareUpdate.ForeColor = System.Drawing.Color.RoyalBlue;
             this.progressBarFirmwareUpdate.Maximum = 0;
             this.progressBarFirmwareUpdate.Name = "progressBarFirmwareUpdate";
             this.progressBarFirmwareUpdate.RightToLeftLayout = true;
@@ -1755,79 +1757,111 @@ namespace TVNConfigSW
             // 
             // splitContainer5.Panel1
             // 
-            this.splitContainer5.Panel1.Controls.Add(this.textBoxCommandList);
-            this.splitContainer5.Panel1.Controls.Add(this.textBoxFwRev);
-            this.splitContainer5.Panel1.Controls.Add(this.textBoxCCID1);
-            this.splitContainer5.Panel1.Controls.Add(this.textBoxBootloader);
-            this.splitContainer5.Panel1.Controls.Add(this.label41);
-            this.splitContainer5.Panel1.Controls.Add(this.label1);
-            this.splitContainer5.Panel1.Controls.Add(this.textBoxImei);
-            this.splitContainer5.Panel1.Controls.Add(this.label11);
-            this.splitContainer5.Panel1.Controls.Add(this.buttonWriteSettingToDevice);
-            this.splitContainer5.Panel1.Controls.Add(this.label4);
+            this.splitContainer5.Panel1.Controls.Add(this.groupBox4);
             this.splitContainer5.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.AutoScroll = true;
-            this.splitContainer5.Panel2.Controls.Add(this.checkBox1);
-            this.splitContainer5.Panel2.Controls.Add(this.checkBox2);
-            this.splitContainer5.Panel2.Controls.Add(this.checkBox3);
-            this.splitContainer5.Panel2.Controls.Add(this.checkBoxDisplayGpsSentence);
-            this.splitContainer5.Panel2.Controls.Add(this.CheckboxUpdate);
-            this.splitContainer5.Panel2.Controls.Add(this.checkBoxAutoScrollDeviceLogs);
+            this.splitContainer5.Panel2.Controls.Add(this.textBoxCommandList);
             this.splitContainer5.Panel2.Controls.Add(this.groupBox3);
             this.splitContainer5.Panel2.Controls.Add(this.groupBoxLogs);
-            this.splitContainer5.Panel2.Controls.Add(this.textBoxFirmwareFilePath1);
             this.splitContainer5.Panel2.Controls.Add(this.buttonRebootToDFUMode2);
-            this.splitContainer5.Panel2.Controls.Add(this.buttonOpenFWFile);
+            this.splitContainer5.Panel2.Controls.Add(this.buttonWriteSettingToDevice);
             this.splitContainer5.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer5.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer5_Panel2_Paint);
             this.splitContainer5.Size = new System.Drawing.Size(221, 736);
-            this.splitContainer5.SplitterDistance = 199;
+            this.splitContainer5.SplitterDistance = 118;
             this.splitContainer5.TabIndex = 0;
             // 
-            // textBoxCommandList
+            // groupBox4
             // 
-            this.textBoxCommandList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxCommandList.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCommandList.ForeColor = System.Drawing.Color.Blue;
-            this.textBoxCommandList.Location = new System.Drawing.Point(0, 107);
-            this.textBoxCommandList.Multiline = true;
-            this.textBoxCommandList.Name = "textBoxCommandList";
-            this.textBoxCommandList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxCommandList.Size = new System.Drawing.Size(218, 57);
-            this.textBoxCommandList.TabIndex = 1;
-            this.textBoxCommandList.Text = "*300190,990,099#";
+            this.groupBox4.Controls.Add(this.textBoxFwRev);
+            this.groupBox4.Controls.Add(this.textBoxImei);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.textBoxCCID1);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.textBoxBootloader);
+            this.groupBox4.Controls.Add(this.label41);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(0, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(221, 118);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Config Info";
             // 
             // textBoxFwRev
             // 
             this.textBoxFwRev.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxFwRev.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFwRev.Location = new System.Drawing.Point(150, 9);
+            this.textBoxFwRev.Location = new System.Drawing.Point(145, 25);
             this.textBoxFwRev.Name = "textBoxFwRev";
             this.textBoxFwRev.Size = new System.Drawing.Size(69, 22);
             this.textBoxFwRev.TabIndex = 1;
             this.textBoxFwRev.TextChanged += new System.EventHandler(this.textBoxFwRev_TextChanged);
+            // 
+            // textBoxImei
+            // 
+            this.textBoxImei.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxImei.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxImei.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxImei.Location = new System.Drawing.Point(48, 52);
+            this.textBoxImei.Name = "textBoxImei";
+            this.textBoxImei.ReadOnly = true;
+            this.textBoxImei.Size = new System.Drawing.Size(165, 22);
+            this.textBoxImei.TabIndex = 2;
+            this.textBoxImei.TextChanged += new System.EventHandler(this.textBoxImei_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(2, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "IMEI:";
             // 
             // textBoxCCID1
             // 
             this.textBoxCCID1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxCCID1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxCCID1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCCID1.Location = new System.Drawing.Point(54, 60);
+            this.textBoxCCID1.Location = new System.Drawing.Point(48, 80);
             this.textBoxCCID1.Name = "textBoxCCID1";
             this.textBoxCCID1.ReadOnly = true;
-            this.textBoxCCID1.Size = new System.Drawing.Size(164, 22);
+            this.textBoxCCID1.Size = new System.Drawing.Size(165, 22);
             this.textBoxCCID1.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 28);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 16);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Blder:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(108, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 16);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "FW:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxBootloader
             // 
             this.textBoxBootloader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxBootloader.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBootloader.Location = new System.Drawing.Point(53, 9);
+            this.textBoxBootloader.Location = new System.Drawing.Point(48, 25);
             this.textBoxBootloader.Name = "textBoxBootloader";
             this.textBoxBootloader.Size = new System.Drawing.Size(50, 22);
             this.textBoxBootloader.TabIndex = 38;
@@ -1836,105 +1870,28 @@ namespace TVNConfigSW
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(9, 63);
+            this.label41.Location = new System.Drawing.Point(4, 83);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(42, 16);
+            this.label41.Size = new System.Drawing.Size(43, 16);
             this.label41.TabIndex = 7;
             this.label41.Text = "CCID:";
             // 
-            // label1
+            // textBoxCommandList
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(109, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 16);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "FW:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textBoxImei
-            // 
-            this.textBoxImei.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxImei.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxImei.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxImei.Location = new System.Drawing.Point(53, 36);
-            this.textBoxImei.Name = "textBoxImei";
-            this.textBoxImei.ReadOnly = true;
-            this.textBoxImei.Size = new System.Drawing.Size(165, 22);
-            this.textBoxImei.TabIndex = 2;
-            this.textBoxImei.TextChanged += new System.EventHandler(this.textBoxImei_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 11);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 16);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Blder:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // buttonWriteSettingToDevice
-            // 
-            this.buttonWriteSettingToDevice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonWriteSettingToDevice.Location = new System.Drawing.Point(12, 170);
-            this.buttonWriteSettingToDevice.Name = "buttonWriteSettingToDevice";
-            this.buttonWriteSettingToDevice.Size = new System.Drawing.Size(195, 26);
-            this.buttonWriteSettingToDevice.TabIndex = 24;
-            this.buttonWriteSettingToDevice.Text = "Write Setting To Device";
-            this.buttonWriteSettingToDevice.UseVisualStyleBackColor = true;
-            this.buttonWriteSettingToDevice.Click += new System.EventHandler(this.buttonWriteSettingToDevice_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "IMEI:";
-            // 
-            // checkBoxDisplayGpsSentence
-            // 
-            this.checkBoxDisplayGpsSentence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBoxDisplayGpsSentence.AutoSize = true;
-            this.checkBoxDisplayGpsSentence.Checked = true;
-            this.checkBoxDisplayGpsSentence.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxDisplayGpsSentence.Location = new System.Drawing.Point(8, 390);
-            this.checkBoxDisplayGpsSentence.Name = "checkBoxDisplayGpsSentence";
-            this.checkBoxDisplayGpsSentence.Size = new System.Drawing.Size(85, 20);
-            this.checkBoxDisplayGpsSentence.TabIndex = 0;
-            this.checkBoxDisplayGpsSentence.Text = " GPS Logs";
-            this.checkBoxDisplayGpsSentence.UseVisualStyleBackColor = true;
-            this.checkBoxDisplayGpsSentence.CheckedChanged += new System.EventHandler(this.checkBoxDisplayGpsSentence_CheckedChanged);
-            // 
-            // CheckboxUpdate
-            // 
-            this.CheckboxUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CheckboxUpdate.AutoSize = true;
-            this.CheckboxUpdate.Location = new System.Drawing.Point(8, 338);
-            this.CheckboxUpdate.Name = "CheckboxUpdate";
-            this.CheckboxUpdate.Size = new System.Drawing.Size(105, 20);
-            this.CheckboxUpdate.TabIndex = 25;
-            this.CheckboxUpdate.Text = "Auto Update";
-            this.CheckboxUpdate.UseVisualStyleBackColor = true;
-            this.CheckboxUpdate.CheckedChanged += new System.EventHandler(this.CheckboxUpdate_CheckedChanged);
-            // 
-            // checkBoxAutoScrollDeviceLogs
-            // 
-            this.checkBoxAutoScrollDeviceLogs.AutoSize = true;
-            this.checkBoxAutoScrollDeviceLogs.Checked = true;
-            this.checkBoxAutoScrollDeviceLogs.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxAutoScrollDeviceLogs.Location = new System.Drawing.Point(8, 364);
-            this.checkBoxAutoScrollDeviceLogs.Name = "checkBoxAutoScrollDeviceLogs";
-            this.checkBoxAutoScrollDeviceLogs.Size = new System.Drawing.Size(95, 20);
-            this.checkBoxAutoScrollDeviceLogs.TabIndex = 24;
-            this.checkBoxAutoScrollDeviceLogs.Text = "Auto scroll";
-            this.checkBoxAutoScrollDeviceLogs.UseVisualStyleBackColor = true;
-            this.checkBoxAutoScrollDeviceLogs.CheckedChanged += new System.EventHandler(this.checkBoxAutoScrollDeviceLogs_CheckedChanged);
+            this.textBoxCommandList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxCommandList.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCommandList.ForeColor = System.Drawing.Color.Blue;
+            this.textBoxCommandList.Location = new System.Drawing.Point(4, 354);
+            this.textBoxCommandList.Multiline = true;
+            this.textBoxCommandList.Name = "textBoxCommandList";
+            this.textBoxCommandList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxCommandList.Size = new System.Drawing.Size(215, 57);
+            this.textBoxCommandList.TabIndex = 1;
+            this.textBoxCommandList.Text = "*300190,990,099#";
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.buttonExportTXT);
             this.groupBox3.Controls.Add(this.buttonExImei);
             this.groupBox3.Controls.Add(this.buttonClear1);
@@ -1946,18 +1903,17 @@ namespace TVNConfigSW
             this.groupBox3.Controls.Add(this.buttonDeleteFlash);
             this.groupBox3.Controls.Add(this.buttonTvn05);
             this.groupBox3.Controls.Add(this.buttonTvn02);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox3.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(0, 165);
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(-1, 165);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(221, 167);
+            this.groupBox3.Size = new System.Drawing.Size(222, 167);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Config Button";
             // 
             // buttonExportTXT
             // 
-            this.buttonExportTXT.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExportTXT.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExportTXT.Location = new System.Drawing.Point(5, 74);
             this.buttonExportTXT.Name = "buttonExportTXT";
             this.buttonExportTXT.Size = new System.Drawing.Size(100, 25);
@@ -1968,7 +1924,8 @@ namespace TVNConfigSW
             // 
             // buttonExImei
             // 
-            this.buttonExImei.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExImei.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExImei.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExImei.Location = new System.Drawing.Point(124, 136);
             this.buttonExImei.Name = "buttonExImei";
             this.buttonExImei.Size = new System.Drawing.Size(93, 23);
@@ -1979,7 +1936,8 @@ namespace TVNConfigSW
             // 
             // buttonClear1
             // 
-            this.buttonClear1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonClear1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear1.Location = new System.Drawing.Point(124, 105);
             this.buttonClear1.Name = "buttonClear1";
             this.buttonClear1.Size = new System.Drawing.Size(94, 25);
@@ -1990,7 +1948,7 @@ namespace TVNConfigSW
             // 
             // buttonClearLogs
             // 
-            this.buttonClearLogs.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClearLogs.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClearLogs.Location = new System.Drawing.Point(6, 105);
             this.buttonClearLogs.Name = "buttonClearLogs";
             this.buttonClearLogs.Size = new System.Drawing.Size(99, 25);
@@ -2001,7 +1959,7 @@ namespace TVNConfigSW
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(6, 136);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(99, 23);
@@ -2011,7 +1969,7 @@ namespace TVNConfigSW
             // 
             // buttonDefault
             // 
-            this.buttonDefault.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDefault.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDefault.Location = new System.Drawing.Point(3, 21);
             this.buttonDefault.Name = "buttonDefault";
             this.buttonDefault.Size = new System.Drawing.Size(73, 21);
@@ -2022,9 +1980,10 @@ namespace TVNConfigSW
             // 
             // buttonReset
             // 
-            this.buttonReset.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonReset.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReset.Location = new System.Drawing.Point(78, 21);
+            this.buttonReset.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonReset.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReset.Location = new System.Drawing.Point(77, 21);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(67, 21);
             this.buttonReset.TabIndex = 38;
@@ -2035,8 +1994,8 @@ namespace TVNConfigSW
             // buttonWriteLogs
             // 
             this.buttonWriteLogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonWriteLogs.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonWriteLogs.Location = new System.Drawing.Point(124, 74);
+            this.buttonWriteLogs.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonWriteLogs.Location = new System.Drawing.Point(125, 74);
             this.buttonWriteLogs.Name = "buttonWriteLogs";
             this.buttonWriteLogs.Size = new System.Drawing.Size(94, 25);
             this.buttonWriteLogs.TabIndex = 24;
@@ -2047,8 +2006,8 @@ namespace TVNConfigSW
             // 
             this.buttonDeleteFlash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDeleteFlash.Cursor = System.Windows.Forms.Cursors.Help;
-            this.buttonDeleteFlash.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeleteFlash.Location = new System.Drawing.Point(149, 21);
+            this.buttonDeleteFlash.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDeleteFlash.Location = new System.Drawing.Point(145, 21);
             this.buttonDeleteFlash.Name = "buttonDeleteFlash";
             this.buttonDeleteFlash.Size = new System.Drawing.Size(73, 21);
             this.buttonDeleteFlash.TabIndex = 25;
@@ -2059,10 +2018,10 @@ namespace TVNConfigSW
             // buttonTvn05
             // 
             this.buttonTvn05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonTvn05.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTvn05.Location = new System.Drawing.Point(158, 48);
+            this.buttonTvn05.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTvn05.Location = new System.Drawing.Point(159, 46);
             this.buttonTvn05.Name = "buttonTvn05";
-            this.buttonTvn05.Size = new System.Drawing.Size(57, 20);
+            this.buttonTvn05.Size = new System.Drawing.Size(57, 22);
             this.buttonTvn05.TabIndex = 36;
             this.buttonTvn05.Text = "TVN05";
             this.buttonTvn05.UseVisualStyleBackColor = true;
@@ -2070,7 +2029,7 @@ namespace TVNConfigSW
             // 
             // buttonTvn02
             // 
-            this.buttonTvn02.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTvn02.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTvn02.Location = new System.Drawing.Point(6, 46);
             this.buttonTvn02.Name = "buttonTvn02";
             this.buttonTvn02.Size = new System.Drawing.Size(61, 22);
@@ -2271,17 +2230,6 @@ namespace TVNConfigSW
             this.label3.Text = "PWR:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBoxFirmwareFilePath1
-            // 
-            this.textBoxFirmwareFilePath1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxFirmwareFilePath1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFirmwareFilePath1.Location = new System.Drawing.Point(5, 504);
-            this.textBoxFirmwareFilePath1.Multiline = true;
-            this.textBoxFirmwareFilePath1.Name = "textBoxFirmwareFilePath1";
-            this.textBoxFirmwareFilePath1.Size = new System.Drawing.Size(140, 26);
-            this.textBoxFirmwareFilePath1.TabIndex = 5;
-            this.textBoxFirmwareFilePath1.TextChanged += new System.EventHandler(this.textBoxFirmwareFilePath1_TextChanged);
-            // 
             // buttonRebootToDFUMode2
             // 
             this.buttonRebootToDFUMode2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -2290,27 +2238,26 @@ namespace TVNConfigSW
             this.buttonRebootToDFUMode2.Font = new System.Drawing.Font("Georgia", 12F);
             this.buttonRebootToDFUMode2.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonRebootToDFUMode2.ImageKey = "(none)";
-            this.buttonRebootToDFUMode2.Location = new System.Drawing.Point(0, 467);
+            this.buttonRebootToDFUMode2.Location = new System.Drawing.Point(-2, 550);
             this.buttonRebootToDFUMode2.Name = "buttonRebootToDFUMode2";
             this.buttonRebootToDFUMode2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.buttonRebootToDFUMode2.Size = new System.Drawing.Size(219, 31);
+            this.buttonRebootToDFUMode2.Size = new System.Drawing.Size(225, 48);
             this.buttonRebootToDFUMode2.TabIndex = 4;
             this.buttonRebootToDFUMode2.Text = "Start Update";
             this.buttonRebootToDFUMode2.UseVisualStyleBackColor = false;
             this.buttonRebootToDFUMode2.Click += new System.EventHandler(this.buttonRebootToBootloaderMode_Click);
             // 
-            // buttonOpenFWFile
+            // buttonWriteSettingToDevice
             // 
-            this.buttonOpenFWFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpenFWFile.AutoSize = true;
-            this.buttonOpenFWFile.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOpenFWFile.Location = new System.Drawing.Point(151, 505);
-            this.buttonOpenFWFile.Name = "buttonOpenFWFile";
-            this.buttonOpenFWFile.Size = new System.Drawing.Size(68, 25);
-            this.buttonOpenFWFile.TabIndex = 3;
-            this.buttonOpenFWFile.Text = "Open file";
-            this.buttonOpenFWFile.UseVisualStyleBackColor = true;
-            this.buttonOpenFWFile.Click += new System.EventHandler(this.buttonOpenBinaryFWFile_Click);
+            this.buttonWriteSettingToDevice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonWriteSettingToDevice.Location = new System.Drawing.Point(7, 417);
+            this.buttonWriteSettingToDevice.Name = "buttonWriteSettingToDevice";
+            this.buttonWriteSettingToDevice.Size = new System.Drawing.Size(209, 26);
+            this.buttonWriteSettingToDevice.TabIndex = 24;
+            this.buttonWriteSettingToDevice.Text = "Write Setting To Device";
+            this.buttonWriteSettingToDevice.UseVisualStyleBackColor = true;
+            this.buttonWriteSettingToDevice.Click += new System.EventHandler(this.buttonWriteSettingToDevice_Click);
             // 
             // splitContainer2
             // 
@@ -2350,7 +2297,7 @@ namespace TVNConfigSW
             // 
             this.splitContainer7.Panel2.Controls.Add(this.splitContainer16);
             this.splitContainer7.Size = new System.Drawing.Size(1243, 166);
-            this.splitContainer7.SplitterDistance = 490;
+            this.splitContainer7.SplitterDistance = 683;
             this.splitContainer7.TabIndex = 0;
             // 
             // splitContainer15
@@ -2366,8 +2313,8 @@ namespace TVNConfigSW
             // splitContainer15.Panel2
             // 
             this.splitContainer15.Panel2.Controls.Add(this.gprs4gStartus);
-            this.splitContainer15.Size = new System.Drawing.Size(490, 166);
-            this.splitContainer15.SplitterDistance = 256;
+            this.splitContainer15.Size = new System.Drawing.Size(683, 166);
+            this.splitContainer15.SplitterDistance = 356;
             this.splitContainer15.TabIndex = 0;
             // 
             // errorlog
@@ -2378,7 +2325,7 @@ namespace TVNConfigSW
             this.errorlog.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorlog.Location = new System.Drawing.Point(0, 0);
             this.errorlog.Name = "errorlog";
-            this.errorlog.Size = new System.Drawing.Size(256, 166);
+            this.errorlog.Size = new System.Drawing.Size(356, 166);
             this.errorlog.TabIndex = 0;
             this.errorlog.TabStop = false;
             this.errorlog.Text = "Error Logs";
@@ -2391,7 +2338,7 @@ namespace TVNConfigSW
             this.textBoxDeviceErrorMessage1.Location = new System.Drawing.Point(3, 18);
             this.textBoxDeviceErrorMessage1.Multiline = true;
             this.textBoxDeviceErrorMessage1.Name = "textBoxDeviceErrorMessage1";
-            this.textBoxDeviceErrorMessage1.Size = new System.Drawing.Size(250, 145);
+            this.textBoxDeviceErrorMessage1.Size = new System.Drawing.Size(350, 145);
             this.textBoxDeviceErrorMessage1.TabIndex = 1;
             // 
             // gprs4gStartus
@@ -2401,7 +2348,7 @@ namespace TVNConfigSW
             this.gprs4gStartus.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gprs4gStartus.Location = new System.Drawing.Point(0, 0);
             this.gprs4gStartus.Name = "gprs4gStartus";
-            this.gprs4gStartus.Size = new System.Drawing.Size(230, 166);
+            this.gprs4gStartus.Size = new System.Drawing.Size(323, 166);
             this.gprs4gStartus.TabIndex = 0;
             this.gprs4gStartus.TabStop = false;
             this.gprs4gStartus.Text = "GPRS - 4G Status";
@@ -2413,7 +2360,7 @@ namespace TVNConfigSW
             this.textBoxGprsMessage1.Location = new System.Drawing.Point(3, 18);
             this.textBoxGprsMessage1.Multiline = true;
             this.textBoxGprsMessage1.Name = "textBoxGprsMessage1";
-            this.textBoxGprsMessage1.Size = new System.Drawing.Size(224, 145);
+            this.textBoxGprsMessage1.Size = new System.Drawing.Size(317, 145);
             this.textBoxGprsMessage1.TabIndex = 0;
             // 
             // splitContainer16
@@ -2429,8 +2376,8 @@ namespace TVNConfigSW
             // splitContainer16.Panel2
             // 
             this.splitContainer16.Panel2.Controls.Add(this.groupBox5);
-            this.splitContainer16.Size = new System.Drawing.Size(749, 166);
-            this.splitContainer16.SplitterDistance = 696;
+            this.splitContainer16.Size = new System.Drawing.Size(556, 166);
+            this.splitContainer16.SplitterDistance = 393;
             this.splitContainer16.TabIndex = 0;
             // 
             // groupBox2
@@ -2440,10 +2387,11 @@ namespace TVNConfigSW
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(696, 166);
+            this.groupBox2.Size = new System.Drawing.Size(393, 166);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "GPRS - 4G Status";
+            this.groupBox2.Text = "GPS Logs";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter_1);
             // 
             // textGPSstartus
             // 
@@ -2452,7 +2400,7 @@ namespace TVNConfigSW
             this.textGPSstartus.Location = new System.Drawing.Point(3, 18);
             this.textGPSstartus.Multiline = true;
             this.textGPSstartus.Name = "textGPSstartus";
-            this.textGPSstartus.Size = new System.Drawing.Size(690, 145);
+            this.textGPSstartus.Size = new System.Drawing.Size(387, 145);
             this.textGPSstartus.TabIndex = 1;
             // 
             // groupBox5
@@ -2462,7 +2410,7 @@ namespace TVNConfigSW
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(0, 0);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(49, 166);
+            this.groupBox5.Size = new System.Drawing.Size(159, 166);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Update log";
@@ -2475,7 +2423,7 @@ namespace TVNConfigSW
             this.listBoxFirmwareUpdateLog1.ItemHeight = 24;
             this.listBoxFirmwareUpdateLog1.Location = new System.Drawing.Point(3, 18);
             this.listBoxFirmwareUpdateLog1.Name = "listBoxFirmwareUpdateLog1";
-            this.listBoxFirmwareUpdateLog1.Size = new System.Drawing.Size(43, 145);
+            this.listBoxFirmwareUpdateLog1.Size = new System.Drawing.Size(153, 145);
             this.listBoxFirmwareUpdateLog1.TabIndex = 0;
             this.listBoxFirmwareUpdateLog1.SelectedIndexChanged += new System.EventHandler(this.listBoxFirmwareUpdateLog1_SelectedIndexChanged);
             // 
@@ -2493,10 +2441,17 @@ namespace TVNConfigSW
             // 
             // splitContainer3.Panel2
             // 
+            this.splitContainer3.Panel2.Controls.Add(this.checkBox1);
+            this.splitContainer3.Panel2.Controls.Add(this.textBoxFirmwareFilePath1);
+            this.splitContainer3.Panel2.Controls.Add(this.buttonOpenFWFile);
+            this.splitContainer3.Panel2.Controls.Add(this.checkBox3);
+            this.splitContainer3.Panel2.Controls.Add(this.CheckboxUpdate);
+            this.splitContainer3.Panel2.Controls.Add(this.checkBoxAutoScrollDeviceLogs);
+            this.splitContainer3.Panel2.Controls.Add(this.checkBoxDisplayGpsSentence);
             this.splitContainer3.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer3.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer3_Panel2_Paint);
             this.splitContainer3.Size = new System.Drawing.Size(1240, 631);
-            this.splitContainer3.SplitterDistance = 588;
+            this.splitContainer3.SplitterDistance = 599;
             this.splitContainer3.TabIndex = 1;
             // 
             // textBoxDeviceLogs
@@ -2512,8 +2467,93 @@ namespace TVNConfigSW
             this.textBoxDeviceLogs.Name = "textBoxDeviceLogs";
             this.textBoxDeviceLogs.ReadOnly = true;
             this.textBoxDeviceLogs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxDeviceLogs.Size = new System.Drawing.Size(1240, 588);
+            this.textBoxDeviceLogs.Size = new System.Drawing.Size(1240, 599);
             this.textBoxDeviceLogs.TabIndex = 18;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(312, 5);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(116, 20);
+            this.checkBox1.TabIndex = 37;
+            this.checkBox1.Text = " GPRS-4G Logs";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // textBoxFirmwareFilePath1
+            // 
+            this.textBoxFirmwareFilePath1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxFirmwareFilePath1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFirmwareFilePath1.Location = new System.Drawing.Point(795, 2);
+            this.textBoxFirmwareFilePath1.Multiline = true;
+            this.textBoxFirmwareFilePath1.Name = "textBoxFirmwareFilePath1";
+            this.textBoxFirmwareFilePath1.Size = new System.Drawing.Size(353, 26);
+            this.textBoxFirmwareFilePath1.TabIndex = 5;
+            this.textBoxFirmwareFilePath1.TextChanged += new System.EventHandler(this.textBoxFirmwareFilePath1_TextChanged);
+            // 
+            // buttonOpenFWFile
+            // 
+            this.buttonOpenFWFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOpenFWFile.AutoSize = true;
+            this.buttonOpenFWFile.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOpenFWFile.Location = new System.Drawing.Point(1154, 2);
+            this.buttonOpenFWFile.Name = "buttonOpenFWFile";
+            this.buttonOpenFWFile.Size = new System.Drawing.Size(68, 25);
+            this.buttonOpenFWFile.TabIndex = 3;
+            this.buttonOpenFWFile.Text = "Open file";
+            this.buttonOpenFWFile.UseVisualStyleBackColor = true;
+            this.buttonOpenFWFile.Click += new System.EventHandler(this.buttonOpenBinaryFWFile_Click);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Location = new System.Drawing.Point(434, 5);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(92, 20);
+            this.checkBox3.TabIndex = 38;
+            this.checkBox3.Text = "Error Logs";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // CheckboxUpdate
+            // 
+            this.CheckboxUpdate.AutoSize = true;
+            this.CheckboxUpdate.Location = new System.Drawing.Point(9, 5);
+            this.CheckboxUpdate.Name = "CheckboxUpdate";
+            this.CheckboxUpdate.Size = new System.Drawing.Size(105, 20);
+            this.CheckboxUpdate.TabIndex = 25;
+            this.CheckboxUpdate.Text = "Auto Update";
+            this.CheckboxUpdate.UseVisualStyleBackColor = true;
+            this.CheckboxUpdate.CheckedChanged += new System.EventHandler(this.CheckboxUpdate_CheckedChanged);
+            // 
+            // checkBoxAutoScrollDeviceLogs
+            // 
+            this.checkBoxAutoScrollDeviceLogs.AutoSize = true;
+            this.checkBoxAutoScrollDeviceLogs.Checked = true;
+            this.checkBoxAutoScrollDeviceLogs.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxAutoScrollDeviceLogs.Location = new System.Drawing.Point(120, 5);
+            this.checkBoxAutoScrollDeviceLogs.Name = "checkBoxAutoScrollDeviceLogs";
+            this.checkBoxAutoScrollDeviceLogs.Size = new System.Drawing.Size(95, 20);
+            this.checkBoxAutoScrollDeviceLogs.TabIndex = 24;
+            this.checkBoxAutoScrollDeviceLogs.Text = "Auto scroll";
+            this.checkBoxAutoScrollDeviceLogs.UseVisualStyleBackColor = true;
+            this.checkBoxAutoScrollDeviceLogs.CheckedChanged += new System.EventHandler(this.checkBoxAutoScrollDeviceLogs_CheckedChanged);
+            // 
+            // checkBoxDisplayGpsSentence
+            // 
+            this.checkBoxDisplayGpsSentence.AutoSize = true;
+            this.checkBoxDisplayGpsSentence.Checked = true;
+            this.checkBoxDisplayGpsSentence.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxDisplayGpsSentence.Location = new System.Drawing.Point(221, 5);
+            this.checkBoxDisplayGpsSentence.Name = "checkBoxDisplayGpsSentence";
+            this.checkBoxDisplayGpsSentence.Size = new System.Drawing.Size(85, 20);
+            this.checkBoxDisplayGpsSentence.TabIndex = 0;
+            this.checkBoxDisplayGpsSentence.Text = " GPS Logs";
+            this.checkBoxDisplayGpsSentence.UseVisualStyleBackColor = true;
+            this.checkBoxDisplayGpsSentence.CheckedChanged += new System.EventHandler(this.checkBoxDisplayGpsSentence_CheckedChanged);
             // 
             // splitter1
             // 
@@ -2546,42 +2586,6 @@ namespace TVNConfigSW
             this.tabControlTestList.SelectedIndex = 0;
             this.tabControlTestList.Size = new System.Drawing.Size(1482, 845);
             this.tabControlTestList.TabIndex = 35;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(112, 390);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(85, 20);
-            this.checkBox1.TabIndex = 37;
-            this.checkBox1.Text = " GPS Logs";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(112, 338);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(105, 20);
-            this.checkBox2.TabIndex = 39;
-            this.checkBox2.Text = "Auto Update";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Location = new System.Drawing.Point(112, 364);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(95, 20);
-            this.checkBox3.TabIndex = 38;
-            this.checkBox3.Text = "Auto scroll";
-            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
@@ -2677,11 +2681,12 @@ namespace TVNConfigSW
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             this.splitContainer5.Panel1.ResumeLayout(false);
-            this.splitContainer5.Panel1.PerformLayout();
             this.splitContainer5.Panel2.ResumeLayout(false);
             this.splitContainer5.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBoxLogs.ResumeLayout(false);
             this.groupBoxLogs.PerformLayout();
@@ -2711,6 +2716,8 @@ namespace TVNConfigSW
             this.groupBox5.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
@@ -3240,7 +3247,7 @@ namespace TVNConfigSW
                     textBoxImei.Text = imei[1];
                     textBoxImei2.Text = imei[1];
                 }
-                else if (line.Contains("+CCID:"))
+                else if (line.Contains("-I-SimCard CCID:"))
                 {
                     string[] CCID = line.Split(':');
                     textBoxCCID.Text = CCID[1];
@@ -3451,7 +3458,6 @@ namespace TVNConfigSW
         const string CMD_RESET = "*300190,991#";
         const string CMD_TVN02 = "*000000,001,300190# \n  \r*300190,011,e-connect,,#\n  \r*300190,015,1,gps.tracking.vn,18860#\n  \r*300190,016,1,#\n  \r*300190,018,30,999#";
         const string CMD_TVN05 = "*000000,001,300190# \n  \r*300190,011,e-connect,,#\n  \r*300190,015,1,gps.tracking.vn,20022#\n  \r*300190,016,1,#\n  \r*300190,018,30,999#";
-        const string CMD_TVND09 = "*000000,001,300190# \n  \r*300190,011,e-connect,,#\n  \r*300190,015,1,gps.tracking.vn,18888#\n  \r*300190,016,1,#\n  \r*300190,018,30,999#";
         private void buttonOpenBinaryFWFile_Click(object sender, EventArgs e)
         {
             // Load directory of picture and init image infor
@@ -3980,6 +3986,12 @@ namespace TVNConfigSW
             textBoxTime.Clear();
             textBoxPos.Clear();
             textBoxIO.Clear();
+            listBoxFirmwareUpdateLog1.ClearSelected();
+            textBoxGprsMessage.Clear();
+            textBoxGpsMessage.Clear();
+            textBoxTempD.Clear();
+            textGPSstartus.Clear();
+
         }
 
         private void textBoxADB_TextChanged(object sender, EventArgs e)
@@ -3987,14 +3999,6 @@ namespace TVNConfigSW
 
         }
 
-        private void buttonTVND09_Click(object sender, EventArgs e)
-        {
-            if (isDeviceConnected)
-            {
-                // Read command from text box
-                commandStrQueue.Enqueue(CMD_TVND09);
-            }
-        }
 
         private void label11_Click(object sender, EventArgs e)
         {
@@ -4122,6 +4126,11 @@ namespace TVNConfigSW
         }
 
         private void splitContainer3_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter_1(object sender, EventArgs e)
         {
 
         }
