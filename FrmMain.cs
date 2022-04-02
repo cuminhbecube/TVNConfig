@@ -231,8 +231,8 @@ namespace TVNConfigSW
         private SplitContainer splitContainer16;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
-        private CheckBox checkBox1;
-        private CheckBox checkBox3;
+        private CheckBox checkBoxGPRS4Glogs;
+        private CheckBox checkBoxErrorLog;
         private GroupBox groupBox4;
         private TabPage tabPage6;
 
@@ -422,10 +422,10 @@ namespace TVNConfigSW
             this.listBoxFirmwareUpdateLog1 = new System.Windows.Forms.ListBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.textBoxDeviceLogs = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxGPRS4Glogs = new System.Windows.Forms.CheckBox();
             this.textBoxFirmwareFilePath1 = new System.Windows.Forms.TextBox();
             this.buttonOpenFWFile = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxErrorLog = new System.Windows.Forms.CheckBox();
             this.CheckboxUpdate = new System.Windows.Forms.CheckBox();
             this.checkBoxAutoScrollDeviceLogs = new System.Windows.Forms.CheckBox();
             this.checkBoxDisplayGpsSentence = new System.Windows.Forms.CheckBox();
@@ -2441,10 +2441,10 @@ namespace TVNConfigSW
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.checkBox1);
+            this.splitContainer3.Panel2.Controls.Add(this.checkBoxGPRS4Glogs);
             this.splitContainer3.Panel2.Controls.Add(this.textBoxFirmwareFilePath1);
             this.splitContainer3.Panel2.Controls.Add(this.buttonOpenFWFile);
-            this.splitContainer3.Panel2.Controls.Add(this.checkBox3);
+            this.splitContainer3.Panel2.Controls.Add(this.checkBoxErrorLog);
             this.splitContainer3.Panel2.Controls.Add(this.CheckboxUpdate);
             this.splitContainer3.Panel2.Controls.Add(this.checkBoxAutoScrollDeviceLogs);
             this.splitContainer3.Panel2.Controls.Add(this.checkBoxDisplayGpsSentence);
@@ -2470,21 +2470,21 @@ namespace TVNConfigSW
             this.textBoxDeviceLogs.Size = new System.Drawing.Size(1240, 599);
             this.textBoxDeviceLogs.TabIndex = 18;
             // 
-            // checkBox1
+            // checkBoxGPRS4Glogs
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(312, 5);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(116, 20);
-            this.checkBox1.TabIndex = 37;
-            this.checkBox1.Text = " GPRS-4G Logs";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxGPRS4Glogs.AutoSize = true;
+            this.checkBoxGPRS4Glogs.Checked = true;
+            this.checkBoxGPRS4Glogs.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGPRS4Glogs.Location = new System.Drawing.Point(312, 5);
+            this.checkBoxGPRS4Glogs.Name = "checkBoxGPRS4Glogs";
+            this.checkBoxGPRS4Glogs.Size = new System.Drawing.Size(116, 20);
+            this.checkBoxGPRS4Glogs.TabIndex = 37;
+            this.checkBoxGPRS4Glogs.Text = " GPRS-4G Logs";
+            this.checkBoxGPRS4Glogs.UseVisualStyleBackColor = true;
             // 
             // textBoxFirmwareFilePath1
             // 
-            this.textBoxFirmwareFilePath1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxFirmwareFilePath1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxFirmwareFilePath1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFirmwareFilePath1.Location = new System.Drawing.Point(795, 2);
             this.textBoxFirmwareFilePath1.Multiline = true;
@@ -2506,17 +2506,17 @@ namespace TVNConfigSW
             this.buttonOpenFWFile.UseVisualStyleBackColor = true;
             this.buttonOpenFWFile.Click += new System.EventHandler(this.buttonOpenBinaryFWFile_Click);
             // 
-            // checkBox3
+            // checkBoxErrorLog
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Location = new System.Drawing.Point(434, 5);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(92, 20);
-            this.checkBox3.TabIndex = 38;
-            this.checkBox3.Text = "Error Logs";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxErrorLog.AutoSize = true;
+            this.checkBoxErrorLog.Checked = true;
+            this.checkBoxErrorLog.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxErrorLog.Location = new System.Drawing.Point(434, 5);
+            this.checkBoxErrorLog.Name = "checkBoxErrorLog";
+            this.checkBoxErrorLog.Size = new System.Drawing.Size(92, 20);
+            this.checkBoxErrorLog.TabIndex = 38;
+            this.checkBoxErrorLog.Text = "Error Logs";
+            this.checkBoxErrorLog.UseVisualStyleBackColor = true;
             // 
             // CheckboxUpdate
             // 
@@ -3204,12 +3204,20 @@ namespace TVNConfigSW
                     (line.Contains("+CSQ")))
                 {
                     AppendLineToTextBox(textBoxGprsMessage1, line, true);
+                    if (checkBoxGPRS4Glogs.Checked == false)
+                    {
+                        logEnable = false;
+                    }
                 }
                 else if (line.Contains("-E-") || line.Contains("-E0") ||
                      line.Contains("Can not") || line.Contains("can not") ||
                       line.Contains("failed") || line.Contains("fail") || line.Contains("false"))
                 {
                     AppendLineToTextBox(textBoxDeviceErrorMessage1, line, true);
+                    if (checkBoxErrorLog.Checked == false)
+                    {
+                        logEnable = false;
+                    }
                 }
                 else if (line.Contains("-BLD-"))
                 {
@@ -3345,7 +3353,7 @@ namespace TVNConfigSW
 
                     textBoxPower.Text = groups3[1].Value;
 
-                    var regex4 = new Regex(@"I/O:(\d*):");
+                    var regex4 = new Regex(@"I/O : (\d*),");
                     var groups4 = regex4.Match(line).Groups; 
                     var regexc = new Regex(@"I/O |(\d*)");
                     var groupsc = regex4.Match(line).Groups;
