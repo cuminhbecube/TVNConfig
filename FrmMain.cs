@@ -207,8 +207,6 @@ namespace TVNConfigSW
         private Label label6;
         private Label label5;
         private Label label3;
-        private TextBox textBoxDeviceErrorMessage1;
-        private GroupBox errorlog;
         private GroupBox gprs4gStartus;
         private TextBox textBoxGprsMessage1;
         private SplitContainer splitContainer3;
@@ -235,6 +233,8 @@ namespace TVNConfigSW
         private CheckBox checkBoxErrorLog;
         private GroupBox groupBox4;
         private Button buttonTvnTest;
+        private GroupBox groupBox13;
+        private TextBox textBoxErrorLog;
         private TabPage tabPage6;
 
         [System.Diagnostics.DebuggerStepThrough()]
@@ -413,8 +413,6 @@ namespace TVNConfigSW
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.splitContainer15 = new System.Windows.Forms.SplitContainer();
-            this.errorlog = new System.Windows.Forms.GroupBox();
-            this.textBoxDeviceErrorMessage1 = new System.Windows.Forms.TextBox();
             this.gprs4gStartus = new System.Windows.Forms.GroupBox();
             this.textBoxGprsMessage1 = new System.Windows.Forms.TextBox();
             this.splitContainer16 = new System.Windows.Forms.SplitContainer();
@@ -434,6 +432,8 @@ namespace TVNConfigSW
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.tabControlTestList = new System.Windows.Forms.TabControl();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.textBoxErrorLog = new System.Windows.Forms.TextBox();
             this.statusStrip.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -511,7 +511,6 @@ namespace TVNConfigSW
             this.splitContainer15.Panel1.SuspendLayout();
             this.splitContainer15.Panel2.SuspendLayout();
             this.splitContainer15.SuspendLayout();
-            this.errorlog.SuspendLayout();
             this.gprs4gStartus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).BeginInit();
             this.splitContainer16.Panel1.SuspendLayout();
@@ -526,6 +525,7 @@ namespace TVNConfigSW
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
             this.splitContainer9.SuspendLayout();
             this.tabControlTestList.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
@@ -2326,7 +2326,7 @@ namespace TVNConfigSW
             // 
             // splitContainer15.Panel1
             // 
-            this.splitContainer15.Panel1.Controls.Add(this.errorlog);
+            this.splitContainer15.Panel1.Controls.Add(this.groupBox13);
             // 
             // splitContainer15.Panel2
             // 
@@ -2334,30 +2334,6 @@ namespace TVNConfigSW
             this.splitContainer15.Size = new System.Drawing.Size(739, 166);
             this.splitContainer15.SplitterDistance = 385;
             this.splitContainer15.TabIndex = 0;
-            // 
-            // errorlog
-            // 
-            this.errorlog.Controls.Add(this.textBoxDeviceErrorMessage1);
-            this.errorlog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.errorlog.Enabled = false;
-            this.errorlog.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorlog.Location = new System.Drawing.Point(0, 0);
-            this.errorlog.Name = "errorlog";
-            this.errorlog.Size = new System.Drawing.Size(385, 166);
-            this.errorlog.TabIndex = 0;
-            this.errorlog.TabStop = false;
-            this.errorlog.Text = "Error Logs";
-            // 
-            // textBoxDeviceErrorMessage1
-            // 
-            this.textBoxDeviceErrorMessage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxDeviceErrorMessage1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDeviceErrorMessage1.ForeColor = System.Drawing.Color.Red;
-            this.textBoxDeviceErrorMessage1.Location = new System.Drawing.Point(3, 18);
-            this.textBoxDeviceErrorMessage1.Multiline = true;
-            this.textBoxDeviceErrorMessage1.Name = "textBoxDeviceErrorMessage1";
-            this.textBoxDeviceErrorMessage1.Size = new System.Drawing.Size(379, 145);
-            this.textBoxDeviceErrorMessage1.TabIndex = 1;
             // 
             // gprs4gStartus
             // 
@@ -2598,6 +2574,28 @@ namespace TVNConfigSW
             this.tabControlTestList.Size = new System.Drawing.Size(1482, 845);
             this.tabControlTestList.TabIndex = 35;
             // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.textBoxErrorLog);
+            this.groupBox13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox13.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.Location = new System.Drawing.Point(0, 0);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(385, 166);
+            this.groupBox13.TabIndex = 0;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Error Logs";
+            // 
+            // textBoxErrorLog
+            // 
+            this.textBoxErrorLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxErrorLog.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxErrorLog.Location = new System.Drawing.Point(3, 18);
+            this.textBoxErrorLog.Multiline = true;
+            this.textBoxErrorLog.Name = "textBoxErrorLog";
+            this.textBoxErrorLog.Size = new System.Drawing.Size(379, 145);
+            this.textBoxErrorLog.TabIndex = 1;
+            // 
             // FrmMain
             // 
             this.ClientSize = new System.Drawing.Size(1482, 867);
@@ -2713,8 +2711,6 @@ namespace TVNConfigSW
             this.splitContainer15.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).EndInit();
             this.splitContainer15.ResumeLayout(false);
-            this.errorlog.ResumeLayout(false);
-            this.errorlog.PerformLayout();
             this.gprs4gStartus.ResumeLayout(false);
             this.gprs4gStartus.PerformLayout();
             this.splitContainer16.Panel1.ResumeLayout(false);
@@ -2734,6 +2730,8 @@ namespace TVNConfigSW
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
             this.splitContainer9.ResumeLayout(false);
             this.tabControlTestList.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3224,7 +3222,7 @@ namespace TVNConfigSW
                      line.Contains("Can not") || line.Contains("can not") ||
                       line.Contains("failed") || line.Contains("fail") || line.Contains("false"))
                 {
-                    AppendLineToTextBox(textBoxDeviceErrorMessage1, line, true);
+                    AppendLineToTextBox(textBoxErrorLog, line, true);
                     if (checkBoxErrorLog.Checked == false)
                     {
                         logEnable = false;
@@ -3409,7 +3407,7 @@ namespace TVNConfigSW
                 commandStrQueue.TryDequeue(out cmd);
                 serialPort.WriteLine(cmd);
                 //listBoxLog.Log(Level.Info, "Written command to client: " + cmd);
-                textBoxDeviceErrorMessage1.Text += "Written command to client: " + cmd + Environment.NewLine;
+                textBoxErrorLog.Text += "Written command to client: " + cmd + Environment.NewLine;
             }
 
             // Check and send bootloader packet to device
@@ -3902,7 +3900,7 @@ namespace TVNConfigSW
 
         private void buttonClearLog_Click(object sender, EventArgs e)
         {
-            textBoxDeviceErrorMessage1.Clear();
+            textBoxErrorLog.Clear();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -3916,11 +3914,10 @@ namespace TVNConfigSW
         {
             textBoxDeviceLogs.Clear();
             textBoxImei.Clear();
-            textBoxDeviceErrorMessage1.Clear();
+            textBoxErrorLog.Clear();
             textBoxGprsMessage1.Clear();
             textBoxDeviceLogs.Clear();
             textBoxImei.Clear();
-            textBoxDeviceErrorMessage1.Clear();
             textBoxGprsMessage1.Clear();
             textBoxADA.Clear();
             textBoxADB.Clear();
