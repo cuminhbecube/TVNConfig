@@ -955,7 +955,6 @@ namespace TVNConfigSW
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(339, 627);
             this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // panel4
             // 
@@ -1135,7 +1134,6 @@ namespace TVNConfigSW
             this.groupBoxCRER.TabIndex = 0;
             this.groupBoxCRER.TabStop = false;
             this.groupBoxCRER.Text = "Backlog NO.";
-            this.groupBoxCRER.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // textBoxCRER
             // 
@@ -1496,7 +1494,6 @@ namespace TVNConfigSW
             this.label12.Size = new System.Drawing.Size(53, 16);
             this.label12.TabIndex = 0;
             this.label12.Text = "POWER";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // panel12
             // 
@@ -1771,7 +1768,6 @@ namespace TVNConfigSW
             this.splitContainer5.Panel2.Controls.Add(this.buttonRebootToDFUMode2);
             this.splitContainer5.Panel2.Controls.Add(this.buttonWriteSettingToDevice);
             this.splitContainer5.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer5.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer5_Panel2_Paint);
             this.splitContainer5.Size = new System.Drawing.Size(221, 736);
             this.splitContainer5.SplitterDistance = 118;
             this.splitContainer5.TabIndex = 0;
@@ -1804,7 +1800,6 @@ namespace TVNConfigSW
             this.textBoxFwRev.Name = "textBoxFwRev";
             this.textBoxFwRev.Size = new System.Drawing.Size(69, 22);
             this.textBoxFwRev.TabIndex = 1;
-            this.textBoxFwRev.TextChanged += new System.EventHandler(this.textBoxFwRev_TextChanged);
             // 
             // textBoxImei
             // 
@@ -1816,7 +1811,6 @@ namespace TVNConfigSW
             this.textBoxImei.ReadOnly = true;
             this.textBoxImei.Size = new System.Drawing.Size(165, 22);
             this.textBoxImei.TabIndex = 2;
-            this.textBoxImei.TextChanged += new System.EventHandler(this.textBoxImei_TextChanged);
             // 
             // label4
             // 
@@ -1846,7 +1840,6 @@ namespace TVNConfigSW
             this.label11.Size = new System.Drawing.Size(42, 16);
             this.label11.TabIndex = 37;
             this.label11.Text = "Blder:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label1
             // 
@@ -1856,7 +1849,6 @@ namespace TVNConfigSW
             this.label1.Size = new System.Drawing.Size(31, 16);
             this.label1.TabIndex = 36;
             this.label1.Text = "FW:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxBootloader
             // 
@@ -1867,7 +1859,6 @@ namespace TVNConfigSW
             this.textBoxBootloader.Name = "textBoxBootloader";
             this.textBoxBootloader.Size = new System.Drawing.Size(50, 22);
             this.textBoxBootloader.TabIndex = 38;
-            this.textBoxBootloader.TextChanged += new System.EventHandler(this.textBoxBootloader_TextChanged);
             // 
             // label41
             // 
@@ -1883,11 +1874,11 @@ namespace TVNConfigSW
             this.textBoxCommandList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxCommandList.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCommandList.ForeColor = System.Drawing.Color.Blue;
-            this.textBoxCommandList.Location = new System.Drawing.Point(4, 354);
+            this.textBoxCommandList.Location = new System.Drawing.Point(1, 338);
             this.textBoxCommandList.Multiline = true;
             this.textBoxCommandList.Name = "textBoxCommandList";
             this.textBoxCommandList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxCommandList.Size = new System.Drawing.Size(215, 57);
+            this.textBoxCommandList.Size = new System.Drawing.Size(215, 45);
             this.textBoxCommandList.TabIndex = 1;
             this.textBoxCommandList.Text = "*300190,990,099#";
             // 
@@ -2128,7 +2119,6 @@ namespace TVNConfigSW
             this.textBoxVbat.Name = "textBoxVbat";
             this.textBoxVbat.Size = new System.Drawing.Size(46, 22);
             this.textBoxVbat.TabIndex = 25;
-            this.textBoxVbat.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
             // 
             // label40
             // 
@@ -2138,7 +2128,6 @@ namespace TVNConfigSW
             this.label40.Size = new System.Drawing.Size(44, 16);
             this.label40.TabIndex = 24;
             this.label40.Text = "VBAT:";
-            this.label40.Click += new System.EventHandler(this.label40_Click);
             // 
             // textBoxIO
             // 
@@ -2162,7 +2151,6 @@ namespace TVNConfigSW
             this.textBoxADB.Name = "textBoxADB";
             this.textBoxADB.Size = new System.Drawing.Size(46, 22);
             this.textBoxADB.TabIndex = 21;
-            this.textBoxADB.TextChanged += new System.EventHandler(this.textBoxADB_TextChanged);
             // 
             // textBoxTempB
             // 
@@ -2177,7 +2165,6 @@ namespace TVNConfigSW
             this.textBoxADA.Name = "textBoxADA";
             this.textBoxADA.Size = new System.Drawing.Size(49, 22);
             this.textBoxADA.TabIndex = 18;
-            this.textBoxADA.TextChanged += new System.EventHandler(this.textBoxADA_TextChanged);
             // 
             // textBoxPos
             // 
@@ -2194,7 +2181,6 @@ namespace TVNConfigSW
             this.label9.Size = new System.Drawing.Size(36, 16);
             this.label9.TabIndex = 16;
             this.label9.Text = "CSQ:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // textBoxTempA
             // 
@@ -2202,7 +2188,6 @@ namespace TVNConfigSW
             this.textBoxTempA.Name = "textBoxTempA";
             this.textBoxTempA.Size = new System.Drawing.Size(38, 22);
             this.textBoxTempA.TabIndex = 9;
-            this.textBoxTempA.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBoxTime
             // 
@@ -2210,7 +2195,6 @@ namespace TVNConfigSW
             this.textBoxTime.Name = "textBoxTime";
             this.textBoxTime.Size = new System.Drawing.Size(161, 22);
             this.textBoxTime.TabIndex = 8;
-            this.textBoxTime.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBoxPower
             // 
@@ -2218,7 +2202,6 @@ namespace TVNConfigSW
             this.textBoxPower.Name = "textBoxPower";
             this.textBoxPower.Size = new System.Drawing.Size(48, 22);
             this.textBoxPower.TabIndex = 6;
-            this.textBoxPower.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label8
             // 
@@ -2228,7 +2211,6 @@ namespace TVNConfigSW
             this.label8.Size = new System.Drawing.Size(44, 16);
             this.label8.TabIndex = 4;
             this.label8.Text = "TEMP";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -2238,7 +2220,6 @@ namespace TVNConfigSW
             this.label7.Size = new System.Drawing.Size(38, 16);
             this.label7.TabIndex = 3;
             this.label7.Text = "ADB:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -2257,7 +2238,6 @@ namespace TVNConfigSW
             this.label5.Size = new System.Drawing.Size(41, 16);
             this.label5.TabIndex = 1;
             this.label5.Text = "TIME";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
             // 
@@ -2267,7 +2247,6 @@ namespace TVNConfigSW
             this.label3.Size = new System.Drawing.Size(40, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "PWR:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // buttonRebootToDFUMode2
             // 
@@ -2277,7 +2256,7 @@ namespace TVNConfigSW
             this.buttonRebootToDFUMode2.Font = new System.Drawing.Font("Georgia", 12F);
             this.buttonRebootToDFUMode2.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonRebootToDFUMode2.ImageKey = "(none)";
-            this.buttonRebootToDFUMode2.Location = new System.Drawing.Point(-2, 550);
+            this.buttonRebootToDFUMode2.Location = new System.Drawing.Point(-3, 569);
             this.buttonRebootToDFUMode2.Name = "buttonRebootToDFUMode2";
             this.buttonRebootToDFUMode2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.buttonRebootToDFUMode2.Size = new System.Drawing.Size(225, 48);
@@ -2290,7 +2269,7 @@ namespace TVNConfigSW
             // 
             this.buttonWriteSettingToDevice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonWriteSettingToDevice.Location = new System.Drawing.Point(7, 417);
+            this.buttonWriteSettingToDevice.Location = new System.Drawing.Point(3, 389);
             this.buttonWriteSettingToDevice.Name = "buttonWriteSettingToDevice";
             this.buttonWriteSettingToDevice.Size = new System.Drawing.Size(209, 26);
             this.buttonWriteSettingToDevice.TabIndex = 24;
@@ -2336,7 +2315,7 @@ namespace TVNConfigSW
             // 
             this.splitContainer7.Panel2.Controls.Add(this.splitContainer16);
             this.splitContainer7.Size = new System.Drawing.Size(1243, 166);
-            this.splitContainer7.SplitterDistance = 683;
+            this.splitContainer7.SplitterDistance = 739;
             this.splitContainer7.TabIndex = 0;
             // 
             // splitContainer15
@@ -2352,8 +2331,8 @@ namespace TVNConfigSW
             // splitContainer15.Panel2
             // 
             this.splitContainer15.Panel2.Controls.Add(this.gprs4gStartus);
-            this.splitContainer15.Size = new System.Drawing.Size(683, 166);
-            this.splitContainer15.SplitterDistance = 356;
+            this.splitContainer15.Size = new System.Drawing.Size(739, 166);
+            this.splitContainer15.SplitterDistance = 385;
             this.splitContainer15.TabIndex = 0;
             // 
             // errorlog
@@ -2364,7 +2343,7 @@ namespace TVNConfigSW
             this.errorlog.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorlog.Location = new System.Drawing.Point(0, 0);
             this.errorlog.Name = "errorlog";
-            this.errorlog.Size = new System.Drawing.Size(356, 166);
+            this.errorlog.Size = new System.Drawing.Size(385, 166);
             this.errorlog.TabIndex = 0;
             this.errorlog.TabStop = false;
             this.errorlog.Text = "Error Logs";
@@ -2377,7 +2356,7 @@ namespace TVNConfigSW
             this.textBoxDeviceErrorMessage1.Location = new System.Drawing.Point(3, 18);
             this.textBoxDeviceErrorMessage1.Multiline = true;
             this.textBoxDeviceErrorMessage1.Name = "textBoxDeviceErrorMessage1";
-            this.textBoxDeviceErrorMessage1.Size = new System.Drawing.Size(350, 145);
+            this.textBoxDeviceErrorMessage1.Size = new System.Drawing.Size(379, 145);
             this.textBoxDeviceErrorMessage1.TabIndex = 1;
             // 
             // gprs4gStartus
@@ -2387,7 +2366,7 @@ namespace TVNConfigSW
             this.gprs4gStartus.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gprs4gStartus.Location = new System.Drawing.Point(0, 0);
             this.gprs4gStartus.Name = "gprs4gStartus";
-            this.gprs4gStartus.Size = new System.Drawing.Size(323, 166);
+            this.gprs4gStartus.Size = new System.Drawing.Size(350, 166);
             this.gprs4gStartus.TabIndex = 0;
             this.gprs4gStartus.TabStop = false;
             this.gprs4gStartus.Text = "GPRS - 4G Status";
@@ -2399,7 +2378,7 @@ namespace TVNConfigSW
             this.textBoxGprsMessage1.Location = new System.Drawing.Point(3, 18);
             this.textBoxGprsMessage1.Multiline = true;
             this.textBoxGprsMessage1.Name = "textBoxGprsMessage1";
-            this.textBoxGprsMessage1.Size = new System.Drawing.Size(317, 145);
+            this.textBoxGprsMessage1.Size = new System.Drawing.Size(344, 145);
             this.textBoxGprsMessage1.TabIndex = 0;
             // 
             // splitContainer16
@@ -2415,8 +2394,8 @@ namespace TVNConfigSW
             // splitContainer16.Panel2
             // 
             this.splitContainer16.Panel2.Controls.Add(this.groupBox5);
-            this.splitContainer16.Size = new System.Drawing.Size(556, 166);
-            this.splitContainer16.SplitterDistance = 393;
+            this.splitContainer16.Size = new System.Drawing.Size(500, 166);
+            this.splitContainer16.SplitterDistance = 284;
             this.splitContainer16.TabIndex = 0;
             // 
             // groupBox2
@@ -2426,11 +2405,10 @@ namespace TVNConfigSW
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(393, 166);
+            this.groupBox2.Size = new System.Drawing.Size(284, 166);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "GPS Logs";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter_1);
             // 
             // textGPSstartus
             // 
@@ -2439,7 +2417,7 @@ namespace TVNConfigSW
             this.textGPSstartus.Location = new System.Drawing.Point(3, 18);
             this.textGPSstartus.Multiline = true;
             this.textGPSstartus.Name = "textGPSstartus";
-            this.textGPSstartus.Size = new System.Drawing.Size(387, 145);
+            this.textGPSstartus.Size = new System.Drawing.Size(278, 145);
             this.textGPSstartus.TabIndex = 1;
             // 
             // groupBox5
@@ -2449,7 +2427,7 @@ namespace TVNConfigSW
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(0, 0);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(159, 166);
+            this.groupBox5.Size = new System.Drawing.Size(212, 166);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Update log";
@@ -2462,9 +2440,8 @@ namespace TVNConfigSW
             this.listBoxFirmwareUpdateLog1.ItemHeight = 24;
             this.listBoxFirmwareUpdateLog1.Location = new System.Drawing.Point(3, 18);
             this.listBoxFirmwareUpdateLog1.Name = "listBoxFirmwareUpdateLog1";
-            this.listBoxFirmwareUpdateLog1.Size = new System.Drawing.Size(153, 145);
+            this.listBoxFirmwareUpdateLog1.Size = new System.Drawing.Size(206, 145);
             this.listBoxFirmwareUpdateLog1.TabIndex = 0;
-            this.listBoxFirmwareUpdateLog1.SelectedIndexChanged += new System.EventHandler(this.listBoxFirmwareUpdateLog1_SelectedIndexChanged);
             // 
             // splitContainer3
             // 
@@ -2488,7 +2465,6 @@ namespace TVNConfigSW
             this.splitContainer3.Panel2.Controls.Add(this.checkBoxAutoScrollDeviceLogs);
             this.splitContainer3.Panel2.Controls.Add(this.checkBoxDisplayGpsSentence);
             this.splitContainer3.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer3.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer3_Panel2_Paint);
             this.splitContainer3.Size = new System.Drawing.Size(1240, 631);
             this.splitContainer3.SplitterDistance = 599;
             this.splitContainer3.TabIndex = 1;
@@ -2530,7 +2506,6 @@ namespace TVNConfigSW
             this.textBoxFirmwareFilePath1.Name = "textBoxFirmwareFilePath1";
             this.textBoxFirmwareFilePath1.Size = new System.Drawing.Size(353, 26);
             this.textBoxFirmwareFilePath1.TabIndex = 5;
-            this.textBoxFirmwareFilePath1.TextChanged += new System.EventHandler(this.textBoxFirmwareFilePath1_TextChanged);
             // 
             // buttonOpenFWFile
             // 
@@ -2566,7 +2541,6 @@ namespace TVNConfigSW
             this.CheckboxUpdate.TabIndex = 25;
             this.CheckboxUpdate.Text = "Auto Update";
             this.CheckboxUpdate.UseVisualStyleBackColor = true;
-            this.CheckboxUpdate.CheckedChanged += new System.EventHandler(this.CheckboxUpdate_CheckedChanged);
             // 
             // checkBoxAutoScrollDeviceLogs
             // 
@@ -2579,7 +2553,6 @@ namespace TVNConfigSW
             this.checkBoxAutoScrollDeviceLogs.TabIndex = 24;
             this.checkBoxAutoScrollDeviceLogs.Text = "Auto scroll";
             this.checkBoxAutoScrollDeviceLogs.UseVisualStyleBackColor = true;
-            this.checkBoxAutoScrollDeviceLogs.CheckedChanged += new System.EventHandler(this.checkBoxAutoScrollDeviceLogs_CheckedChanged);
             // 
             // checkBoxDisplayGpsSentence
             // 
@@ -2592,7 +2565,6 @@ namespace TVNConfigSW
             this.checkBoxDisplayGpsSentence.TabIndex = 0;
             this.checkBoxDisplayGpsSentence.Text = " GPS Logs";
             this.checkBoxDisplayGpsSentence.UseVisualStyleBackColor = true;
-            this.checkBoxDisplayGpsSentence.CheckedChanged += new System.EventHandler(this.checkBoxDisplayGpsSentence_CheckedChanged);
             // 
             // splitter1
             // 
@@ -3890,21 +3862,6 @@ namespace TVNConfigSW
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxFwRev_TextChanged(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void textBoxFirmwareFilePath1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonDefault_Click(object sender, EventArgs e)
         {
@@ -3955,56 +3912,6 @@ namespace TVNConfigSW
 
 
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonClear1_Click(object sender, EventArgs e)
         {
             textBoxDeviceLogs.Clear();
@@ -4042,87 +3949,12 @@ namespace TVNConfigSW
 
         }
 
-        private void textBoxADB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label40_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxADA_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer9_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer9_Panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBoxBootloader_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxAutoScrollDeviceLogs_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxDisplayGpsSentence_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CheckboxUpdate_CheckedChanged(object sender, EventArgs e)
-        {
-            
-
-        }
 
         private void button7_Click_1(object sender, EventArgs e)
         {
             textBoxDeviceLogs.Clear();
         }
 
-        private void textBoxImei_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonExportTXT_Click(object sender, EventArgs e)
         {
@@ -4163,25 +3995,7 @@ namespace TVNConfigSW
             }
         }
 
-        private void listBoxFirmwareUpdateLog1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-                
-        }
 
-        private void splitContainer5_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer3_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonTvnTest_Click(object sender, EventArgs e)
         {
