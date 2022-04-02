@@ -234,6 +234,7 @@ namespace TVNConfigSW
         private CheckBox checkBoxGPRS4Glogs;
         private CheckBox checkBoxErrorLog;
         private GroupBox groupBox4;
+        private Button buttonTvnTest;
         private TabPage tabPage6;
 
         [System.Diagnostics.DebuggerStepThrough()]
@@ -375,6 +376,7 @@ namespace TVNConfigSW
             this.label41 = new System.Windows.Forms.Label();
             this.textBoxCommandList = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonTvnTest = new System.Windows.Forms.Button();
             this.buttonExportTXT = new System.Windows.Forms.Button();
             this.buttonExImei = new System.Windows.Forms.Button();
             this.buttonClear1 = new System.Windows.Forms.Button();
@@ -1892,6 +1894,7 @@ namespace TVNConfigSW
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.buttonTvnTest);
             this.groupBox3.Controls.Add(this.buttonExportTXT);
             this.groupBox3.Controls.Add(this.buttonExImei);
             this.groupBox3.Controls.Add(this.buttonClear1);
@@ -1911,11 +1914,26 @@ namespace TVNConfigSW
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Config Button";
             // 
+            // buttonTvnTest
+            // 
+            this.buttonTvnTest.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTvnTest.Location = new System.Drawing.Point(144, 46);
+            this.buttonTvnTest.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonTvnTest.Name = "buttonTvnTest";
+            this.buttonTvnTest.Padding = new System.Windows.Forms.Padding(1);
+            this.buttonTvnTest.Size = new System.Drawing.Size(73, 22);
+            this.buttonTvnTest.TabIndex = 39;
+            this.buttonTvnTest.Text = "TVNTest";
+            this.buttonTvnTest.UseVisualStyleBackColor = true;
+            this.buttonTvnTest.Click += new System.EventHandler(this.buttonTvnTest_Click);
+            // 
             // buttonExportTXT
             // 
             this.buttonExportTXT.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExportTXT.Location = new System.Drawing.Point(5, 74);
+            this.buttonExportTXT.Location = new System.Drawing.Point(3, 74);
+            this.buttonExportTXT.Margin = new System.Windows.Forms.Padding(5);
             this.buttonExportTXT.Name = "buttonExportTXT";
+            this.buttonExportTXT.Padding = new System.Windows.Forms.Padding(1);
             this.buttonExportTXT.Size = new System.Drawing.Size(100, 25);
             this.buttonExportTXT.TabIndex = 29;
             this.buttonExportTXT.Text = "Export Logs";
@@ -1927,8 +1945,10 @@ namespace TVNConfigSW
             this.buttonExImei.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExImei.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExImei.Location = new System.Drawing.Point(124, 136);
+            this.buttonExImei.Margin = new System.Windows.Forms.Padding(5);
             this.buttonExImei.Name = "buttonExImei";
-            this.buttonExImei.Size = new System.Drawing.Size(93, 23);
+            this.buttonExImei.Padding = new System.Windows.Forms.Padding(1);
+            this.buttonExImei.Size = new System.Drawing.Size(94, 23);
             this.buttonExImei.TabIndex = 19;
             this.buttonExImei.Text = "Ex to Excel";
             this.buttonExImei.UseVisualStyleBackColor = true;
@@ -1939,7 +1959,9 @@ namespace TVNConfigSW
             this.buttonClear1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClear1.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear1.Location = new System.Drawing.Point(124, 105);
+            this.buttonClear1.Margin = new System.Windows.Forms.Padding(5);
             this.buttonClear1.Name = "buttonClear1";
+            this.buttonClear1.Padding = new System.Windows.Forms.Padding(1);
             this.buttonClear1.Size = new System.Drawing.Size(94, 25);
             this.buttonClear1.TabIndex = 26;
             this.buttonClear1.Text = "Clear All";
@@ -1949,8 +1971,10 @@ namespace TVNConfigSW
             // buttonClearLogs
             // 
             this.buttonClearLogs.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClearLogs.Location = new System.Drawing.Point(6, 105);
+            this.buttonClearLogs.Location = new System.Drawing.Point(3, 105);
+            this.buttonClearLogs.Margin = new System.Windows.Forms.Padding(5);
             this.buttonClearLogs.Name = "buttonClearLogs";
+            this.buttonClearLogs.Padding = new System.Windows.Forms.Padding(1);
             this.buttonClearLogs.Size = new System.Drawing.Size(99, 25);
             this.buttonClearLogs.TabIndex = 27;
             this.buttonClearLogs.Text = "Clear Logs";
@@ -1960,8 +1984,10 @@ namespace TVNConfigSW
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(6, 136);
+            this.button4.Location = new System.Drawing.Point(3, 136);
+            this.button4.Margin = new System.Windows.Forms.Padding(5);
             this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(1);
             this.button4.Size = new System.Drawing.Size(99, 23);
             this.button4.TabIndex = 20;
             this.button4.Text = "Ex to Sheet";
@@ -1969,9 +1995,12 @@ namespace TVNConfigSW
             // 
             // buttonDefault
             // 
+            this.buttonDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonDefault.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDefault.Location = new System.Drawing.Point(3, 21);
+            this.buttonDefault.Margin = new System.Windows.Forms.Padding(5);
             this.buttonDefault.Name = "buttonDefault";
+            this.buttonDefault.Padding = new System.Windows.Forms.Padding(1);
             this.buttonDefault.Size = new System.Drawing.Size(73, 21);
             this.buttonDefault.TabIndex = 26;
             this.buttonDefault.Text = "Default";
@@ -1984,7 +2013,9 @@ namespace TVNConfigSW
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonReset.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonReset.Location = new System.Drawing.Point(77, 21);
+            this.buttonReset.Margin = new System.Windows.Forms.Padding(5);
             this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Padding = new System.Windows.Forms.Padding(1);
             this.buttonReset.Size = new System.Drawing.Size(67, 21);
             this.buttonReset.TabIndex = 38;
             this.buttonReset.Text = "Reset";
@@ -1996,7 +2027,9 @@ namespace TVNConfigSW
             this.buttonWriteLogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonWriteLogs.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonWriteLogs.Location = new System.Drawing.Point(125, 74);
+            this.buttonWriteLogs.Margin = new System.Windows.Forms.Padding(5);
             this.buttonWriteLogs.Name = "buttonWriteLogs";
+            this.buttonWriteLogs.Padding = new System.Windows.Forms.Padding(1);
             this.buttonWriteLogs.Size = new System.Drawing.Size(94, 25);
             this.buttonWriteLogs.TabIndex = 24;
             this.buttonWriteLogs.Text = "EX IMEI";
@@ -2007,8 +2040,10 @@ namespace TVNConfigSW
             this.buttonDeleteFlash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDeleteFlash.Cursor = System.Windows.Forms.Cursors.Help;
             this.buttonDeleteFlash.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeleteFlash.Location = new System.Drawing.Point(145, 21);
+            this.buttonDeleteFlash.Location = new System.Drawing.Point(144, 21);
+            this.buttonDeleteFlash.Margin = new System.Windows.Forms.Padding(5);
             this.buttonDeleteFlash.Name = "buttonDeleteFlash";
+            this.buttonDeleteFlash.Padding = new System.Windows.Forms.Padding(1);
             this.buttonDeleteFlash.Size = new System.Drawing.Size(73, 21);
             this.buttonDeleteFlash.TabIndex = 25;
             this.buttonDeleteFlash.Text = "Del flash";
@@ -2019,9 +2054,11 @@ namespace TVNConfigSW
             // 
             this.buttonTvn05.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonTvn05.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTvn05.Location = new System.Drawing.Point(159, 46);
+            this.buttonTvn05.Location = new System.Drawing.Point(77, 46);
+            this.buttonTvn05.Margin = new System.Windows.Forms.Padding(5);
             this.buttonTvn05.Name = "buttonTvn05";
-            this.buttonTvn05.Size = new System.Drawing.Size(57, 22);
+            this.buttonTvn05.Padding = new System.Windows.Forms.Padding(1);
+            this.buttonTvn05.Size = new System.Drawing.Size(67, 22);
             this.buttonTvn05.TabIndex = 36;
             this.buttonTvn05.Text = "TVN05";
             this.buttonTvn05.UseVisualStyleBackColor = true;
@@ -2030,9 +2067,11 @@ namespace TVNConfigSW
             // buttonTvn02
             // 
             this.buttonTvn02.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTvn02.Location = new System.Drawing.Point(6, 46);
+            this.buttonTvn02.Location = new System.Drawing.Point(3, 46);
+            this.buttonTvn02.Margin = new System.Windows.Forms.Padding(5);
             this.buttonTvn02.Name = "buttonTvn02";
-            this.buttonTvn02.Size = new System.Drawing.Size(61, 22);
+            this.buttonTvn02.Padding = new System.Windows.Forms.Padding(1);
+            this.buttonTvn02.Size = new System.Drawing.Size(73, 22);
             this.buttonTvn02.TabIndex = 1;
             this.buttonTvn02.Text = "TVN02";
             this.buttonTvn02.UseVisualStyleBackColor = true;
@@ -3464,8 +3503,9 @@ namespace TVNConfigSW
         const string CMD_DEFAULT_FIRWARE = "*300190,990,099#";
         const string CMD_DELETE_FLASH = "*300190,500#";
         const string CMD_RESET = "*300190,991#";
-        const string CMD_TVN02 = "*000000,001,300190# \n  \r*300190,011,e-connect,,#\n  \r*300190,015,1,gps.tracking.vn,18860#\n  \r*300190,016,1,#\n  \r*300190,018,30,999#";
-        const string CMD_TVN05 = "*000000,001,300190# \n  \r*300190,011,e-connect,,#\n  \r*300190,015,1,gps.tracking.vn,20022#\n  \r*300190,016,1,#\n  \r*300190,018,30,999#";
+        const string CMD_TVN02 = "*000000,001,300190#\n\r*300190,011,e-connect,,#\n\r*300190,015,1,gps.tracking.vn,18860#\n\r*300190,016,1,#\n\r*300190,018,30,999#";
+        const string CMD_TVN05 = "*000000,001,300190#\n\r*300190,011,e-connect,,#\n\r*300190,015,1,gps.tracking.vn,20022#\n\r*300190,016,1,#\n\r*300190,018,30,999#";
+        const string CMD_TVNTest = "*000000,001,300190#\n\r*300190,011,e-connect,,#\n\r*300190,015,1,gps.tracking.vn,19860#\n\r*300190,016,1,#\n\r*300190,018,30,999#";
         private void buttonOpenBinaryFWFile_Click(object sender, EventArgs e)
         {
             // Load directory of picture and init image infor
@@ -4141,6 +4181,15 @@ namespace TVNConfigSW
         private void groupBox2_Enter_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonTvnTest_Click(object sender, EventArgs e)
+        {
+            if (isDeviceConnected)
+            {
+                // Read command from text box
+                commandStrQueue.Enqueue(CMD_TVNTest);
+            }
         }
     }
 }
