@@ -3316,11 +3316,12 @@ namespace TVNConfigSW
                 }
 
 
-                else if (line.Contains(" Bytes, @"))
+                else if (line.Contains("-I-TxPacketTimeStamp")|| line.Contains("Bytes, @"))
                 {
-                    string[] time = line.Split('@');
+                    string[] time = line.Split(':');
+                    string[] time1 = line.Split('@');
                     textBoxTime.Text = time[1];
-                    textBoxTime2.Text = time[1];
+                    textBoxTime.Text = time1[1];
                 }
                 else if (line.Contains("+CSQ:"))
                 {
@@ -3362,10 +3363,10 @@ namespace TVNConfigSW
 
                     textBoxPower.Text = groups3[1].Value;
 
-                    var regex4 = new Regex(@"I/O : (\d*),");
+                    var regex4 = new Regex(@"I/O: (\d*),");
                     var groups4 = regex4.Match(line).Groups; 
-                    var regexc = new Regex(@"I/O |(\d*)");
-                    var groupsc = regex4.Match(line).Groups;
+                    var regexc = new Regex(@"I/O : (\d*)");
+                    var groupsc = regexc.Match(line).Groups;
                     textBoxIO.Text = groupsc[1].Value;
                     textBoxIO.Text = groups4[1].Value;
                     var regex5 = new Regex(@"Temp:(\d*[.]\d*)");
