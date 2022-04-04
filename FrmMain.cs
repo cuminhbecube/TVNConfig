@@ -3316,13 +3316,12 @@ namespace TVNConfigSW
                 }
 
 
-                else if (line.Contains("-I-TxPacketTimeStamp")|| line.Contains("Bytes, @"))
+                else if (line.Contains("-I-TxPacket"))
                 {
-                    string[] time = line.Split(':');
-                    string[] time1 = line.Split('@');
-                    textBoxTime.Text = time[1];
-                    textBoxTime.Text = time1[1];
+                    string[] time = line.Split('-');
+                    textBoxTime.Text = time[3];
                 }
+
                 else if (line.Contains("+CSQ:"))
                 {
                     string[] time = line.Split(':');
