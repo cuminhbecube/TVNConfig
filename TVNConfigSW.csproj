@@ -148,8 +148,11 @@
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IMEI.cs" />
+    <Compile Include="IMEIBase.cs" />
     <Compile Include="IntervalPacket.cs" />
     <Compile Include="ListBoxLog.cs" />
+    <Compile Include="ListImei.cs" />
     <Compile Include="ModbusCRC16.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -177,6 +180,11 @@
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BootloaderProcessing.datasource" />
+    <None Include="Properties\DataSources\FrmMain.datasource" />
+    <None Include="Properties\DataSources\IntervalPacket.datasource" />
+    <None Include="Properties\DataSources\ListBoxLog.datasource" />
+    <None Include="Properties\DataSources\ModbusCRC16.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
