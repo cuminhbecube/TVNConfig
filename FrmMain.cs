@@ -246,7 +246,7 @@ namespace TVNConfigSW
         private TextBox textBoxLong;
         private TextBox textBoxAlt;
         private TextBox textBoxLat;
-        private TextBox textBox8;
+        private TextBox textBoxGPSLength;
         private TextBox textBoxFrame;
         private TextBox textBoxPacketSNum;
         private TextBox textBoxDeviceDTC;
@@ -537,7 +537,7 @@ namespace TVNConfigSW
             this.textBoxLong = new System.Windows.Forms.TextBox();
             this.textBoxAlt = new System.Windows.Forms.TextBox();
             this.textBoxLat = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxGPSLength = new System.Windows.Forms.TextBox();
             this.textBoxFrame = new System.Windows.Forms.TextBox();
             this.textBoxPacketSNum = new System.Windows.Forms.TextBox();
             this.textBoxDeviceDTC = new System.Windows.Forms.TextBox();
@@ -2508,7 +2508,7 @@ namespace TVNConfigSW
             this.splitContainer17.Panel2.Controls.Add(this.textBoxLong);
             this.splitContainer17.Panel2.Controls.Add(this.textBoxAlt);
             this.splitContainer17.Panel2.Controls.Add(this.textBoxLat);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox8);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxGPSLength);
             this.splitContainer17.Panel2.Controls.Add(this.textBoxFrame);
             this.splitContainer17.Panel2.Controls.Add(this.textBoxPacketSNum);
             this.splitContainer17.Panel2.Controls.Add(this.textBoxDeviceDTC);
@@ -3266,12 +3266,12 @@ namespace TVNConfigSW
             this.textBoxLat.Size = new System.Drawing.Size(209, 26);
             this.textBoxLat.TabIndex = 40;
             // 
-            // textBox8
+            // textBoxGPSLength
             // 
-            this.textBox8.Location = new System.Drawing.Point(183, 186);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(209, 26);
-            this.textBox8.TabIndex = 39;
+            this.textBoxGPSLength.Location = new System.Drawing.Point(183, 186);
+            this.textBoxGPSLength.Name = "textBoxGPSLength";
+            this.textBoxGPSLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxGPSLength.TabIndex = 39;
             // 
             // textBoxFrame
             // 
@@ -4026,48 +4026,93 @@ namespace TVNConfigSW
                 {
                     AppendLineToTextBox(textBoxLogsData, line, true);
                     var length = line.Substring(2, 4);
+                    textBoxLength.Text = length;
                     var Protocolnumber = line.Substring(2, 4);
+                    textBoxProtocol.Text = Protocolnumber;
                     var imei = line.Substring(2, 4);
+                    textBoxImeiData.Text = imei;
                     var timeDTC = line.Substring(2, 4);
+                    textBoxDeviceDTC.Text = timeDTC;
                     var packetNum = line.Substring(2, 4);
+                    textBoxPacketSNum.Text = packetNum;
                     var Frame = line.Substring(2, 4);
+                    textBoxFrame.Text = Frame;
                     var GPSlength = line.Substring(2, 4); 
+                    textBoxGPSLength.Text = GPSlength;
                     var Lat = line.Substring(2, 4);
+                    textBoxLat.Text = Lat;
                     var Long = line.Substring(2, 4);
+                    textBoxLong.Text = Long;
                     var Alt = line.Substring(2, 4);
+                    textBoxAlt.Text = Alt;
                     var GPSTime = line.Substring(2, 4);
+                    textBoxGpsTime.Text = GPSTime;
                     var GPSSpeed = line.Substring(2, 4);
+                    textBoxGpsSpeed.Text = GPSSpeed;
                     var GPSStatus = line.Substring(2, 4);
-                    var ÉHPError = line.Substring(2, 4);
+                    textBoxGpsStatus.Text = GPSStatus;
+                    var EHPError = line.Substring(2, 4);
+                    textBoxEHPError.Text = EHPError;
                     var EVPError = line.Substring(2, 4);
+                    textBoxEVPError.Text = EVPError;
                     var StatusLength = line.Substring(2, 4);
+                    textBoxStatusLength.Text = StatusLength;
                     var EventID = line.Substring(2, 4);
+                    textBoxEventID.Text = EventID;
                     var TerminalStatus = line.Substring(2, 4);
+                    textBoxTerminalStatus.Text = TerminalStatus;
                     var PowerStatus = line.Substring(2, 4);
+                    textBoxPowerSupply.Text = PowerStatus;
                     var IOStatus = line.Substring(2, 4);
+                    textBoxIOStatus.Text = IOStatus;
                     var ADA = line.Substring(2, 4);
+                    textBoxADAData.Text = ADA;
                     var ADB = line.Substring(2, 4);
+                    textBoxADBData.Text = ADB;
                     var TotalKMday = line.Substring(2, 4);
+                    textBoxKMperDay.Text = TotalKMday;
                     var SpeedLength = line.Substring(2, 4);
+                    textBoxSpeedLength.Text = SpeedLength;
                     var SpeedData = line.Substring(2, 4);
+                    textBoxSpeedData.Text = SpeedData;
                     var Drive4h = line.Substring(2, 4);
+                    textBoxDriver4h.Text = Drive4h;
                     var Drive10h = line.Substring(2, 4);
+                    textBoxDrive10h.Text = Drive10h;
                     var IDLength = line.Substring(2, 4);
+                    textBoxDriverDataLength.Text = IDLength;    
+                    var DriveID = line.Substring(2, 4);
+                    textBoxDriverID.Text = DriveID;
                     var DriveName = line.Substring(2, 4);
+                    textBoxDriveName.Text = DriveName;
                     var LBSLength = line.Substring(2, 4);
+                    textBoxLBSInfoLength.Text = LBSLength;
                     var GPSRSSI = line.Substring(2, 4);
+                    textBoxGPSRssi.Text = GPSRSSI;
                     var Satellites = line.Substring(2, 4);
+                    textBoxSatellite.Text = Satellites;
                     var CellID = line.Substring(2, 4);
+                    textBoxCellID.Text = CellID;
                     var LAC = line.Substring(2, 4);
+                    textBoxLAC.Text = LAC;
                     var ComLength = line.Substring(2, 4);
+                    textBoxCOMInfoLength.Text = ComLength;
                     var ComType = line.Substring(2, 4);
+                    textBoxComType.Text = ComType;
                     var ComData = line.Substring(2, 4);
+                    textBoxComData.Text = ComData;
                     var WireLength = line.Substring(2, 4);
+                    textBoxWireInfoLength.Text = WireLength;
                     var WireType = line.Substring(2, 4);
+                    textBoxWireType.Text = WireType;
                     var WireData = line.Substring(2, 4);
+                    textBoxWireData.Text = WireData;
                     var SpareLength = line.Substring(2, 4);
+                    textBoxSpareInfoLength.Text = SpareLength;
                     var Checksum = line.Substring(2, 4);
+                    textBoxChecksum.Text = Checksum;
                     var EndMark = line.Substring(2, 4);
+                    textBoxEndMark.Text = EndMark;
 
                 }
 
