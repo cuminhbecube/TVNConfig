@@ -208,21 +208,21 @@ namespace TVNConfigSW
         private Label label45;
         private Label label46;
         private Label label48;
-        private TextBox textBox17;
-        private TextBox textBox18;
-        private TextBox textBox19;
-        private TextBox textBox20;
-        private TextBox textBox21;
-        private TextBox textBox22;
-        private TextBox textBox23;
-        private TextBox textBox24;
-        private TextBox textBox25;
-        private TextBox textBox26;
-        private TextBox textBox27;
-        private TextBox textBox28;
-        private TextBox textBox29;
-        private TextBox textBox30;
-        private TextBox textBox31;
+        private TextBox textBoxDriverID;
+        private TextBox textBoxDriverIDLength;
+        private TextBox textBoxDrive10h;
+        private TextBox textBoxDriver4h;
+        private TextBox textBoxDriverDataLength;
+        private TextBox textBoxSpeedLength;
+        private TextBox textBoxSpeedData;
+        private TextBox textBoxKMperDay;
+        private TextBox textBoxADBData;
+        private TextBox textBoxADAData;
+        private TextBox textBoxIOStatus;
+        private TextBox textBoxPowerSupply;
+        private TextBox textBoxTerminalStatus;
+        private TextBox textBoxEventID;
+        private TextBox textBoxStatusLength;
         private Label label49;
         private Label label50;
         private Label label52;
@@ -238,21 +238,21 @@ namespace TVNConfigSW
         private Label label36;
         private Label label38;
         private Label label39;
-        private TextBox textBox16;
-        private TextBox textBox15;
-        private TextBox textBox14;
-        private TextBox textBox13;
-        private TextBox textBox12;
-        private TextBox textBox11;
-        private TextBox textBox10;
-        private TextBox textBox9;
+        private TextBox textBoxEVPError;
+        private TextBox textBoxEHPError;
+        private TextBox textBoxGpsStatus;
+        private TextBox textBoxGpsSpeed;
+        private TextBox textBoxGpsTime;
+        private TextBox textBoxLong;
+        private TextBox textBoxAlt;
+        private TextBox textBoxLat;
         private TextBox textBox8;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox textBoxFrame;
+        private TextBox textBoxPacketSNum;
+        private TextBox textBoxDeviceDTC;
+        private TextBox textBoxImeiData;
+        private TextBox textBoxProtocol;
+        private TextBox textBoxLength;
         private Label label61;
         private Label label60;
         private Label label57;
@@ -262,6 +262,40 @@ namespace TVNConfigSW
         private Label label32;
         private Label label31;
         private Label label30;
+        private Label label77;
+        private TextBox textBoxEndMark;
+        private Label label78;
+        private TextBox textBoxChecksum;
+        private Label label62;
+        private Label label63;
+        private Label label64;
+        private Label label65;
+        private Label label66;
+        private Label label67;
+        private TextBox textBoxSpareData;
+        private TextBox textBoxSpareInfoLength;
+        private TextBox textBoxWireData;
+        private TextBox textBoxWireType;
+        private TextBox textBoxWireInfoLength;
+        private TextBox textBoxComType;
+        private TextBox textBoxComData;
+        private TextBox textBoxCOMInfoLength;
+        private TextBox textBoxLAC;
+        private TextBox textBoxCellID;
+        private TextBox textBoxSatellite;
+        private TextBox textBoxGPSRssi;
+        private TextBox textBoxGSMRssi;
+        private TextBox textBoxLBSInfoLength;
+        private TextBox textBoxDriveName;
+        private Label label68;
+        private Label label69;
+        private Label label70;
+        private Label label71;
+        private Label label72;
+        private Label label73;
+        private Label label74;
+        private Label label75;
+        private Label label76;
         private TabPage tabPage6;
 
         [System.Diagnostics.DebuggerStepThrough()]
@@ -423,62 +457,63 @@ namespace TVNConfigSW
             this.dataGridViewLogs = new System.Windows.Forms.DataGridView();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.splitContainer17 = new System.Windows.Forms.SplitContainer();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.pageSetupDialog2 = new System.Windows.Forms.PageSetupDialog();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBoxLogsData = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.textBoxEndMark = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.textBoxChecksum = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.textBoxSpareData = new System.Windows.Forms.TextBox();
+            this.textBoxSpareInfoLength = new System.Windows.Forms.TextBox();
+            this.textBoxWireData = new System.Windows.Forms.TextBox();
+            this.textBoxWireType = new System.Windows.Forms.TextBox();
+            this.textBoxWireInfoLength = new System.Windows.Forms.TextBox();
+            this.textBoxComType = new System.Windows.Forms.TextBox();
+            this.textBoxComData = new System.Windows.Forms.TextBox();
+            this.textBoxCOMInfoLength = new System.Windows.Forms.TextBox();
+            this.textBoxLAC = new System.Windows.Forms.TextBox();
+            this.textBoxCellID = new System.Windows.Forms.TextBox();
+            this.textBoxSatellite = new System.Windows.Forms.TextBox();
+            this.textBoxGPSRssi = new System.Windows.Forms.TextBox();
+            this.textBoxGSMRssi = new System.Windows.Forms.TextBox();
+            this.textBoxLBSInfoLength = new System.Windows.Forms.TextBox();
+            this.textBoxDriveName = new System.Windows.Forms.TextBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.textBoxDriverID = new System.Windows.Forms.TextBox();
+            this.textBoxDriverIDLength = new System.Windows.Forms.TextBox();
+            this.textBoxDrive10h = new System.Windows.Forms.TextBox();
+            this.textBoxDriver4h = new System.Windows.Forms.TextBox();
+            this.textBoxDriverDataLength = new System.Windows.Forms.TextBox();
+            this.textBoxSpeedLength = new System.Windows.Forms.TextBox();
+            this.textBoxSpeedData = new System.Windows.Forms.TextBox();
+            this.textBoxKMperDay = new System.Windows.Forms.TextBox();
+            this.textBoxADBData = new System.Windows.Forms.TextBox();
+            this.textBoxADAData = new System.Windows.Forms.TextBox();
+            this.textBoxIOStatus = new System.Windows.Forms.TextBox();
+            this.textBoxPowerSupply = new System.Windows.Forms.TextBox();
+            this.textBoxTerminalStatus = new System.Windows.Forms.TextBox();
+            this.textBoxEventID = new System.Windows.Forms.TextBox();
+            this.textBoxStatusLength = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
@@ -488,6 +523,39 @@ namespace TVNConfigSW
             this.label56 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.textBoxEVPError = new System.Windows.Forms.TextBox();
+            this.textBoxEHPError = new System.Windows.Forms.TextBox();
+            this.textBoxGpsStatus = new System.Windows.Forms.TextBox();
+            this.textBoxGpsSpeed = new System.Windows.Forms.TextBox();
+            this.textBoxGpsTime = new System.Windows.Forms.TextBox();
+            this.textBoxLong = new System.Windows.Forms.TextBox();
+            this.textBoxAlt = new System.Windows.Forms.TextBox();
+            this.textBoxLat = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxFrame = new System.Windows.Forms.TextBox();
+            this.textBoxPacketSNum = new System.Windows.Forms.TextBox();
+            this.textBoxDeviceDTC = new System.Windows.Forms.TextBox();
+            this.textBoxImeiData = new System.Windows.Forms.TextBox();
+            this.textBoxProtocol = new System.Windows.Forms.TextBox();
+            this.textBoxLength = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.pageSetupDialog2 = new System.Windows.Forms.PageSetupDialog();
             this.statusStrip.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -2346,7 +2414,7 @@ namespace TVNConfigSW
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage9.Size = new System.Drawing.Size(1427, 828);
             this.tabPage9.TabIndex = 2;
-            this.tabPage9.Text = "tabPage9";
+            this.tabPage9.Text = "Logs Data";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // splitContainer17
@@ -2362,27 +2430,61 @@ namespace TVNConfigSW
             // 
             // splitContainer17.Panel2
             // 
+            this.splitContainer17.Panel2.Controls.Add(this.label77);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxEndMark);
+            this.splitContainer17.Panel2.Controls.Add(this.label78);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxChecksum);
+            this.splitContainer17.Panel2.Controls.Add(this.label62);
+            this.splitContainer17.Panel2.Controls.Add(this.label63);
+            this.splitContainer17.Panel2.Controls.Add(this.label64);
+            this.splitContainer17.Panel2.Controls.Add(this.label65);
+            this.splitContainer17.Panel2.Controls.Add(this.label66);
+            this.splitContainer17.Panel2.Controls.Add(this.label67);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxSpareData);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxSpareInfoLength);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxWireData);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxWireType);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxWireInfoLength);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxComType);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxComData);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxCOMInfoLength);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxLAC);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxCellID);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxSatellite);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxGPSRssi);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxGSMRssi);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxLBSInfoLength);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxDriveName);
+            this.splitContainer17.Panel2.Controls.Add(this.label68);
+            this.splitContainer17.Panel2.Controls.Add(this.label69);
+            this.splitContainer17.Panel2.Controls.Add(this.label70);
+            this.splitContainer17.Panel2.Controls.Add(this.label71);
+            this.splitContainer17.Panel2.Controls.Add(this.label72);
+            this.splitContainer17.Panel2.Controls.Add(this.label73);
+            this.splitContainer17.Panel2.Controls.Add(this.label74);
+            this.splitContainer17.Panel2.Controls.Add(this.label75);
+            this.splitContainer17.Panel2.Controls.Add(this.label76);
             this.splitContainer17.Panel2.Controls.Add(this.label42);
             this.splitContainer17.Panel2.Controls.Add(this.label43);
             this.splitContainer17.Panel2.Controls.Add(this.label44);
             this.splitContainer17.Panel2.Controls.Add(this.label45);
             this.splitContainer17.Panel2.Controls.Add(this.label46);
             this.splitContainer17.Panel2.Controls.Add(this.label48);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox17);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox18);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox19);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox20);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox21);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox22);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox23);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox24);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox25);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox26);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox27);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox28);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox29);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox30);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox31);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxDriverID);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxDriverIDLength);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxDrive10h);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxDriver4h);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxDriverDataLength);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxSpeedLength);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxSpeedData);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxKMperDay);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxADBData);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxADAData);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxIOStatus);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxPowerSupply);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxTerminalStatus);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxEventID);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxStatusLength);
             this.splitContainer17.Panel2.Controls.Add(this.label49);
             this.splitContainer17.Panel2.Controls.Add(this.label50);
             this.splitContainer17.Panel2.Controls.Add(this.label52);
@@ -2398,21 +2500,21 @@ namespace TVNConfigSW
             this.splitContainer17.Panel2.Controls.Add(this.label36);
             this.splitContainer17.Panel2.Controls.Add(this.label38);
             this.splitContainer17.Panel2.Controls.Add(this.label39);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox16);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox15);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox14);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox13);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox12);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox11);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox10);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox9);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxEVPError);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxEHPError);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxGpsStatus);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxGpsSpeed);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxGpsTime);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxLong);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxAlt);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxLat);
             this.splitContainer17.Panel2.Controls.Add(this.textBox8);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox7);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox6);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox5);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox4);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox3);
-            this.splitContainer17.Panel2.Controls.Add(this.textBox2);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxFrame);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxPacketSNum);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxDeviceDTC);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxImeiData);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxProtocol);
+            this.splitContainer17.Panel2.Controls.Add(this.textBoxLength);
             this.splitContainer17.Panel2.Controls.Add(this.label61);
             this.splitContainer17.Panel2.Controls.Add(this.label60);
             this.splitContainer17.Panel2.Controls.Add(this.label57);
@@ -2422,23 +2524,10 @@ namespace TVNConfigSW
             this.splitContainer17.Panel2.Controls.Add(this.label32);
             this.splitContainer17.Panel2.Controls.Add(this.label31);
             this.splitContainer17.Panel2.Controls.Add(this.label30);
+            this.splitContainer17.Panel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer17.Size = new System.Drawing.Size(1421, 822);
             this.splitContainer17.SplitterDistance = 220;
             this.splitContainer17.TabIndex = 0;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(186, 868);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(152, 19);
-            this.radioButton1.TabIndex = 40;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Disconnected to Server";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // groupBox8
             // 
@@ -2462,485 +2551,864 @@ namespace TVNConfigSW
             this.textBoxLogsData.Size = new System.Drawing.Size(1415, 186);
             this.textBoxLogsData.TabIndex = 0;
             // 
-            // label30
+            // label77
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(42, 86);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(54, 16);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "label30";
+            this.label77.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(756, 458);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(71, 19);
+            this.label77.TabIndex = 117;
+            this.label77.Text = "End Mark";
             // 
-            // label31
+            // textBoxEndMark
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(42, 114);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(52, 16);
-            this.label31.TabIndex = 1;
-            this.label31.Text = "label31";
+            this.textBoxEndMark.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxEndMark.Location = new System.Drawing.Point(902, 455);
+            this.textBoxEndMark.Name = "textBoxEndMark";
+            this.textBoxEndMark.Size = new System.Drawing.Size(209, 26);
+            this.textBoxEndMark.TabIndex = 116;
             // 
-            // label32
+            // label78
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(42, 142);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(53, 16);
-            this.label32.TabIndex = 2;
-            this.label32.Text = "label32";
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(280, 458);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(73, 19);
+            this.label78.TabIndex = 115;
+            this.label78.Text = "Checksum";
             // 
-            // label37
+            // textBoxChecksum
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(42, 170);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(54, 16);
-            this.label37.TabIndex = 7;
-            this.label37.Text = "label37";
+            this.textBoxChecksum.Location = new System.Drawing.Point(426, 455);
+            this.textBoxChecksum.Name = "textBoxChecksum";
+            this.textBoxChecksum.Size = new System.Drawing.Size(209, 26);
+            this.textBoxChecksum.TabIndex = 114;
             // 
-            // label47
+            // label62
             // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(42, 226);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(54, 16);
-            this.label47.TabIndex = 15;
-            this.label47.Text = "label47";
+            this.label62.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(1007, 385);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(118, 19);
+            this.label62.TabIndex = 113;
+            this.label62.Text = "Spare Info Length";
             // 
-            // label51
+            // label63
             // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(42, 198);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(52, 16);
-            this.label51.TabIndex = 19;
-            this.label51.Text = "label51";
+            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(1007, 413);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(78, 19);
+            this.label63.TabIndex = 112;
+            this.label63.Text = "Spare Data";
             // 
-            // label57
+            // label64
             // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(42, 254);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(54, 16);
-            this.label57.TabIndex = 25;
-            this.label57.Text = "label57";
+            this.label64.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(1007, 357);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(85, 19);
+            this.label64.TabIndex = 111;
+            this.label64.Text = "1-Wire Data";
             // 
-            // label60
+            // label65
             // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(42, 310);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(54, 16);
-            this.label60.TabIndex = 28;
-            this.label60.Text = "label60";
+            this.label65.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(1007, 329);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(86, 19);
+            this.label65.TabIndex = 110;
+            this.label65.Text = "1-Wire Type";
+            this.label65.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label61
+            // label66
             // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(42, 282);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(52, 16);
-            this.label61.TabIndex = 29;
-            this.label61.Text = "label61";
+            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(1007, 301);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(125, 19);
+            this.label66.TabIndex = 109;
+            this.label66.Text = "1-Wire Info Length";
             // 
-            // textBox2
+            // label67
             // 
-            this.textBox2.Location = new System.Drawing.Point(188, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 22);
-            this.textBox2.TabIndex = 33;
+            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(1007, 273);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(79, 19);
+            this.label67.TabIndex = 108;
+            this.label67.Text = "COM Data";
             // 
-            // textBox3
+            // textBoxSpareData
             // 
-            this.textBox3.Location = new System.Drawing.Point(188, 111);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(209, 22);
-            this.textBox3.TabIndex = 34;
+            this.textBoxSpareData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSpareData.Location = new System.Drawing.Point(1153, 410);
+            this.textBoxSpareData.Name = "textBoxSpareData";
+            this.textBoxSpareData.Size = new System.Drawing.Size(209, 26);
+            this.textBoxSpareData.TabIndex = 107;
             // 
-            // textBox4
+            // textBoxSpareInfoLength
             // 
-            this.textBox4.Location = new System.Drawing.Point(188, 139);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(209, 22);
-            this.textBox4.TabIndex = 35;
+            this.textBoxSpareInfoLength.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSpareInfoLength.Location = new System.Drawing.Point(1153, 382);
+            this.textBoxSpareInfoLength.Name = "textBoxSpareInfoLength";
+            this.textBoxSpareInfoLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxSpareInfoLength.TabIndex = 106;
             // 
-            // textBox5
+            // textBoxWireData
             // 
-            this.textBox5.Location = new System.Drawing.Point(188, 167);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(209, 22);
-            this.textBox5.TabIndex = 36;
+            this.textBoxWireData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxWireData.Location = new System.Drawing.Point(1153, 354);
+            this.textBoxWireData.Name = "textBoxWireData";
+            this.textBoxWireData.Size = new System.Drawing.Size(209, 26);
+            this.textBoxWireData.TabIndex = 105;
             // 
-            // textBox6
+            // textBoxWireType
             // 
-            this.textBox6.Location = new System.Drawing.Point(188, 195);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(209, 22);
-            this.textBox6.TabIndex = 37;
+            this.textBoxWireType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxWireType.Location = new System.Drawing.Point(1153, 326);
+            this.textBoxWireType.Name = "textBoxWireType";
+            this.textBoxWireType.Size = new System.Drawing.Size(209, 26);
+            this.textBoxWireType.TabIndex = 104;
             // 
-            // textBox7
+            // textBoxWireInfoLength
             // 
-            this.textBox7.Location = new System.Drawing.Point(188, 223);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(209, 22);
-            this.textBox7.TabIndex = 38;
+            this.textBoxWireInfoLength.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxWireInfoLength.Location = new System.Drawing.Point(1153, 298);
+            this.textBoxWireInfoLength.Name = "textBoxWireInfoLength";
+            this.textBoxWireInfoLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxWireInfoLength.TabIndex = 103;
             // 
-            // textBox8
+            // textBoxComType
             // 
-            this.textBox8.Location = new System.Drawing.Point(188, 251);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(209, 22);
-            this.textBox8.TabIndex = 39;
+            this.textBoxComType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxComType.Location = new System.Drawing.Point(1153, 242);
+            this.textBoxComType.Name = "textBoxComType";
+            this.textBoxComType.Size = new System.Drawing.Size(209, 26);
+            this.textBoxComType.TabIndex = 102;
             // 
-            // textBox9
+            // textBoxComData
             // 
-            this.textBox9.Location = new System.Drawing.Point(188, 279);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(209, 22);
-            this.textBox9.TabIndex = 40;
+            this.textBoxComData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxComData.Location = new System.Drawing.Point(1153, 270);
+            this.textBoxComData.Name = "textBoxComData";
+            this.textBoxComData.Size = new System.Drawing.Size(209, 26);
+            this.textBoxComData.TabIndex = 101;
             // 
-            // textBox10
+            // textBoxCOMInfoLength
             // 
-            this.textBox10.Location = new System.Drawing.Point(188, 335);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(209, 22);
-            this.textBox10.TabIndex = 41;
+            this.textBoxCOMInfoLength.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCOMInfoLength.Location = new System.Drawing.Point(1153, 214);
+            this.textBoxCOMInfoLength.Name = "textBoxCOMInfoLength";
+            this.textBoxCOMInfoLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxCOMInfoLength.TabIndex = 100;
             // 
-            // textBox11
+            // textBoxLAC
             // 
-            this.textBox11.Location = new System.Drawing.Point(188, 307);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(209, 22);
-            this.textBox11.TabIndex = 42;
+            this.textBoxLAC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxLAC.Location = new System.Drawing.Point(1153, 186);
+            this.textBoxLAC.Name = "textBoxLAC";
+            this.textBoxLAC.Size = new System.Drawing.Size(209, 26);
+            this.textBoxLAC.TabIndex = 99;
             // 
-            // textBox12
+            // textBoxCellID
             // 
-            this.textBox12.Location = new System.Drawing.Point(188, 363);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(209, 22);
-            this.textBox12.TabIndex = 43;
+            this.textBoxCellID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCellID.Location = new System.Drawing.Point(1153, 158);
+            this.textBoxCellID.Name = "textBoxCellID";
+            this.textBoxCellID.Size = new System.Drawing.Size(209, 26);
+            this.textBoxCellID.TabIndex = 98;
             // 
-            // textBox13
+            // textBoxSatellite
             // 
-            this.textBox13.Location = new System.Drawing.Point(188, 391);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(209, 22);
-            this.textBox13.TabIndex = 44;
+            this.textBoxSatellite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSatellite.Location = new System.Drawing.Point(1153, 130);
+            this.textBoxSatellite.Name = "textBoxSatellite";
+            this.textBoxSatellite.Size = new System.Drawing.Size(209, 26);
+            this.textBoxSatellite.TabIndex = 97;
             // 
-            // textBox14
+            // textBoxGPSRssi
             // 
-            this.textBox14.Location = new System.Drawing.Point(188, 419);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(209, 22);
-            this.textBox14.TabIndex = 45;
+            this.textBoxGPSRssi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxGPSRssi.Location = new System.Drawing.Point(1153, 102);
+            this.textBoxGPSRssi.Name = "textBoxGPSRssi";
+            this.textBoxGPSRssi.Size = new System.Drawing.Size(209, 26);
+            this.textBoxGPSRssi.TabIndex = 96;
             // 
-            // textBox15
+            // textBoxGSMRssi
             // 
-            this.textBox15.Location = new System.Drawing.Point(188, 447);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(209, 22);
-            this.textBox15.TabIndex = 46;
+            this.textBoxGSMRssi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxGSMRssi.Location = new System.Drawing.Point(1153, 74);
+            this.textBoxGSMRssi.Name = "textBoxGSMRssi";
+            this.textBoxGSMRssi.Size = new System.Drawing.Size(209, 26);
+            this.textBoxGSMRssi.TabIndex = 95;
             // 
-            // textBox16
+            // textBoxLBSInfoLength
             // 
-            this.textBox16.Location = new System.Drawing.Point(188, 475);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(209, 22);
-            this.textBox16.TabIndex = 47;
+            this.textBoxLBSInfoLength.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxLBSInfoLength.Location = new System.Drawing.Point(1153, 46);
+            this.textBoxLBSInfoLength.Name = "textBoxLBSInfoLength";
+            this.textBoxLBSInfoLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxLBSInfoLength.TabIndex = 94;
+            // 
+            // textBoxDriveName
+            // 
+            this.textBoxDriveName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxDriveName.Location = new System.Drawing.Point(1153, 18);
+            this.textBoxDriveName.Name = "textBoxDriveName";
+            this.textBoxDriveName.Size = new System.Drawing.Size(209, 26);
+            this.textBoxDriveName.TabIndex = 93;
+            // 
+            // label68
+            // 
+            this.label68.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(1007, 217);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(119, 19);
+            this.label68.TabIndex = 92;
+            this.label68.Text = "COM Info Length";
+            // 
+            // label69
+            // 
+            this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(1007, 245);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(80, 19);
+            this.label69.TabIndex = 91;
+            this.label69.Text = "COM Type";
+            // 
+            // label70
+            // 
+            this.label70.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(1007, 189);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(40, 19);
+            this.label70.TabIndex = 90;
+            this.label70.Text = "LAC";
+            // 
+            // label71
+            // 
+            this.label71.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(1007, 133);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(62, 19);
+            this.label71.TabIndex = 89;
+            this.label71.Text = "Satellites";
+            // 
+            // label72
+            // 
+            this.label72.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(1007, 161);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(53, 19);
+            this.label72.TabIndex = 88;
+            this.label72.Text = "Cell ID";
+            // 
+            // label73
+            // 
+            this.label73.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(1007, 105);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(75, 19);
+            this.label73.TabIndex = 87;
+            this.label73.Text = "GPS RSSI";
+            // 
+            // label74
+            // 
+            this.label74.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(1007, 77);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(80, 19);
+            this.label74.TabIndex = 86;
+            this.label74.Text = "GSM RSSI";
+            // 
+            // label75
+            // 
+            this.label75.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(1007, 49);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(110, 19);
+            this.label75.TabIndex = 85;
+            this.label75.Text = "LBS Info Length";
+            // 
+            // label76
+            // 
+            this.label76.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(1007, 21);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(88, 19);
+            this.label76.TabIndex = 84;
+            this.label76.Text = "Driver Name";
+            // 
+            // label42
+            // 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(531, 385);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(112, 19);
+            this.label42.TabIndex = 83;
+            this.label42.Text = "Driver ID Length";
+            // 
+            // label43
+            // 
+            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(531, 413);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(67, 19);
+            this.label43.TabIndex = 82;
+            this.label43.Text = "Driver ID";
+            // 
+            // label44
+            // 
+            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(531, 357);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(104, 19);
+            this.label44.TabIndex = 81;
+            this.label44.Text = "Driver 10h /day";
+            // 
+            // label45
+            // 
+            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(531, 329);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(141, 19);
+            this.label45.TabIndex = 80;
+            this.label45.Text = "Driver 4h Continously";
+            // 
+            // label46
+            // 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(531, 301);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(125, 19);
+            this.label46.TabIndex = 79;
+            this.label46.Text = "Driver Data Length";
+            // 
+            // label48
+            // 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(531, 273);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(92, 19);
+            this.label48.TabIndex = 78;
+            this.label48.Text = "Speed  data/s";
+            // 
+            // textBoxDriverID
+            // 
+            this.textBoxDriverID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxDriverID.Location = new System.Drawing.Point(677, 410);
+            this.textBoxDriverID.Name = "textBoxDriverID";
+            this.textBoxDriverID.Size = new System.Drawing.Size(209, 26);
+            this.textBoxDriverID.TabIndex = 77;
+            // 
+            // textBoxDriverIDLength
+            // 
+            this.textBoxDriverIDLength.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxDriverIDLength.Location = new System.Drawing.Point(677, 382);
+            this.textBoxDriverIDLength.Name = "textBoxDriverIDLength";
+            this.textBoxDriverIDLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxDriverIDLength.TabIndex = 76;
+            // 
+            // textBoxDrive10h
+            // 
+            this.textBoxDrive10h.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxDrive10h.Location = new System.Drawing.Point(677, 354);
+            this.textBoxDrive10h.Name = "textBoxDrive10h";
+            this.textBoxDrive10h.Size = new System.Drawing.Size(209, 26);
+            this.textBoxDrive10h.TabIndex = 75;
+            // 
+            // textBoxDriver4h
+            // 
+            this.textBoxDriver4h.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxDriver4h.Location = new System.Drawing.Point(677, 326);
+            this.textBoxDriver4h.Name = "textBoxDriver4h";
+            this.textBoxDriver4h.Size = new System.Drawing.Size(209, 26);
+            this.textBoxDriver4h.TabIndex = 74;
+            // 
+            // textBoxDriverDataLength
+            // 
+            this.textBoxDriverDataLength.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxDriverDataLength.Location = new System.Drawing.Point(677, 298);
+            this.textBoxDriverDataLength.Name = "textBoxDriverDataLength";
+            this.textBoxDriverDataLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxDriverDataLength.TabIndex = 73;
+            // 
+            // textBoxSpeedLength
+            // 
+            this.textBoxSpeedLength.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSpeedLength.Location = new System.Drawing.Point(677, 242);
+            this.textBoxSpeedLength.Name = "textBoxSpeedLength";
+            this.textBoxSpeedLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxSpeedLength.TabIndex = 72;
+            // 
+            // textBoxSpeedData
+            // 
+            this.textBoxSpeedData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSpeedData.Location = new System.Drawing.Point(677, 270);
+            this.textBoxSpeedData.Name = "textBoxSpeedData";
+            this.textBoxSpeedData.Size = new System.Drawing.Size(209, 26);
+            this.textBoxSpeedData.TabIndex = 71;
+            // 
+            // textBoxKMperDay
+            // 
+            this.textBoxKMperDay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxKMperDay.Location = new System.Drawing.Point(677, 214);
+            this.textBoxKMperDay.Name = "textBoxKMperDay";
+            this.textBoxKMperDay.Size = new System.Drawing.Size(209, 26);
+            this.textBoxKMperDay.TabIndex = 70;
+            // 
+            // textBoxADBData
+            // 
+            this.textBoxADBData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxADBData.Location = new System.Drawing.Point(677, 186);
+            this.textBoxADBData.Name = "textBoxADBData";
+            this.textBoxADBData.Size = new System.Drawing.Size(209, 26);
+            this.textBoxADBData.TabIndex = 69;
+            // 
+            // textBoxADAData
+            // 
+            this.textBoxADAData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxADAData.Location = new System.Drawing.Point(677, 158);
+            this.textBoxADAData.Name = "textBoxADAData";
+            this.textBoxADAData.Size = new System.Drawing.Size(209, 26);
+            this.textBoxADAData.TabIndex = 68;
+            // 
+            // textBoxIOStatus
+            // 
+            this.textBoxIOStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxIOStatus.Location = new System.Drawing.Point(677, 130);
+            this.textBoxIOStatus.Name = "textBoxIOStatus";
+            this.textBoxIOStatus.Size = new System.Drawing.Size(209, 26);
+            this.textBoxIOStatus.TabIndex = 67;
+            // 
+            // textBoxPowerSupply
+            // 
+            this.textBoxPowerSupply.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPowerSupply.Location = new System.Drawing.Point(677, 102);
+            this.textBoxPowerSupply.Name = "textBoxPowerSupply";
+            this.textBoxPowerSupply.Size = new System.Drawing.Size(209, 26);
+            this.textBoxPowerSupply.TabIndex = 66;
+            // 
+            // textBoxTerminalStatus
+            // 
+            this.textBoxTerminalStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTerminalStatus.Location = new System.Drawing.Point(677, 74);
+            this.textBoxTerminalStatus.Name = "textBoxTerminalStatus";
+            this.textBoxTerminalStatus.Size = new System.Drawing.Size(209, 26);
+            this.textBoxTerminalStatus.TabIndex = 65;
+            // 
+            // textBoxEventID
+            // 
+            this.textBoxEventID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxEventID.Location = new System.Drawing.Point(677, 46);
+            this.textBoxEventID.Name = "textBoxEventID";
+            this.textBoxEventID.Size = new System.Drawing.Size(209, 26);
+            this.textBoxEventID.TabIndex = 64;
+            // 
+            // textBoxStatusLength
+            // 
+            this.textBoxStatusLength.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxStatusLength.Location = new System.Drawing.Point(677, 18);
+            this.textBoxStatusLength.Name = "textBoxStatusLength";
+            this.textBoxStatusLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxStatusLength.TabIndex = 63;
+            // 
+            // label49
+            // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(531, 217);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(95, 19);
+            this.label49.TabIndex = 62;
+            this.label49.Text = "Total KM/day";
+            // 
+            // label50
+            // 
+            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(531, 245);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(121, 19);
+            this.label50.TabIndex = 61;
+            this.label50.Text = "Speed Info Length";
+            // 
+            // label52
+            // 
+            this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(531, 189);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(41, 19);
+            this.label52.TabIndex = 60;
+            this.label52.Text = "ADB";
+            // 
+            // label53
+            // 
+            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(531, 133);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(67, 19);
+            this.label53.TabIndex = 59;
+            this.label53.Text = "IO Status";
+            // 
+            // label54
+            // 
+            this.label54.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(531, 161);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(42, 19);
+            this.label54.TabIndex = 58;
+            this.label54.Text = "ADA";
+            // 
+            // label55
+            // 
+            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(531, 105);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(136, 19);
+            this.label55.TabIndex = 57;
+            this.label55.Text = "Power Supply Status";
+            // 
+            // label56
+            // 
+            this.label56.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(531, 77);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(101, 19);
+            this.label56.TabIndex = 56;
+            this.label56.Text = "Terminal Status";
+            // 
+            // label58
+            // 
+            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(531, 49);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(63, 19);
+            this.label58.TabIndex = 55;
+            this.label58.Text = "Event ID";
+            // 
+            // label59
+            // 
+            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(531, 21);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(119, 19);
+            this.label59.TabIndex = 54;
+            this.label59.Text = "Status Info Length";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(42, 450);
+            this.label33.Location = new System.Drawing.Point(37, 385);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(53, 16);
+            this.label33.Size = new System.Drawing.Size(73, 19);
             this.label33.TabIndex = 53;
-            this.label33.Text = "label33";
+            this.label33.Text = "EHP Error";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(42, 478);
+            this.label34.Location = new System.Drawing.Point(37, 413);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(53, 16);
+            this.label34.Size = new System.Drawing.Size(73, 19);
             this.label34.TabIndex = 52;
-            this.label34.Text = "label34";
+            this.label34.Text = "EVP Error";
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(42, 422);
+            this.label35.Location = new System.Drawing.Point(37, 357);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(53, 16);
+            this.label35.Size = new System.Drawing.Size(143, 19);
             this.label35.TabIndex = 51;
-            this.label35.Text = "label35";
+            this.label35.Text = "GPS Angle and Status";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(42, 394);
+            this.label36.Location = new System.Drawing.Point(37, 329);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(53, 16);
+            this.label36.Size = new System.Drawing.Size(81, 19);
             this.label36.TabIndex = 50;
-            this.label36.Text = "label36";
+            this.label36.Text = "GPS Speed";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(42, 366);
+            this.label38.Location = new System.Drawing.Point(37, 301);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(53, 16);
+            this.label38.Size = new System.Drawing.Size(71, 19);
             this.label38.TabIndex = 49;
-            this.label38.Text = "label38";
+            this.label38.Text = "GPS Time";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(42, 338);
+            this.label39.Location = new System.Drawing.Point(37, 273);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(53, 16);
+            this.label39.Size = new System.Drawing.Size(56, 19);
             this.label39.TabIndex = 48;
-            this.label39.Text = "label39";
+            this.label39.Text = "Altitude";
             // 
-            // label42
+            // textBoxEVPError
             // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(536, 450);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(53, 16);
-            this.label42.TabIndex = 83;
-            this.label42.Text = "label42";
+            this.textBoxEVPError.Location = new System.Drawing.Point(183, 410);
+            this.textBoxEVPError.Name = "textBoxEVPError";
+            this.textBoxEVPError.Size = new System.Drawing.Size(209, 26);
+            this.textBoxEVPError.TabIndex = 47;
             // 
-            // label43
+            // textBoxEHPError
             // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(536, 478);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(53, 16);
-            this.label43.TabIndex = 82;
-            this.label43.Text = "label43";
+            this.textBoxEHPError.Location = new System.Drawing.Point(183, 382);
+            this.textBoxEHPError.Name = "textBoxEHPError";
+            this.textBoxEHPError.Size = new System.Drawing.Size(209, 26);
+            this.textBoxEHPError.TabIndex = 46;
             // 
-            // label44
+            // textBoxGpsStatus
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(536, 422);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(53, 16);
-            this.label44.TabIndex = 81;
-            this.label44.Text = "label44";
+            this.textBoxGpsStatus.Location = new System.Drawing.Point(183, 354);
+            this.textBoxGpsStatus.Name = "textBoxGpsStatus";
+            this.textBoxGpsStatus.Size = new System.Drawing.Size(209, 26);
+            this.textBoxGpsStatus.TabIndex = 45;
             // 
-            // label45
+            // textBoxGpsSpeed
             // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(536, 394);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(53, 16);
-            this.label45.TabIndex = 80;
-            this.label45.Text = "label45";
+            this.textBoxGpsSpeed.Location = new System.Drawing.Point(183, 326);
+            this.textBoxGpsSpeed.Name = "textBoxGpsSpeed";
+            this.textBoxGpsSpeed.Size = new System.Drawing.Size(209, 26);
+            this.textBoxGpsSpeed.TabIndex = 44;
             // 
-            // label46
+            // textBoxGpsTime
             // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(536, 366);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(53, 16);
-            this.label46.TabIndex = 79;
-            this.label46.Text = "label46";
+            this.textBoxGpsTime.Location = new System.Drawing.Point(183, 298);
+            this.textBoxGpsTime.Name = "textBoxGpsTime";
+            this.textBoxGpsTime.Size = new System.Drawing.Size(209, 26);
+            this.textBoxGpsTime.TabIndex = 43;
             // 
-            // label48
+            // textBoxLong
             // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(536, 338);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(53, 16);
-            this.label48.TabIndex = 78;
-            this.label48.Text = "label48";
+            this.textBoxLong.Location = new System.Drawing.Point(183, 242);
+            this.textBoxLong.Name = "textBoxLong";
+            this.textBoxLong.Size = new System.Drawing.Size(209, 26);
+            this.textBoxLong.TabIndex = 42;
             // 
-            // textBox17
+            // textBoxAlt
             // 
-            this.textBox17.Location = new System.Drawing.Point(682, 475);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(209, 22);
-            this.textBox17.TabIndex = 77;
+            this.textBoxAlt.Location = new System.Drawing.Point(183, 270);
+            this.textBoxAlt.Name = "textBoxAlt";
+            this.textBoxAlt.Size = new System.Drawing.Size(209, 26);
+            this.textBoxAlt.TabIndex = 41;
             // 
-            // textBox18
+            // textBoxLat
             // 
-            this.textBox18.Location = new System.Drawing.Point(682, 447);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(209, 22);
-            this.textBox18.TabIndex = 76;
+            this.textBoxLat.Location = new System.Drawing.Point(183, 214);
+            this.textBoxLat.Name = "textBoxLat";
+            this.textBoxLat.Size = new System.Drawing.Size(209, 26);
+            this.textBoxLat.TabIndex = 40;
             // 
-            // textBox19
+            // textBox8
             // 
-            this.textBox19.Location = new System.Drawing.Point(682, 419);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(209, 22);
-            this.textBox19.TabIndex = 75;
+            this.textBox8.Location = new System.Drawing.Point(183, 186);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(209, 26);
+            this.textBox8.TabIndex = 39;
             // 
-            // textBox20
+            // textBoxFrame
             // 
-            this.textBox20.Location = new System.Drawing.Point(682, 391);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(209, 22);
-            this.textBox20.TabIndex = 74;
+            this.textBoxFrame.Location = new System.Drawing.Point(183, 158);
+            this.textBoxFrame.Name = "textBoxFrame";
+            this.textBoxFrame.Size = new System.Drawing.Size(209, 26);
+            this.textBoxFrame.TabIndex = 38;
             // 
-            // textBox21
+            // textBoxPacketSNum
             // 
-            this.textBox21.Location = new System.Drawing.Point(682, 363);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(209, 22);
-            this.textBox21.TabIndex = 73;
+            this.textBoxPacketSNum.Location = new System.Drawing.Point(183, 130);
+            this.textBoxPacketSNum.Name = "textBoxPacketSNum";
+            this.textBoxPacketSNum.Size = new System.Drawing.Size(209, 26);
+            this.textBoxPacketSNum.TabIndex = 37;
             // 
-            // textBox22
+            // textBoxDeviceDTC
             // 
-            this.textBox22.Location = new System.Drawing.Point(682, 307);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(209, 22);
-            this.textBox22.TabIndex = 72;
+            this.textBoxDeviceDTC.Location = new System.Drawing.Point(183, 102);
+            this.textBoxDeviceDTC.Name = "textBoxDeviceDTC";
+            this.textBoxDeviceDTC.Size = new System.Drawing.Size(209, 26);
+            this.textBoxDeviceDTC.TabIndex = 36;
             // 
-            // textBox23
+            // textBoxImeiData
             // 
-            this.textBox23.Location = new System.Drawing.Point(682, 335);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(209, 22);
-            this.textBox23.TabIndex = 71;
+            this.textBoxImeiData.Location = new System.Drawing.Point(183, 74);
+            this.textBoxImeiData.Name = "textBoxImeiData";
+            this.textBoxImeiData.Size = new System.Drawing.Size(209, 26);
+            this.textBoxImeiData.TabIndex = 35;
             // 
-            // textBox24
+            // textBoxProtocol
             // 
-            this.textBox24.Location = new System.Drawing.Point(682, 279);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(209, 22);
-            this.textBox24.TabIndex = 70;
+            this.textBoxProtocol.Location = new System.Drawing.Point(183, 46);
+            this.textBoxProtocol.Name = "textBoxProtocol";
+            this.textBoxProtocol.Size = new System.Drawing.Size(209, 26);
+            this.textBoxProtocol.TabIndex = 34;
             // 
-            // textBox25
+            // textBoxLength
             // 
-            this.textBox25.Location = new System.Drawing.Point(682, 251);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(209, 22);
-            this.textBox25.TabIndex = 69;
+            this.textBoxLength.Location = new System.Drawing.Point(183, 18);
+            this.textBoxLength.Name = "textBoxLength";
+            this.textBoxLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxLength.TabIndex = 33;
             // 
-            // textBox26
+            // label61
             // 
-            this.textBox26.Location = new System.Drawing.Point(682, 223);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(209, 22);
-            this.textBox26.TabIndex = 68;
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(37, 217);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(58, 19);
+            this.label61.TabIndex = 29;
+            this.label61.Text = "Latitude";
             // 
-            // textBox27
+            // label60
             // 
-            this.textBox27.Location = new System.Drawing.Point(682, 195);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(209, 22);
-            this.textBox27.TabIndex = 67;
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(37, 245);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(69, 19);
+            this.label60.TabIndex = 28;
+            this.label60.Text = "Longitude";
             // 
-            // textBox28
+            // label57
             // 
-            this.textBox28.Location = new System.Drawing.Point(682, 167);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(209, 22);
-            this.textBox28.TabIndex = 66;
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(37, 189);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(111, 19);
+            this.label57.TabIndex = 25;
+            this.label57.Text = "GPS Info Length";
             // 
-            // textBox29
+            // label51
             // 
-            this.textBox29.Location = new System.Drawing.Point(682, 139);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(209, 22);
-            this.textBox29.TabIndex = 65;
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(37, 133);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(143, 19);
+            this.label51.TabIndex = 19;
+            this.label51.Text = "Packet Serial Number";
             // 
-            // textBox30
+            // label47
             // 
-            this.textBox30.Location = new System.Drawing.Point(682, 111);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(209, 22);
-            this.textBox30.TabIndex = 64;
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(37, 161);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(132, 19);
+            this.label47.TabIndex = 15;
+            this.label47.Text = "Frame Control Field";
             // 
-            // textBox31
+            // label37
             // 
-            this.textBox31.Location = new System.Drawing.Point(682, 83);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(209, 22);
-            this.textBox31.TabIndex = 63;
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(37, 105);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(84, 19);
+            this.label37.TabIndex = 7;
+            this.label37.Text = "Device RTC";
             // 
-            // label49
+            // label32
             // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(536, 282);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(53, 16);
-            this.label49.TabIndex = 62;
-            this.label49.Text = "label49";
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(37, 77);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(42, 19);
+            this.label32.TabIndex = 2;
+            this.label32.Text = "IMEI";
             // 
-            // label50
+            // label31
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(536, 310);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(54, 16);
-            this.label50.TabIndex = 61;
-            this.label50.Text = "label50";
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(37, 49);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(110, 19);
+            this.label31.TabIndex = 1;
+            this.label31.Text = "Protocol number";
             // 
-            // label52
+            // label30
             // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(536, 254);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(53, 16);
-            this.label52.TabIndex = 60;
-            this.label52.Text = "label52";
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(37, 21);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(50, 19);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "Length";
             // 
-            // label53
+            // radioButton1
             // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(536, 198);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(53, 16);
-            this.label53.TabIndex = 59;
-            this.label53.Text = "label53";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(536, 226);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(53, 16);
-            this.label54.TabIndex = 58;
-            this.label54.Text = "label54";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(536, 170);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(53, 16);
-            this.label55.TabIndex = 57;
-            this.label55.Text = "label55";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(536, 142);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(53, 16);
-            this.label56.TabIndex = 56;
-            this.label56.Text = "label56";
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(536, 114);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(53, 16);
-            this.label58.TabIndex = 55;
-            this.label58.Text = "label58";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(536, 86);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(53, 16);
-            this.label59.TabIndex = 54;
-            this.label59.Text = "label59";
+            this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(186, 868);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(152, 19);
+            this.radioButton1.TabIndex = 40;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Disconnected to Server";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // FrmMain
             // 
@@ -3558,24 +4026,49 @@ namespace TVNConfigSW
                 {
                     AppendLineToTextBox(textBoxLogsData, line, true);
                     var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4); 
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
-                    var length = line.Substring(2, 4);
+                    var Protocolnumber = line.Substring(2, 4);
+                    var imei = line.Substring(2, 4);
+                    var timeDTC = line.Substring(2, 4);
+                    var packetNum = line.Substring(2, 4);
+                    var Frame = line.Substring(2, 4);
+                    var GPSlength = line.Substring(2, 4); 
+                    var Lat = line.Substring(2, 4);
+                    var Long = line.Substring(2, 4);
+                    var Alt = line.Substring(2, 4);
+                    var GPSTime = line.Substring(2, 4);
+                    var GPSSpeed = line.Substring(2, 4);
+                    var GPSStatus = line.Substring(2, 4);
+                    var ÉHPError = line.Substring(2, 4);
+                    var EVPError = line.Substring(2, 4);
+                    var StatusLength = line.Substring(2, 4);
+                    var EventID = line.Substring(2, 4);
+                    var TerminalStatus = line.Substring(2, 4);
+                    var PowerStatus = line.Substring(2, 4);
+                    var IOStatus = line.Substring(2, 4);
+                    var ADA = line.Substring(2, 4);
+                    var ADB = line.Substring(2, 4);
+                    var TotalKMday = line.Substring(2, 4);
+                    var SpeedLength = line.Substring(2, 4);
+                    var SpeedData = line.Substring(2, 4);
+                    var Drive4h = line.Substring(2, 4);
+                    var Drive10h = line.Substring(2, 4);
+                    var IDLength = line.Substring(2, 4);
+                    var DriveName = line.Substring(2, 4);
+                    var LBSLength = line.Substring(2, 4);
+                    var GPSRSSI = line.Substring(2, 4);
+                    var Satellites = line.Substring(2, 4);
+                    var CellID = line.Substring(2, 4);
+                    var LAC = line.Substring(2, 4);
+                    var ComLength = line.Substring(2, 4);
+                    var ComType = line.Substring(2, 4);
+                    var ComData = line.Substring(2, 4);
+                    var WireLength = line.Substring(2, 4);
+                    var WireType = line.Substring(2, 4);
+                    var WireData = line.Substring(2, 4);
+                    var SpareLength = line.Substring(2, 4);
+                    var Checksum = line.Substring(2, 4);
+                    var EndMark = line.Substring(2, 4);
+
                 }
 
                 else if (line.Contains("-E-") || line.Contains("-E0") ||
