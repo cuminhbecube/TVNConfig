@@ -201,7 +201,7 @@ namespace TVNConfigSW
         private TabPage tabPage9;
         private SplitContainer splitContainer17;
         private GroupBox groupBox8;
-        private TextBox textBox1;
+        private TextBox textBoxLogsData;
         private Label label42;
         private Label label43;
         private Label label44;
@@ -427,7 +427,7 @@ namespace TVNConfigSW
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.pageSetupDialog2 = new System.Windows.Forms.PageSetupDialog();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxLogsData = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -2442,7 +2442,7 @@ namespace TVNConfigSW
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.textBox1);
+            this.groupBox8.Controls.Add(this.textBoxLogsData);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox8.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.Location = new System.Drawing.Point(0, 0);
@@ -2452,15 +2452,15 @@ namespace TVNConfigSW
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Logs Data Send To Server";
             // 
-            // textBox1
+            // textBoxLogsData
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 31);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1415, 186);
-            this.textBox1.TabIndex = 0;
+            this.textBoxLogsData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxLogsData.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLogsData.Location = new System.Drawing.Point(3, 31);
+            this.textBoxLogsData.Multiline = true;
+            this.textBoxLogsData.Name = "textBoxLogsData";
+            this.textBoxLogsData.Size = new System.Drawing.Size(1415, 186);
+            this.textBoxLogsData.TabIndex = 0;
             // 
             // label30
             // 
@@ -3554,6 +3554,30 @@ namespace TVNConfigSW
                         logEnable = false;
                     }
                 }
+                if (line.Contains("7E"))
+                {
+                    AppendLineToTextBox(textBoxLogsData, line, true);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4); 
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                    var length = line.Substring(2, 4);
+                }
+
                 else if (line.Contains("-E-") || line.Contains("-E0") ||
                      line.Contains("Can not") || line.Contains("can not") ||
                       line.Contains("failed") || line.Contains("fail") || line.Contains("false"))
