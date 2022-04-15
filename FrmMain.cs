@@ -4087,17 +4087,8 @@ namespace TVNConfigSW
                         textBoxDriverID.Text = DriveID;
                         var DriveName = line.Substring(2, 4);
                         textBoxDriveName.Text = DriveName;
-                        var LBSLength = line.Substring(2, 4);
-                        textBoxLBSInfoLength.Text = LBSLength;
-                        var GPSRSSI = line.Substring(2, 4);
-                        textBoxGPSRssi.Text = GPSRSSI;
-                        var Satellites = line.Substring(2, 4);
-                        textBoxSatellite.Text = Satellites;
-                        var CellID = line.Substring(2, 4);
-                        textBoxCellID.Text = CellID;
-                        var LAC = line.Substring(2, 4);
-                        textBoxLAC.Text = LAC;
-                        var ComLength = line.Substring(2, 4);
+
+                        var ComLength = line.Substring(line.Length - 16, 4);
                         textBoxCOMInfoLength.Text = ComLength;
                         var ComType = line.Substring(2, 4);
                         textBoxComType.Text = ComType;
@@ -4111,7 +4102,21 @@ namespace TVNConfigSW
                         textBoxWireData.Text = WireData;
                         var SpareLength = line.Substring(2, 4);
                         textBoxSpareInfoLength.Text = SpareLength;
-                    }    
+
+                    }
+                    var LBSLength = line.Substring(line.Length - 28, 2);
+                    textBoxLBSInfoLength.Text = LBSLength;
+                    var GSMRSSI = line.Substring(line.Length - 26, 2);
+                    textBoxGSMRssi.Text = GSMRSSI;
+                    var GPSRSSI = line.Substring(line.Length - 24, 2);
+                    textBoxGPSRssi.Text = GPSRSSI;
+                    var Satellites = line.Substring(line.Length - 22, 2);
+                    textBoxSatellite.Text = Satellites;
+                    var CellID = line.Substring(20, 8);
+                    textBoxCellID.Text = CellID;
+                    var LAC = line.Substring(line.Length - 12, 4);
+                    textBoxLAC.Text = LAC;
+                    
                     var Checksum = line.Substring(line.Length - 8, 4);
                     textBoxChecksum.Text = Checksum;
                     var EndMark = line.Substring(line.Length - 4, 4);
