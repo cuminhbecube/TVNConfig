@@ -4061,15 +4061,15 @@ namespace TVNConfigSW
                         //textBoxSpareInfoLength.Text = SpareLength;
 
                     }
-                    var LBSLength = line.Substring(line.Length - 28, 2);
+                    var LBSLength = line.Substring(line.Length - 29, 2);
                     textBoxLBSInfoLength.Text = LBSLength;
-                    var GSMRSSI = line.Substring(line.Length - 26, 2);
+                    var GSMRSSI = line.Substring(line.Length - 27, 2);
                     textBoxGSMRssi.Text = GSMRSSI;
-                    var GPSRSSI = line.Substring(line.Length - 24, 2);
+                    var GPSRSSI = line.Substring(line.Length - 25, 2);
                     textBoxGPSRssi.Text = GPSRSSI;
-                    var Satellites = line.Substring(line.Length - 22, 2);
+                    var Satellites = line.Substring(line.Length - 23, 2);
                     textBoxSatellite.Text = Satellites;
-                    var CellID = line.Substring(20, 8);
+                    var CellID = line.Substring(21, 8);
                     textBoxCellID.Text = CellID;
                     var LAC = line.Substring(line.Length - 12, 4);
                     textBoxLAC.Text = LAC;
