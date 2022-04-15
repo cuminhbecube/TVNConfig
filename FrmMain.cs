@@ -3214,105 +3214,105 @@ namespace TVNConfigSW
             // 
             this.textBoxEVPError.Location = new System.Drawing.Point(195, 410);
             this.textBoxEVPError.Name = "textBoxEVPError";
-            this.textBoxEVPError.Size = new System.Drawing.Size(209, 26);
+            this.textBoxEVPError.Size = new System.Drawing.Size(150, 26);
             this.textBoxEVPError.TabIndex = 47;
             // 
             // textBoxEHPError
             // 
             this.textBoxEHPError.Location = new System.Drawing.Point(195, 382);
             this.textBoxEHPError.Name = "textBoxEHPError";
-            this.textBoxEHPError.Size = new System.Drawing.Size(209, 26);
+            this.textBoxEHPError.Size = new System.Drawing.Size(150, 26);
             this.textBoxEHPError.TabIndex = 46;
             // 
             // textBoxGpsStatus
             // 
             this.textBoxGpsStatus.Location = new System.Drawing.Point(195, 354);
             this.textBoxGpsStatus.Name = "textBoxGpsStatus";
-            this.textBoxGpsStatus.Size = new System.Drawing.Size(209, 26);
+            this.textBoxGpsStatus.Size = new System.Drawing.Size(150, 26);
             this.textBoxGpsStatus.TabIndex = 45;
             // 
             // textBoxGpsSpeed
             // 
             this.textBoxGpsSpeed.Location = new System.Drawing.Point(195, 326);
             this.textBoxGpsSpeed.Name = "textBoxGpsSpeed";
-            this.textBoxGpsSpeed.Size = new System.Drawing.Size(209, 26);
+            this.textBoxGpsSpeed.Size = new System.Drawing.Size(150, 26);
             this.textBoxGpsSpeed.TabIndex = 44;
             // 
             // textBoxGpsTime
             // 
             this.textBoxGpsTime.Location = new System.Drawing.Point(195, 298);
             this.textBoxGpsTime.Name = "textBoxGpsTime";
-            this.textBoxGpsTime.Size = new System.Drawing.Size(209, 26);
+            this.textBoxGpsTime.Size = new System.Drawing.Size(150, 26);
             this.textBoxGpsTime.TabIndex = 43;
             // 
             // textBoxLong
             // 
             this.textBoxLong.Location = new System.Drawing.Point(195, 242);
             this.textBoxLong.Name = "textBoxLong";
-            this.textBoxLong.Size = new System.Drawing.Size(209, 26);
+            this.textBoxLong.Size = new System.Drawing.Size(150, 26);
             this.textBoxLong.TabIndex = 42;
             // 
             // textBoxAlt
             // 
             this.textBoxAlt.Location = new System.Drawing.Point(195, 270);
             this.textBoxAlt.Name = "textBoxAlt";
-            this.textBoxAlt.Size = new System.Drawing.Size(209, 26);
+            this.textBoxAlt.Size = new System.Drawing.Size(150, 26);
             this.textBoxAlt.TabIndex = 41;
             // 
             // textBoxLat
             // 
             this.textBoxLat.Location = new System.Drawing.Point(195, 214);
             this.textBoxLat.Name = "textBoxLat";
-            this.textBoxLat.Size = new System.Drawing.Size(209, 26);
+            this.textBoxLat.Size = new System.Drawing.Size(150, 26);
             this.textBoxLat.TabIndex = 40;
             // 
             // textBoxGPSLength
             // 
             this.textBoxGPSLength.Location = new System.Drawing.Point(195, 186);
             this.textBoxGPSLength.Name = "textBoxGPSLength";
-            this.textBoxGPSLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxGPSLength.Size = new System.Drawing.Size(150, 26);
             this.textBoxGPSLength.TabIndex = 39;
             // 
             // textBoxFrame
             // 
             this.textBoxFrame.Location = new System.Drawing.Point(195, 158);
             this.textBoxFrame.Name = "textBoxFrame";
-            this.textBoxFrame.Size = new System.Drawing.Size(209, 26);
+            this.textBoxFrame.Size = new System.Drawing.Size(150, 26);
             this.textBoxFrame.TabIndex = 38;
             // 
             // textBoxPacketSNum
             // 
             this.textBoxPacketSNum.Location = new System.Drawing.Point(195, 130);
             this.textBoxPacketSNum.Name = "textBoxPacketSNum";
-            this.textBoxPacketSNum.Size = new System.Drawing.Size(209, 26);
+            this.textBoxPacketSNum.Size = new System.Drawing.Size(150, 26);
             this.textBoxPacketSNum.TabIndex = 37;
             // 
             // textBoxDeviceDTC
             // 
             this.textBoxDeviceDTC.Location = new System.Drawing.Point(195, 102);
             this.textBoxDeviceDTC.Name = "textBoxDeviceDTC";
-            this.textBoxDeviceDTC.Size = new System.Drawing.Size(209, 26);
+            this.textBoxDeviceDTC.Size = new System.Drawing.Size(150, 26);
             this.textBoxDeviceDTC.TabIndex = 36;
             // 
             // textBoxImeiData
             // 
             this.textBoxImeiData.Location = new System.Drawing.Point(195, 74);
             this.textBoxImeiData.Name = "textBoxImeiData";
-            this.textBoxImeiData.Size = new System.Drawing.Size(209, 26);
+            this.textBoxImeiData.Size = new System.Drawing.Size(150, 26);
             this.textBoxImeiData.TabIndex = 35;
             // 
             // textBoxProtocol
             // 
             this.textBoxProtocol.Location = new System.Drawing.Point(195, 46);
             this.textBoxProtocol.Name = "textBoxProtocol";
-            this.textBoxProtocol.Size = new System.Drawing.Size(209, 26);
+            this.textBoxProtocol.Size = new System.Drawing.Size(150, 26);
             this.textBoxProtocol.TabIndex = 34;
             // 
             // textBoxLength
             // 
             this.textBoxLength.Location = new System.Drawing.Point(195, 18);
             this.textBoxLength.Name = "textBoxLength";
-            this.textBoxLength.Size = new System.Drawing.Size(209, 26);
+            this.textBoxLength.Size = new System.Drawing.Size(150, 26);
             this.textBoxLength.TabIndex = 33;
             // 
             // label61
@@ -4076,32 +4076,32 @@ namespace TVNConfigSW
                         var SpeedLength = line.Substring(128, 2);
                         textBoxSpeedLength.Text = SpeedLength;
                         var SpeedData = line.Substring(2, 4);
-                        textBoxSpeedData.Text = SpeedData;
+                        //textBoxSpeedData.Text = SpeedData;
                         var Drive4h = line.Substring(2, 4);
-                        textBoxDriver4h.Text = Drive4h;
+                        //textBoxDriver4h.Text = Drive4h;
                         var Drive10h = line.Substring(2, 4);
-                        textBoxDrive10h.Text = Drive10h;
+                        //textBoxDrive10h.Text = Drive10h;
                         var IDLength = line.Substring(2, 4);
-                        textBoxDriverDataLength.Text = IDLength;
+                        //textBoxDriverDataLength.Text = IDLength;
                         var DriveID = line.Substring(2, 4);
-                        textBoxDriverID.Text = DriveID;
+                        //textBoxDriverID.Text = DriveID;
                         var DriveName = line.Substring(2, 4);
-                        textBoxDriveName.Text = DriveName;
+                        //textBoxDriveName.Text = DriveName;
 
                         var ComLength = line.Substring(line.Length - 16, 4);
-                        textBoxCOMInfoLength.Text = ComLength;
+                        //textBoxCOMInfoLength.Text = ComLength;
                         var ComType = line.Substring(2, 4);
-                        textBoxComType.Text = ComType;
+                        //textBoxComType.Text = ComType;
                         var ComData = line.Substring(2, 4);
-                        textBoxComData.Text = ComData;
+                        //textBoxComData.Text = ComData;
                         var WireLength = line.Substring(2, 4);
-                        textBoxWireInfoLength.Text = WireLength;
+                        //textBoxWireInfoLength.Text = WireLength;
                         var WireType = line.Substring(2, 4);
-                        textBoxWireType.Text = WireType;
+                        //textBoxWireType.Text = WireType;
                         var WireData = line.Substring(2, 4);
-                        textBoxWireData.Text = WireData;
+                        //textBoxWireData.Text = WireData;
                         var SpareLength = line.Substring(2, 4);
-                        textBoxSpareInfoLength.Text = SpareLength;
+                        //textBoxSpareInfoLength.Text = SpareLength;
 
                     }
                     var LBSLength = line.Substring(line.Length - 28, 2);
