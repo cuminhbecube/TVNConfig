@@ -3379,7 +3379,7 @@ namespace TVNConfigSW
             this.MinimumSize = new System.Drawing.Size(1024, 700);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TVNConfigSW";
+            this.Text = "TVNConfigSW Rev1.3";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Closed += new System.EventHandler(this.FrmMain_Closed);
             this.Load += new System.EventHandler(this.FrmMain_Load);
