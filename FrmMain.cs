@@ -2553,9 +2553,9 @@ namespace TVNConfigSW
             // 
             // label77
             // 
-            this.label77.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label77.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(967, 217);
+            this.label77.Location = new System.Drawing.Point(1182, 273);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(71, 19);
             this.label77.TabIndex = 117;
@@ -2563,17 +2563,17 @@ namespace TVNConfigSW
             // 
             // textBoxEndMark
             // 
-            this.textBoxEndMark.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxEndMark.Location = new System.Drawing.Point(1087, 214);
+            this.textBoxEndMark.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxEndMark.Location = new System.Drawing.Point(1328, 270);
             this.textBoxEndMark.Name = "textBoxEndMark";
             this.textBoxEndMark.Size = new System.Drawing.Size(79, 26);
             this.textBoxEndMark.TabIndex = 116;
             // 
             // label78
             // 
-            this.label78.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label78.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(967, 189);
+            this.label78.Location = new System.Drawing.Point(1182, 245);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(73, 19);
             this.label78.TabIndex = 115;
@@ -2581,8 +2581,8 @@ namespace TVNConfigSW
             // 
             // textBoxChecksum
             // 
-            this.textBoxChecksum.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxChecksum.Location = new System.Drawing.Point(1087, 186);
+            this.textBoxChecksum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxChecksum.Location = new System.Drawing.Point(1328, 242);
             this.textBoxChecksum.Name = "textBoxChecksum";
             this.textBoxChecksum.Size = new System.Drawing.Size(79, 26);
             this.textBoxChecksum.TabIndex = 114;
@@ -4061,15 +4061,15 @@ namespace TVNConfigSW
                         //textBoxSpareInfoLength.Text = SpareLength;
 
                     }
-                    var LBSLength = line.Substring(line.Length - 29, 2);
+                    var LBSLength = line.Substring(line.Length - 28, 2);
                     textBoxLBSInfoLength.Text = LBSLength;
-                    var GSMRSSI = line.Substring(line.Length - 27, 2);
+                    var GSMRSSI = line.Substring(line.Length - 26, 2);
                     textBoxGSMRssi.Text = GSMRSSI;
-                    var GPSRSSI = line.Substring(line.Length - 25, 2);
+                    var GPSRSSI = line.Substring(line.Length - 24, 2);
                     textBoxGPSRssi.Text = GPSRSSI;
-                    var Satellites = line.Substring(line.Length - 23, 2);
+                    var Satellites = line.Substring(line.Length - 22, 2);
                     textBoxSatellite.Text = Satellites;
-                    var CellID = line.Substring(21, 8);
+                    var CellID = line.Substring(line.Length - 20, 8);
                     textBoxCellID.Text = CellID;
                     var LAC = line.Substring(line.Length - 12, 4);
                     textBoxLAC.Text = LAC;

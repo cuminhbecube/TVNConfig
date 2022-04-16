@@ -8,7 +8,7 @@ using System.Reflection;
 [ assembly: AssemblyDescription("www.dss.com.vn")]
 [ assembly: AssemblyCompany("DSS")]
 [ assembly: AssemblyProduct("TVNConfigSW")]
-[ assembly: AssemblyCopyright("c. 2017-2018 by Mai Truong Giang")]
+[ assembly: AssemblyCopyright("c. 2017-2018 by Mai Truong Giang, Add more function and edit by Nguyen Long Vu")]
 [ assembly: AssemblyTrademark( "" ) ]
 [ assembly: AssemblyCulture( "" ) ]
 
