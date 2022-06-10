@@ -149,7 +149,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IMEI.cs" />
-    <Compile Include="IMEIBase.cs" />
     <Compile Include="IntervalPacket.cs" />
     <Compile Include="ListBoxLog.cs" />
     <Compile Include="ListImei.cs" />
