@@ -1,6 +1,6 @@
 # TVNConfigSW
 
-Phần mềm chạy trên window để cấu hình và xem log thiết bị TVN02
+Phần mềm chạy trên window để cấu hình và xem log thiết bị TVN02 - TVN05 - TVN06 - TVN08
 
 ## Getting started
 
