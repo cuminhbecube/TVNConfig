@@ -138,6 +138,9 @@
     <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
@@ -145,8 +148,11 @@
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IMEI.cs" />
+    <Compile Include="IMEIBase.cs" />
     <Compile Include="IntervalPacket.cs" />
     <Compile Include="ListBoxLog.cs" />
+    <Compile Include="ListImei.cs" />
     <Compile Include="ModbusCRC16.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -174,12 +180,18 @@
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BootloaderProcessing.datasource" />
+    <None Include="Properties\DataSources\FrmMain.datasource" />
+    <None Include="Properties\DataSources\IntervalPacket.datasource" />
+    <None Include="Properties\DataSources\ListBoxLog.datasource" />
+    <None Include="Properties\DataSources\ModbusCRC16.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="License-LGPL.txt" />
     <Content Include="sygic_truck_gps_navigation_apk_obb_ZrX_icon.ico" />
   </ItemGroup>
   <ItemGroup>

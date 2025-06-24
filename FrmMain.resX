@@ -128,7 +128,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB4
-        CQAAAk1TRnQBSQFMAgEBAwEAATABAgEwAQIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CQAAAk1TRnQBSQFMAgEBAwEAAfgBAgH4AQIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -180,72 +180,22 @@
   <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>632, 17</value>
   </metadata>
-  <metadata name="buttonRebootToDFUMode2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="pageSetupDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>745, 17</value>
+  </metadata>
+  <metadata name="pageSetupDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>897, 17</value>
   </metadata>
   <metadata name="listBoxFirmwareUpdateLog1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="groupBoxLogs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="textBoxDeviceErrorMessage1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="errorlog.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="gprs4gStartus.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="textBoxDeviceLogs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="checkBoxDisplayGpsSentence.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="checkBoxAutoScrollDeviceLogs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        rkJggg==
-</value>
-  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA
