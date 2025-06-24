@@ -189,7 +189,6 @@ namespace TVNConfigSW
         private TextBox textBoxImei;
         private SplitContainer splitContainer2;
         private SplitContainer splitContainer7;
-        private Panel panel1;
         private GroupBox groupBoxLogs;
         private TextBox textBoxTempC;
         private TextBox textBoxVbat;
@@ -210,7 +209,6 @@ namespace TVNConfigSW
         private Label label5;
         private Label label3;
         private TextBox textBoxDeviceErrorMessage1;
-        private GroupBox errorlog;
         private GroupBox gprs4gStartus;
         private TextBox textBoxGprsMessage1;
         private SplitContainer splitContainer3;
@@ -232,6 +230,7 @@ namespace TVNConfigSW
         private Button buttonReset;
         private TextBox textGPSstartus;
         private TextBox textBoxTempD;
+        private GroupBox groupBox2;
         private TabPage tabPage6;
 
         [System.Diagnostics.DebuggerStepThrough()]
@@ -387,8 +386,8 @@ namespace TVNConfigSW
             this.textBoxImei = new System.Windows.Forms.TextBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxLogs = new System.Windows.Forms.GroupBox();
+            this.textBoxTempD = new System.Windows.Forms.TextBox();
             this.textBoxTempC = new System.Windows.Forms.TextBox();
             this.textBoxVbat = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
@@ -408,8 +407,8 @@ namespace TVNConfigSW
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxDeviceErrorMessage1 = new System.Windows.Forms.TextBox();
-            this.errorlog = new System.Windows.Forms.GroupBox();
             this.gprs4gStartus = new System.Windows.Forms.GroupBox();
+            this.textGPSstartus = new System.Windows.Forms.TextBox();
             this.textBoxGprsMessage1 = new System.Windows.Forms.TextBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.textBoxDeviceLogs = new System.Windows.Forms.TextBox();
@@ -426,8 +425,7 @@ namespace TVNConfigSW
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.tabControlTestList = new System.Windows.Forms.TabControl();
-            this.textGPSstartus = new System.Windows.Forms.TextBox();
-            this.textBoxTempD = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.statusStrip.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -503,7 +501,6 @@ namespace TVNConfigSW
             this.splitContainer7.Panel1.SuspendLayout();
             this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.groupBoxLogs.SuspendLayout();
             this.gprs4gStartus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
@@ -517,6 +514,7 @@ namespace TVNConfigSW
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
             this.splitContainer9.SuspendLayout();
             this.tabControlTestList.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
@@ -2084,9 +2082,8 @@ namespace TVNConfigSW
             // splitContainer7.Panel1
             // 
             this.splitContainer7.Panel1.AutoScroll = true;
-            this.splitContainer7.Panel1.Controls.Add(this.panel1);
-            this.splitContainer7.Panel1.Controls.Add(this.textBoxDeviceErrorMessage1);
-            this.splitContainer7.Panel1.Controls.Add(this.errorlog);
+            this.splitContainer7.Panel1.Controls.Add(this.groupBox2);
+            this.splitContainer7.Panel1.Controls.Add(this.groupBoxLogs);
             // 
             // splitContainer7.Panel2
             // 
@@ -2095,18 +2092,8 @@ namespace TVNConfigSW
             this.splitContainer7.SplitterDistance = 490;
             this.splitContainer7.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.groupBoxLogs);
-            this.panel1.Location = new System.Drawing.Point(269, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 165);
-            this.panel1.TabIndex = 2;
-            // 
             // groupBoxLogs
             // 
-            this.groupBoxLogs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxLogs.Controls.Add(this.textBoxTempD);
             this.groupBoxLogs.Controls.Add(this.textBoxTempC);
             this.groupBoxLogs.Controls.Add(this.textBoxVbat);
@@ -2126,13 +2113,21 @@ namespace TVNConfigSW
             this.groupBoxLogs.Controls.Add(this.label6);
             this.groupBoxLogs.Controls.Add(this.label5);
             this.groupBoxLogs.Controls.Add(this.label3);
+            this.groupBoxLogs.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBoxLogs.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxLogs.Location = new System.Drawing.Point(0, 0);
             this.groupBoxLogs.Name = "groupBoxLogs";
-            this.groupBoxLogs.Size = new System.Drawing.Size(220, 165);
+            this.groupBoxLogs.Size = new System.Drawing.Size(220, 166);
             this.groupBoxLogs.TabIndex = 0;
             this.groupBoxLogs.TabStop = false;
             this.groupBoxLogs.Text = "Signal Indicator";
+            // 
+            // textBoxTempD
+            // 
+            this.textBoxTempD.Location = new System.Drawing.Point(173, 125);
+            this.textBoxTempD.Name = "textBoxTempD";
+            this.textBoxTempD.Size = new System.Drawing.Size(38, 22);
+            this.textBoxTempD.TabIndex = 27;
             // 
             // textBoxTempC
             // 
@@ -2290,26 +2285,14 @@ namespace TVNConfigSW
             // 
             // textBoxDeviceErrorMessage1
             // 
-            this.textBoxDeviceErrorMessage1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxDeviceErrorMessage1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxDeviceErrorMessage1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDeviceErrorMessage1.ForeColor = System.Drawing.Color.Red;
-            this.textBoxDeviceErrorMessage1.Location = new System.Drawing.Point(3, 26);
+            this.textBoxDeviceErrorMessage1.Location = new System.Drawing.Point(3, 18);
             this.textBoxDeviceErrorMessage1.Multiline = true;
             this.textBoxDeviceErrorMessage1.Name = "textBoxDeviceErrorMessage1";
-            this.textBoxDeviceErrorMessage1.Size = new System.Drawing.Size(265, 136);
+            this.textBoxDeviceErrorMessage1.Size = new System.Drawing.Size(264, 145);
             this.textBoxDeviceErrorMessage1.TabIndex = 1;
-            // 
-            // errorlog
-            // 
-            this.errorlog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.errorlog.Enabled = false;
-            this.errorlog.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorlog.Location = new System.Drawing.Point(0, 0);
-            this.errorlog.Name = "errorlog";
-            this.errorlog.Size = new System.Drawing.Size(490, 166);
-            this.errorlog.TabIndex = 0;
-            this.errorlog.TabStop = false;
-            this.errorlog.Text = "Error Logs";
             // 
             // gprs4gStartus
             // 
@@ -2323,6 +2306,16 @@ namespace TVNConfigSW
             this.gprs4gStartus.TabIndex = 0;
             this.gprs4gStartus.TabStop = false;
             this.gprs4gStartus.Text = "GPRS - 4G Status";
+            // 
+            // textGPSstartus
+            // 
+            this.textGPSstartus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textGPSstartus.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textGPSstartus.Location = new System.Drawing.Point(499, 18);
+            this.textGPSstartus.Multiline = true;
+            this.textGPSstartus.Name = "textGPSstartus";
+            this.textGPSstartus.Size = new System.Drawing.Size(0, 145);
+            this.textGPSstartus.TabIndex = 1;
             // 
             // textBoxGprsMessage1
             // 
@@ -2535,22 +2528,17 @@ namespace TVNConfigSW
             this.tabControlTestList.Size = new System.Drawing.Size(1225, 727);
             this.tabControlTestList.TabIndex = 35;
             // 
-            // textGPSstartus
+            // groupBox2
             // 
-            this.textGPSstartus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textGPSstartus.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textGPSstartus.Location = new System.Drawing.Point(499, 18);
-            this.textGPSstartus.Multiline = true;
-            this.textGPSstartus.Name = "textGPSstartus";
-            this.textGPSstartus.Size = new System.Drawing.Size(0, 145);
-            this.textGPSstartus.TabIndex = 1;
-            // 
-            // textBoxTempD
-            // 
-            this.textBoxTempD.Location = new System.Drawing.Point(173, 125);
-            this.textBoxTempD.Name = "textBoxTempD";
-            this.textBoxTempD.Size = new System.Drawing.Size(38, 22);
-            this.textBoxTempD.TabIndex = 27;
+            this.groupBox2.Controls.Add(this.textBoxDeviceErrorMessage1);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(220, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(270, 166);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Error Logs";
             // 
             // FrmMain
             // 
@@ -2662,11 +2650,9 @@ namespace TVNConfigSW
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.splitContainer7.Panel1.ResumeLayout(false);
-            this.splitContainer7.Panel1.PerformLayout();
             this.splitContainer7.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.groupBoxLogs.ResumeLayout(false);
             this.groupBoxLogs.PerformLayout();
             this.gprs4gStartus.ResumeLayout(false);
@@ -2684,6 +2670,8 @@ namespace TVNConfigSW
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
             this.splitContainer9.ResumeLayout(false);
             this.tabControlTestList.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
