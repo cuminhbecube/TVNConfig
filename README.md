@@ -219,8 +219,8 @@ Thiết bị gửi log theo dòng, các loại thông tin:
 #### Các bước build
 ```bash
 # 1. Clone repository
-git clone https://github.com/cuminhbecube/TVNConfig.git
-cd TVNConfig
+git clone https://gitlab.com/dss-tvn02/tvnconfigsw.git
+cd tvnconfigsw
 
 # 2. Restore NuGet packages
 nuget restore TVNConfigSW.sln
@@ -329,12 +329,13 @@ TVNConfigSW.exe
 ### 2. CRC16 Modbus Algorithm
 ```csharp
 // Tính CRC16 cho mảng byte
+// wCRCTable là bảng tra 256 phần tử được định nghĩa trong ModbusCRC16.cs
 UInt16 wCRCWord = 0xFFFF;
 for (int i = offset; i < offset + length; i++)
 {
     byte nTemp = (byte)(data[i] ^ wCRCWord);
     wCRCWord >>= 8;
-    wCRCWord ^= wCRCTable[nTemp];
+    wCRCWord ^= wCRCTable[nTemp];  // Tra bảng để tính CRC nhanh
 }
 return wCRCWord;
 ```
@@ -429,9 +430,11 @@ Phần mềm này là sản phẩm thương mại của DSS. Mọi hành vi sao 
 
 ## Thông tin liên hệ
 
-- **Hotline hỗ trợ kỹ thuật:** 1900-xxxx
+Để được hỗ trợ kỹ thuật và thông tin chi tiết về sản phẩm:
+- **Website:** www.dss.com.vn
 - **Email:** support@dss.com.vn
-- **Địa chỉ:** [Địa chỉ công ty DSS]
+
+_Vui lòng liên hệ qua website hoặc email để được hỗ trợ trực tiếp._
 
 ---
 
