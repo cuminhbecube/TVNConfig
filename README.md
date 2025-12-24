@@ -297,6 +297,446 @@ TVNConfigSW.exe
 
 ---
 
+## Chi tiết xử lý nạp Firmware
+
+Phần này giải thích chi tiết cách chương trình xử lý quy trình nạp firmware vào thiết bị TVN.
+
+### 1. Tổng quan quy trình
+
+Quy trình nạp firmware được chia thành 5 giai đoạn chính:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ GIAI ĐOẠN 1: Đọc và phân tích file firmware                │
+│ - Mở file .bin                                               │
+│ - Tìm marker string để trích xuất phiên bản                 │
+│ - Đọc toàn bộ dữ liệu binary                                │
+│ - Chia thành các khối 2048 bytes                            │
+└─────────────────────────────────────────────────────────────┘
+                        ↓
+┌─────────────────────────────────────────────────────────────┐
+│ GIAI ĐOẠN 2: Tạo danh sách gói tin                         │
+│ - Tạo Init Packet (Message Code 1)                          │
+│ - Tạo các Data Packet (Message Code 2) - mỗi gói 2KB       │
+│ - Tạo End Packet (Message Code 3)                           │
+│ - Tính CRC16 cho từng gói                                   │
+└─────────────────────────────────────────────────────────────┘
+                        ↓
+┌─────────────────────────────────────────────────────────────┐
+│ GIAI ĐOẠN 3: Khởi động thiết bị vào chế độ Bootloader      │
+│ - Gửi lệnh *TVN686,993# để reboot vào DFU mode             │
+│ - Gửi Query State command                                   │
+│ - Chờ nhận "-BLD-START" hoặc "-BLD-ACK" (timeout 30s)      │
+└─────────────────────────────────────────────────────────────┘
+                        ↓
+┌─────────────────────────────────────────────────────────────┐
+│ GIAI ĐOẠN 4: Truyền firmware                               │
+│ - Gửi Init Packet → Chờ ACK                                │
+│ - Gửi Data Packet 1 → Chờ ACK                              │
+│ - Gửi Data Packet 2 → Chờ ACK                              │
+│ - ... (lặp lại cho tất cả gói)                             │
+│ - Gửi End Packet → Chờ ACK                                 │
+└─────────────────────────────────────────────────────────────┘
+                        ↓
+┌─────────────────────────────────────────────────────────────┐
+│ GIAI ĐOẠN 5: Hoàn tất và reboot                            │
+│ - Thiết bị tự động verify firmware                          │
+│ - Thiết bị tự động reboot vào firmware mới                  │
+│ - Phần mềm hiển thị "Complete" trên progress bar           │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 2. Chi tiết từng giai đoạn
+
+#### GIAI ĐOẠN 1: Đọc và phân tích file firmware
+
+**Hàm xử lý:** `BootloaderProcessing.ReadBinaryFile(string binaryFileName)`
+
+**Các bước thực hiện:**
+
+1. **Trích xuất phiên bản firmware:**
+   ```csharp
+   // Tìm marker string đặc biệt trong file
+   string firmwareVersionMarker = "FIRMWARE VERSION MARKER: LIFE IS THE MOST BEAUTIFUL THING IN THE WORLD@";
+   
+   // Đọc từng dòng cho đến khi tìm thấy marker
+   // Ví dụ marker trong file: "...MARKER@1.2.3.4"
+   // → Version = [1, 2, 3, 4]
+   ```
+   
+   - Mở file firmware dưới dạng text
+   - Quét từng dòng tìm marker string
+   - Sau marker là phiên bản dạng "X.Y.Z.W" (4 số)
+   - Lưu vào mảng `FirmwareVersion[4]`
+   - Nếu không tìm thấy marker → trả về FALSE, file không hợp lệ
+
+2. **Đọc dữ liệu binary:**
+   ```csharp
+   BinaryReader binaryReader = new BinaryReader(new FileStream(fileName, FileMode.Open));
+   
+   // Đọc từng khối 2048 bytes
+   do {
+       byte[] payLoadData = binaryReader.ReadBytes(2048);
+       if (payLoadData.Length > 0) {
+           PayLoadList.Add(payLoadData);
+           totalPayloadPacket++;
+       }
+   } while (payLoadData.Length > 0);
+   ```
+   
+   - Mở file ở chế độ binary
+   - Đọc liên tiếp các khối 2048 bytes
+   - Lưu vào danh sách `PayLoadList`
+   - Gói cuối cùng có thể < 2048 bytes
+   - Tối đa 65000 gói (giới hạn của UInt16)
+
+#### GIAI ĐOẠN 2: Tạo danh sách gói tin
+
+**Cấu trúc gói tin bootloader:**
+
+```
+┌────────┬─────────┬────────────┬──────────┬─────────┐
+│ Header │ Payload │   CRC16    │ End Mark │         │
+│ 18 byte│ 0-2048  │  2 bytes   │ 0D 0A    │         │
+└────────┴─────────┴────────────┴──────────┴─────────┘
+
+Chi tiết Header (18 bytes):
+Byte 0:     0x7E              - Start marker
+Byte 1-2:   Length (MSB,LSB)  - Độ dài từ byte 3 đến hết payload
+Byte 3-4:   $B (0x24, 0x42)   - Protocol identifier
+Byte 5-6:   Serial (MSB,LSB)  - Số thứ tự gói (0, 1, 2, ...)
+Byte 7:     Message Code      - Loại gói tin (1:Init, 2:Data, 3:End)
+Byte 8-11:  FW Version        - 4 bytes phiên bản [X,Y,Z,W]
+Byte 12-13: Total Packet      - Tổng số gói (MSB, LSB)
+Byte 14-15: Packet No         - Số thứ tự gói này (MSB, LSB)
+Byte 16-17: Payload Length    - Độ dài payload (MSB, LSB)
+```
+
+**2.1. Tạo Init Packet (Message Code = 1):**
+```csharp
+// Gói đầu tiên, không có payload
+byte[] packet = new byte[22];
+packet[0] = 0x7E;
+packet[1] = 0x00;              // Length MSB
+packet[2] = 0x0F;              // Length LSB = 15
+packet[3] = 0x24;              // '$'
+packet[4] = 0x42;              // 'B'
+packet[5] = 0x00;              // Serial MSB
+packet[6] = 0x00;              // Serial LSB
+packet[7] = 0x01;              // Message Code = 1 (Init)
+packet[8-11] = FirmwareVersion[0-3];
+packet[12-13] = TotalPacket (MSB, LSB);
+packet[14-15] = 0x00, 0x00;    // Packet No = 0
+packet[16-17] = 0x00, 0x00;    // Payload Length = 0
+CRC16 = Calculate(packet[3..17]);
+packet[18] = CRC16 MSB;
+packet[19] = CRC16 LSB;
+packet[20] = 0x0D;             // CR
+packet[21] = 0x0A;             // LF
+```
+
+**2.2. Tạo Data Packets (Message Code = 2):**
+```csharp
+// Với mỗi khối 2048 bytes trong PayLoadList
+for (int i = 0; i < totalPayloadPacket; i++) {
+    int payloadLen = PayLoadList[i].Length;  // 2048 hoặc ít hơn
+    int packetLen = payloadLen + 15;
+    byte[] packet = new byte[packetLen + 7];
+    
+    packet[0] = 0x7E;
+    packet[1-2] = packetLen (MSB, LSB);
+    packet[3-4] = 0x24, 0x42;           // $B
+    packet[5-6] = (i+1) (MSB, LSB);     // Serial number
+    packet[7] = 0x02;                   // Message Code = 2 (Data)
+    packet[8-11] = FirmwareVersion;
+    packet[12-13] = TotalPacket;
+    packet[14-15] = (i+1) (MSB, LSB);   // Packet number
+    packet[16-17] = payloadLen (MSB, LSB);
+    
+    // Copy payload data
+    Copy PayLoadList[i] → packet[18..(18+payloadLen-1)]
+    
+    // Calculate CRC for packet[3..(18+payloadLen-1)]
+    CRC16 = Calculate(...);
+    packet[packetLen+3] = CRC16 MSB;
+    packet[packetLen+4] = CRC16 LSB;
+    packet[packetLen+5] = 0x0D;
+    packet[packetLen+6] = 0x0A;
+    
+    PacketList.Add(packet);
+}
+```
+
+**2.3. Tạo End Packet (Message Code = 3):**
+```csharp
+// Gói cuối cùng, không có payload
+byte[] packet = new byte[22];
+packet[0] = 0x7E;
+packet[1] = 0x00;
+packet[2] = 0x0F;              // Length = 15
+packet[3] = 0x24;              // '$'
+packet[4] = 0x42;              // 'B'
+packet[5-6] = (TotalPacket-1) (MSB, LSB);  // Serial = Last packet number
+packet[7] = 0x03;              // Message Code = 3 (End)
+packet[8-11] = FirmwareVersion;
+packet[12-13] = TotalPacket;
+packet[14-15] = (TotalPacket-1) (MSB, LSB);
+packet[16-17] = 0x00, 0x00;    // Payload Length = 0
+CRC16 = Calculate(packet[3..17]);
+packet[18-19] = CRC16 (MSB, LSB);
+packet[20-21] = 0x0D, 0x0A;
+```
+
+#### GIAI ĐOẠN 3: Khởi động vào chế độ Bootloader
+
+**State Machine:** `IDLE` → `WAITING_DEVICE_BOOTUP`
+
+**Các bước:**
+
+1. **Người dùng click "Reboot to DFU Mode":**
+   ```csharp
+   // Gửi lệnh AT Command để thiết bị reboot vào bootloader
+   commandStrQueue.Enqueue("*TVN686,993#");
+   
+   // Chuyển state và khởi tạo
+   bootloaderProcessing.State = BootloaderProcessingState.WAITING_DEVICE_BOOTUP;
+   bootloaderProcessing.NextTxPacketNo = 0;
+   bootloaderProcessing.WaitingForResponseTimeoutCounter = 0;
+   
+   // Gửi Query State command
+   bootLoaderTxPacketQueue.Enqueue(bootloaderProcessing.CommandQueryDeviceState);
+   ```
+
+2. **Chờ thiết bị phản hồi:**
+   - Timer mỗi 100ms kiểm tra `bootLoaderRxResponseQueue`
+   - Tìm chuỗi "-BLD-START" hoặc "-BLD-ACK" trong response
+   - Nếu tìm thấy:
+     ```
+     → Thiết bị đã vào bootloader mode
+     → Chuyển sang State: SEND_CMD_ERASE
+     → Hiển thị "Device entered bootloader mode, start programming..."
+     ```
+   
+3. **Xử lý timeout:**
+   - Sau 5 giây: Gửi lại Query State command
+   - Sau 30 giây: Timeout, hủy quá trình
+     ```
+     → Hiển thị lỗi "Device cannot enter bootloader mode"
+     → Quay về State: IDLE
+     → IsValid = false
+     ```
+
+#### GIAI ĐOẠN 4: Truyền Firmware
+
+**State Machine:** `SEND_CMD_ERASE` → `SEND_NEXT_DATAPACKET`
+
+**4.1. Gửi Init Packet (SEND_CMD_ERASE state):**
+
+```csharp
+// Clear response queue
+bootLoaderRxResponseQueue.Clear();
+
+// Gửi packet đầu tiên (Init packet - Message Code 1)
+bootLoaderTxPacketQueue.Enqueue(bootloaderProcessing.PacketList[0]);
+
+// Chuyển state
+bootloaderProcessing.State = BootloaderProcessingState.SEND_NEXT_DATAPACKET;
+bootloaderProcessing.WaitingForResponseTimeoutCounter = 0;
+```
+
+**4.2. Gửi Data Packets (SEND_NEXT_DATAPACKET state):**
+
+```csharp
+// Timer 100ms liên tục kiểm tra
+while (State == SEND_NEXT_DATAPACKET) {
+    
+    // Kiểm tra response từ thiết bị
+    if (bootLoaderRxResponseQueue.Count > 0) {
+        string response = bootLoaderRxResponseQueue.Dequeue();
+        
+        if (response.Contains("-BLD-ACK")) {
+            // Thiết bị đã nhận gói tin thành công
+            bootloaderProcessing.NextTxPacketNo++;
+            bootloaderProcessing.WaitingForResponseTimeoutCounter = 0;
+            
+            // Cập nhật progress bar
+            progressBarFirmwareUpdate.Value = NextTxPacketNo;
+            labelFirmwareUpdateProcess.Text = 
+                "Firmware Update Process: " + NextTxPacketNo + "/" + TotalPacket;
+            
+            // Kiểm tra xem đã gửi hết chưa
+            if (NextTxPacketNo >= TotalPacket) {
+                // Hoàn thành
+                listBoxLog.Log("Firmware update complete!");
+                progressBarFirmwareUpdate.Value = TotalPacket;
+                bootloaderProcessing.State = BootloaderProcessingState.IDLE;
+                bootloaderProcessing.IsValid = false;
+            }
+            else {
+                // Gửi gói tiếp theo
+                bootLoaderTxPacketQueue.Enqueue(
+                    bootloaderProcessing.PacketList[NextTxPacketNo]
+                );
+            }
+        }
+        else if (response.Contains("-BLD-RESEND")) {
+            // Thiết bị yêu cầu gửi lại gói hiện tại
+            listBoxLog.Log("Device request resend packet " + NextTxPacketNo);
+            bootLoaderTxPacketQueue.Enqueue(
+                bootloaderProcessing.PacketList[NextTxPacketNo]
+            );
+            bootloaderProcessing.WaitingForResponseTimeoutCounter = 0;
+        }
+    }
+    else {
+        // Không có response, tăng timeout counter
+        bootloaderProcessing.WaitingForResponseTimeoutCounter++;
+        
+        // Timeout sau 10 giây → gửi lại
+        if (WaitingForResponseTimeoutCounter >= (10000 / 100)) {
+            listBoxLog.Log("Timeout, resend packet " + NextTxPacketNo);
+            bootLoaderTxPacketQueue.Enqueue(
+                bootloaderProcessing.PacketList[NextTxPacketNo]
+            );
+            WaitingForResponseTimeoutCounter = 0;
+        }
+    }
+}
+```
+
+#### GIAI ĐOẠN 5: Hoàn tất và Reboot
+
+**Sau khi gửi xong End Packet:**
+
+1. **Thiết bị tự động verify:**
+   - Kiểm tra CRC16 của toàn bộ firmware
+   - Kiểm tra tính toàn vẹn dữ liệu
+   - Nếu OK: Lưu firmware vào flash memory
+
+2. **Thiết bị reboot:**
+   - Tự động khởi động lại
+   - Load firmware mới
+   - Gửi thông tin firmware version ra serial port
+
+3. **Phần mềm hoàn tất:**
+   ```csharp
+   progressBarFirmwareUpdate.Value = TotalPacket;
+   labelFirmwareUpdateProcess.Text = "Firmware Update Process: Complete";
+   listBoxLog.Log(Level.Info, "Firmware update completed successfully!");
+   bootloaderProcessing.State = BootloaderProcessingState.IDLE;
+   bootloaderProcessing.IsValid = false;
+   ```
+
+### 3. Xử lý lỗi và retry
+
+**3.1. Lỗi CRC16 không khớp:**
+- Thiết bị gửi "-BLD-RESEND"
+- Phần mềm gửi lại gói tin hiện tại
+- Tối đa retry không giới hạn cho đến khi thành công
+
+**3.2. Timeout không nhận ACK:**
+- Sau 10 giây không nhận ACK
+- Phần mềm tự động gửi lại gói tin
+- Tiếp tục cho đến khi nhận được ACK
+
+**3.3. Mất kết nối:**
+- Nếu serial port bị disconnect
+- Phần mềm dừng quá trình
+- Hiển thị lỗi "Connection lost"
+- User phải kết nối lại và bắt đầu lại từ đầu
+
+**3.4. File firmware không hợp lệ:**
+- Không tìm thấy version marker → Từ chối file
+- File quá lớn (>65000 gói) → Từ chối file
+- Hiển thị lỗi cho user
+
+### 4. Thread và Concurrency
+
+**Serial Port Thread:**
+```csharp
+// Thread này chạy khi có data từ COM port
+serialPort.DataReceived += (sender, e) => {
+    int numBytes = serialPort.BytesToRead;
+    byte[] buffer = new byte[numBytes];
+    serialPort.Read(buffer, 0, numBytes);
+    serialPortRcvBufferQueue.Enqueue(buffer);  // Thread-safe queue
+};
+```
+
+**Timer Thread (100ms):**
+```csharp
+// Timer chạy mỗi 100ms để xử lý data và bootloader
+timerSerialPortRxDataParsing.Tick += (sender, e) => {
+    
+    // 1. Xử lý received data
+    ReadLogLineFromSerialPort();
+    
+    // 2. Gửi command từ queue
+    if (commandStrQueue.Count > 0) {
+        string cmd = commandStrQueue.Dequeue();
+        serialPort.WriteLine(cmd);
+    }
+    
+    // 3. Gửi bootloader packet từ queue
+    if (bootLoaderTxPacketQueue.Count > 0) {
+        byte[] packet = bootLoaderTxPacketQueue.Dequeue();
+        serialPort.Write(packet, 0, packet.Length);
+    }
+    
+    // 4. Xử lý bootloader state machine
+    if (bootloaderProcessing.IsValid == true) {
+        BootloaderProcessingHandler();
+    }
+};
+```
+
+**UI Thread:**
+- Cập nhật progress bar
+- Hiển thị log
+- Enable/disable buttons
+
+### 5. Ví dụ Log thực tế khi nạp firmware
+
+```
+[Info] Open firmware file: TVN02_v1.2.3.4.bin
+[Info] Firmware version: 1.2.3.4
+[Info] Total packets: 523
+[Info] File loaded successfully
+
+[Info] User clicked "Reboot to DFU Mode"
+[Info] Sending reboot command...
+[Info] Waiting for device to enter bootloader mode...
+
+[Info] Device entered bootloader mode, start programming...
+[Info] Sending Init Packet (1/523)
+[Info] ACK received, sending packet 2/523
+[Info] ACK received, sending packet 3/523
+[Info] ACK received, sending packet 4/523
+...
+[Info] ACK received, sending packet 522/523
+[Info] ACK received, sending packet 523/523 (End Packet)
+[Info] Firmware update completed successfully!
+[Info] Device is rebooting...
+```
+
+### 6. Các câu hỏi thường gặp
+
+**Q: Nạp firmware mất bao lâu?**
+- A: Phụ thuộc vào kích thước firmware và baud rate
+  - Firmware 1MB @ 115200 baud: ~2-3 phút
+  - Firmware 1MB @ 57600 baud: ~4-5 phút
+
+**Q: Có thể hủy giữa chừng không?**
+- A: Không nên, thiết bị có thể brick. Nếu hủy, phải nạp lại từ đầu.
+
+**Q: Nạp thất bại có làm hỏng thiết bị không?**
+- A: Bootloader vẫn còn, có thể nạp lại. Thiết bị sẽ không chạy firmware mới nếu verify thất bại.
+
+**Q: Có cần nguồn điện ngoài không?**
+- A: Khuyến nghị có nguồn ngoài ổn định, không nên chỉ dùng nguồn USB.
+
+---
+
 ## Cấu trúc dữ liệu và thuật toán
 
 ### 1. Bootloader Protocol Flow
